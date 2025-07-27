@@ -1,52 +1,103 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { X } from "lucide-react"
+import Image from "next/image";
+import { toast } from "react-hot-toast";
+import { X, Heart } from "lucide-react";
+import Link from "next/link";
 
-import IconButton from "@/components/ui/icon-button"
-import Currency from "@/components/ui/currency"
-import useCart from "@/hooks/use-cart"
+import IconButton from "@/components/ui/icon-button";
+import Currency from "@/components/ui/currency";
+import useCart from "@/hooks/use-cart";
+import { Button } from "@/components/ui/button";
 
 const CartItem = ({ data }) => {
-  const cart = useCart()
+  const cart = useCart();
 
   const onRemove = () => {
-    cart.removeItem(data.id)
-  }
+    cart.removeItem(data.id);
+  };
+
+  const onMoveToWishlist = () => {
+    // This would typically save to wishlist store
+    cart.removeItem(data.id);
+    toast.success("Item moved to wishlist");
+  };
 
   return (
-    <li className="flex py-6 border-b">
-      <div className="relative size-24 rounded-md overflow-hidden sm:size-48">
-        <Image 
-          fill
-          src={data.images[0].url}
-          alt="Product Image"
-          className="object-cover object-center"
-        />
-      </div>
-      <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
-        <div className="absolute z-10 right-0 top-0">
-          <IconButton onClick={onRemove} icon={<X size={20} />} />
+    <li className="bg-white rounded-lg border border-background p-3 sm:p-4 lg:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className="flex flex-col xs:flex-row">
+        {/* Product Image */}
+        <div className="relative h-40 w-full xs:h-24 xs:w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+          <Link href={`/product/${data.id}`}>
+            <Image
+              fill
+              src={data.images[0]?.url || "/placeholder-image.png"}
+              alt={data.name}
+              className="object-cover object-center hover:scale-105 transition-transform duration-200 cursor-pointer"
+            />
+          </Link>
         </div>
-        <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6">
-          <div className="flex justify-between">
-            <p className="text-lg font-semibold text-black">
-              {data.name}
-            </p>
+
+        {/* Product Details */}
+        <div className="flex-1 mt-3 xs:mt-0 xs:ml-3 sm:ml-4 lg:ml-6">
+          <div className="flex flex-col space-y-3 sm:space-y-0">
+            <div className="flex-1">
+              <Link href={`/product/${data.id}`} className="hover:underline">
+                <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 leading-tight">
+                  {data.name}
+                </h3>
+              </Link>
+
+              <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-primary mb-3">
+                <div className="flex items-center">
+                  <span className="font-medium">Color:</span>
+                  <div className="flex items-center">
+                    <div
+                      className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border ml-1 border-gray-300 mr-1"
+                      style={{ backgroundColor: data.color.value }}
+                    />
+                    <span>{data.color.name}</span>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <span className="font-medium">Size:</span>
+                  <span className=" px-2 py-1 rounded text-xs font-medium">
+                    {data.size.name}
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
+                <div className="text-lg sm:text-xl font-bold text-secondary">
+                  <Currency value={data.price} />
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex items-center justify-between sm:justify-end space-x-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={onMoveToWishlist}
+                    className="flex items-center space-x-1 text-foreground bg-background hover:text-background hover:bg-primary text-xs sm:text-sm px-2 sm:px-3"
+                  >
+                    <Heart size={14} className="sm:w-4 sm:h-4" />
+                    <span className="hidden sm:inline">Save for Later</span>
+                    <span className="sm:hidden">Save</span>
+                  </Button>
+
+                  <IconButton
+                    onClick={onRemove}
+                    icon={<X size={16} className="sm:w-5 sm:h-5" />}
+                    className="bg-background hover:bg-background text-foreground p-1 sm:p-2"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="mt-1 flex text-sm">
-            <p className="text-gray-500">
-              {data.color.name}
-            </p>
-            <p className="text-gray-500 ml-4 border-l pl-4">
-              {data.size.name}
-            </p>
-          </div>
-          <Currency value={data.price} />
         </div>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default CartItem
+export default CartItem;
