@@ -33,9 +33,9 @@ export default function ProductsPage() {
   }, [availabilityFilter, sortBy]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {/* Header Section */}
-      <div className="bg-white border-b">
+      <div className=" border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">
@@ -146,11 +146,11 @@ export default function ProductsPage() {
         )}
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="px-8 py-3 text-sm font-medium text-foreground bg-popover border border-foreground hover:font-bold rounded-lg hover:text-foreground hover:border-2 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground">
             Load More Products
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
