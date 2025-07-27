@@ -23,8 +23,11 @@ export function ProductInfo({
   description,
   categories,
   tags,
+  sizes,
+  inStock,
 }) {
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("");
   const sizeChartModal = useSizeChartModal();
 
   const handleQuantityChange = (e) => {
@@ -58,13 +61,46 @@ export function ProductInfo({
         </div>
 
         <div className="text-2xl font-bold text-foreground mb-6">
-          ${price.toFixed(2)}
+          Rs. {price.toFixed(2)}
+        </div>
+
+        {/* Stock Status */}
+        <div className="mb-4">
+          <span className={`text-sm font-medium ${inStock ? 'text-green-600' : 'text-red-600'}`}>
+            {inStock ? '✓ In Stock' : '✗ Out of Stock'}
+          </span>
         </div>
       </div>
 
       <div className="prose prose-sm text-tertiary text-justify">
         <p>{description}</p>
       </div>
+
+      {/* Size Selection */}
+      {sizes && sizes.length > 0 && (
+        <div className="space-y-3">
+          <h3 className="text-sm font-medium">Size:</h3>
+          <div className="flex flex-wrap gap-2">
+            {sizes.map((size) => (
+              <button
+                key={size.label}
+                onClick={() => setSelectedSize(size.label)}
+                disabled={!size.inStock}
+                className={`px-4 py-2 text-sm border rounded-md transition-colors ${
+                  selectedSize === size.label
+                    ? 'bg-foreground text-background border-foreground'
+                    : size.inStock
+                    ? 'border-gray-300 hover:border-foreground'
+                    : 'border-gray-200 text-gray-400 cursor-not-allowed'
+                }`}
+              >
+                {size.label}
+                {!size.inStock && ' (Out of Stock)'}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="flex items-center space-x-4 ">
         <div className="flex items-center border border-foreground rounded">
@@ -90,16 +126,19 @@ export function ProductInfo({
             +
           </button>
         </div>
-        <Button className="bg-foreground hover:bg-secondary text-background px-8 py-2">
-          ADD TO CART
+        <Button 
+          className="bg-foreground hover:bg-secondary text-background px-8 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled={!inStock || (sizes && sizes.length > 0 && !selectedSize)}
+        >
+          {!inStock ? 'OUT OF STOCK' : 'ADD TO CART'}
         </Button>
       </div>
 
       <div className="flex items-center space-x-6 text-sm">
-        <button className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors">
+        {/* <button className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors">
           <Heart className="w-4 h-4" />
           <span>Browse Wishlist</span>
-        </button>
+        </button> */}
         <button
           className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors"
           onClick={sizeChartModal.onOpen}

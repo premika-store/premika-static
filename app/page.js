@@ -1,98 +1,37 @@
-import ProductCard from "@/components/product-card";
+"use client";
 
-// Sample product data - replace with your actual data source
-const products = [
-  {
-    id: "1",
-    name: "Choomaar Flared Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 849.0,
-    images: [
-      "/products/babita.PNG?height=400&width=300",
-      "/products/asha.PNG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "2",
-    name: "Ruby Ras Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 749.0,
-    images: [
-      "/products/meera.JPG?height=400&width=300",
-      "/products/monika.PNG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "3",
-    name: "Panna Patola Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 749.0,
-    images: [
-      "/products/ekta.PNG?height=400&width=300",
-      "/products/indu.JPG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "4",
-    name: "Chandni Charm Flared Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 849.0,
-    images: [
-      "/products/monika.PNG?height=400&width=300",
-      "/products/indu.JPG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "5",
-    name: "Rogi Raag Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 749.0,
-    images: [
-      "/products/babita.PNG?height=400&width=300",
-      "/products/asha.PNG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "6",
-    name: "Banjari Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 849.0,
-    images: [
-      "/products/meera.JPG?height=400&width=300",
-      "/products/monika.PNG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "7",
-    name: "Petakha Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 749.0,
-    images: [
-      "/products/ekta.PNG?height=400&width=300",
-      "/products/indu.JPG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-  {
-    id: "8",
-    name: "Neelam Bell Sleeves Kurti by Evara",
-    originalPrice: 1199.0,
-    salePrice: 849.0,
-    images: [
-      "/products/monika.PNG?height=400&width=300",
-      "/products/indu.JPG?height=400&width=300&text=Hover",
-    ],
-    badge: "Sale",
-  },
-];
+import { useState, useMemo } from "react";
+import ProductCard from "@/components/product-card";
+import products from "@/data/data";
 
 export default function ProductsPage() {
+  const [availabilityFilter, setAvailabilityFilter] = useState("");
+  const [sortBy, setSortBy] = useState("featured");
+
+  // Filter and sort products
+  const filteredAndSortedProducts = useMemo(() => {
+    let filtered = [...products];
+
+    // Apply availability filter
+    if (availabilityFilter === "in-stock") {
+      filtered = filtered.filter((product) => product.inStock);
+    } else if (availabilityFilter === "out-of-stock") {
+      filtered = filtered.filter((product) => !product.inStock);
+    }
+
+    // Apply sorting
+    if (sortBy === "price-low") {
+      filtered.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "price-high") {
+      filtered.sort((a, b) => b.price - a.price);
+    } else if (sortBy === "name") {
+      filtered.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    // "featured" keeps original order
+
+    return filtered;
+  }, [availabilityFilter, sortBy]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header Section */}
@@ -114,7 +53,11 @@ export default function ProductsPage() {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-sm font-medium text-foreground">Filter:</span>
-            <select className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
+            <select
+              value={availabilityFilter}
+              onChange={(e) => setAvailabilityFilter(e.target.value)}
+              className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            >
               <option value="" className="bg-popover text-foreground">
                 Availability
               </option>
@@ -128,42 +71,34 @@ export default function ProductsPage() {
                 Out of Stock
               </option>
             </select>
-            <select className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary">
-              <option value="" className="bg-popover text-foreground">
-                Price
-              </option>
-              <option
-                value="low-to-high"
-                className="bg-popover text-foreground"
+            {(availabilityFilter || sortBy !== "featured") && (
+              <button
+                onClick={() => {
+                  setAvailabilityFilter("");
+                  setSortBy("featured");
+                }}
+                className="px-3 py-2 text-sm font-medium text-red-600 border border-red-300 rounded-md hover:bg-red-50 transition-colors duration-200"
               >
-                Low to High
-              </option>
-              <option
-                value="high-to-low"
-                className="bg-popover text-foreground"
-              >
-                High to Low
-              </option>
-            </select>
+                Clear All
+              </button>
+            )}
           </div>
 
           <div className="flex items-center gap-4">
             <span className="text-sm text-foreground">
-              {products.length} products
+              {filteredAndSortedProducts.length} products
             </span>
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-foreground">
                 Sort by:
               </span>
               <select
-                defaultValue="featured"
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
                 className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
               >
                 <option value="featured" className="bg-popover text-foreground">
                   Featured
-                </option>
-                <option value="newest" className="bg-popover text-foreground">
-                  Newest
                 </option>
                 <option
                   value="price-low"
@@ -177,6 +112,9 @@ export default function ProductsPage() {
                 >
                   Price: High to Low
                 </option>
+                <option value="name" className="bg-popover text-foreground">
+                  Name (A-Z)
+                </option>
               </select>
             </div>
           </div>
@@ -184,10 +122,28 @@ export default function ProductsPage() {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {filteredAndSortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
+
+        {/* No products message */}
+        {filteredAndSortedProducts.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-lg text-gray-500">
+              No products found matching your criteria.
+            </p>
+            <button
+              onClick={() => {
+                setAvailabilityFilter("");
+                setSortBy("featured");
+              }}
+              className="mt-4 px-6 py-2 text-sm font-medium text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
+            >
+              Clear Filters
+            </button>
+          </div>
+        )}
 
         {/* Load More Button */}
         <div className="text-center mt-12">

@@ -6,85 +6,37 @@ import { ProductInfo } from "@/components/product-info"
 import { ProductTabs } from "@/components/product-tabs"
 import { RelatedProducts } from "@/components/related-products"
 import { Breadcrumb } from "@/components/breadcrumb"
-import asha from "@/public/products/asha.png"
-import babita from "@/public/products/babita.png"
-import ekta from "@/public/products/ekta.png"
-import jaya from "@/public/products/jaya.png"
-// import meera from "@/public/products/meera.JPG"
+import products from "@/data/data"
+import { notFound } from "next/navigation"
 
-
-export default function SingleProductPage() {
-  // Sample product data
-  const productImages = [
-    asha,
-    babita,
-    ekta,
-    jaya,
-    // meera,
-  ]
-
-  const productData = {
-    title: "Ashaa",
-    price: 100.0,
-    rating: 5,
-    reviewCount: 1,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum magna aliqua consequat ut.",
-    categories: ["Clothing", "Laptops & Desktops"],
-    tags: ["Clothes"],
+export default function SingleProductPage({ params }) {
+  // Find the product by ID
+  const product = products.find(p => p.id === parseInt(params.productId))
+  
+  // If product not found, show 404
+  if (!product) {
+    notFound()
   }
 
-  const relatedProducts = [
-    {
-      id: 1,
-      name: "Fusca Dapsi Enm No.",
-      category: "Clothing, Laptops & Desktops",
-      price: 40.0,
-      originalPrice: 45.0,
-      rating: 5,
-      image: asha,
-      onSale: true,
+  // Get related products (excluding current product)
+  const relatedProducts = products
+    .filter(p => p.id !== product.id && p.category === product.category)
+    .slice(0, 4)
+    .map(p => ({
+      id: p.id,
+      name: p.name,
+      category: p.category,
+      price: p.price,
+      rating: 5, // Default rating since not in data
+      image: p.images[0],
       imageHeight: 250,
       imageWidth: 250,
-    },
-    {
-      id: 2,
-      name: "Lacus Dignissim Pauidaulum Et",
-      category: "Clothing, Laptops & Desktops",
-      price: 80.0,
-      rating: 5,
-      image: babita,
-      imageHeight: 250,
-      imageWidth: 250,
-    },
-    {
-      id: 3,
-      name: "Fusce Tempor Velit",
-      category: "Clothing, Handbag & Scarfs",
-      price: 55.0,
-      rating: 5,
-      image: ekta,
-      imageHeight: 250,
-      imageWidth: 250,
-    },
-    {
-      id: 4,
-      name: "Integer Feugiat Augue Atone",
-      category: "Clothing, Laptops & Desktops",
-      price: 100.0,
-      rating: 5,
-      image: jaya,
-      imageHeight: 250,
-      imageWidth: 250,
-    },
-  ]
+    }))
 
   const breadcrumbItems = [
-    { label: "Home", href: "#" },
-    { label: "Shop", href: "#" },
-    { label: "Clothing", href: "#" },
-    { label: "Laptops & Desktops", href: "#" },
-    { label: "Ipsum Imperdie Omittam Incididunt" },
+    { label: "Home", href: "/" },
+    { label: "Shop", href: "/" },
+    { label: product.name },
   ]
 
   return (
@@ -98,23 +50,25 @@ export default function SingleProductPage() {
         {/* Main Product Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Product Images */}
-          <ProductImageCarousel images={productImages} alt={productData.title} />
+          <ProductImageCarousel images={product.images} alt={product.name} />
 
           {/* Product Details */}
           <ProductInfo
-            title={productData.title}
-            price={productData.price}
-            rating={productData.rating}
-            reviewCount={productData.reviewCount}
-            description={productData.description}
-            categories={productData.categories}
-            tags={productData.tags}
+            title={product.name}
+            price={product.price}
+            rating={5} // Default rating since not in data
+            reviewCount={1} // Default review count
+            description={product.description}
+            categories={[product.category]}
+            tags={[product.category]}
+            sizes={product.sizes}
+            inStock={product.inStock}
           />
         </div>
 
         {/* Product Description Tabs */}
         <div className="mb-16">
-          <ProductTabs description={productData.description} reviewCount={productData.reviewCount} />
+          <ProductTabs description={product.description} reviewCount={1} />
         </div>
 
         {/* Related Products */}
