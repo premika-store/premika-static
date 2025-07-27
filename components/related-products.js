@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export function RelatedProducts({ products }) {
@@ -15,12 +16,12 @@ export function RelatedProducts({ products }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <div
-            key={product.id}
-            className="group relative bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
-            onMouseEnter={() => setHoveredProductId(product.id)}
-            onMouseLeave={() => setHoveredProductId(null)}
-          >
+          <Link key={product.id} href={`/${product.id}`} className="block">
+            <div
+              className="group relative bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
+              onMouseEnter={() => setHoveredProductId(product.id)}
+              onMouseLeave={() => setHoveredProductId(null)}
+            >
             {/* Product Image Container */}
             <div className="relative aspect-[3/4] overflow-hidden bg-gray-100">
               {/* Main Product Image */}
@@ -72,11 +73,19 @@ export function RelatedProducts({ products }) {
               </div>
 
               {/* Add to Cart Button */}
-              <button className="w-full px-4 py-2 text-sm font-medium text-background bg-foreground border border-secondary rounded-md hover:bg-popover hover:font-bold hover:text-foreground hover:border-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+              <button 
+                className="w-full px-4 py-2 text-sm font-medium text-background bg-foreground border border-secondary rounded-md hover:bg-popover hover:font-bold hover:text-foreground hover:border-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // Handle add to cart functionality here
+                  console.log("Add to cart:", product.name);
+                }}
+              >
                 Add to Cart
               </button>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>
