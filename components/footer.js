@@ -54,7 +54,10 @@ export function Footer() {
             <h4 className="font-bold  mb-6">Contact Us</h4>
             <div className="space-y-3 text-sm">
               <p>
-                <span className="font-medium">PHONE:</span> (+91) 9599215195
+                <span className="font-medium">PHONE:</span>{" "}
+                <a href="tel:+919599215195" className="hover:text-white transition-colors">
+                  (+91) 9599215195
+                </a>
               </p>
               <p>
                 <span className="font-medium">EMAIL:</span>{" "}
