@@ -11,7 +11,7 @@ export default function Component() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-4">
             <Shield className="h-8 w-8" />
-            <Badge variant="secondary" className="text-lg px-4 py-2">
+            <Badge variant="primary" className="text-lg px-4 py-2">
               Store Policies
             </Badge>
           </div>
