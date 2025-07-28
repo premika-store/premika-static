@@ -20,58 +20,6 @@ const CartPage = () => {
 
   const cart = useCart();
 
-  // TEMPORARY: Function to add test items
-  const addTestItems = () => {
-    const testItems = [
-      {
-        id: "test-1",
-        name: "Beautiful Silk Saree",
-        price: "149.99",
-        isFeatured: true,
-        category: {
-          id: "cat-1",
-          name: "Sarees",
-          billboard: { id: "bb-1", label: "Sarees", imageUrl: "" },
-        },
-        size: { id: "size-1", name: "M", value: "Medium" },
-        color: { id: "color-1", name: "Red", value: "#dc2626" },
-        images: [{ id: "img-1", url: "/products/rekha.PNG" }],
-      },
-      {
-        id: "test-2",
-        name: "Elegant Cotton Dress",
-        price: "89.99",
-        isFeatured: false,
-        category: {
-          id: "cat-2",
-          name: "Dresses",
-          billboard: { id: "bb-2", label: "Dresses", imageUrl: "" },
-        },
-        size: { id: "size-2", name: "L", value: "Large" },
-        color: { id: "color-2", name: "Blue", value: "#2563eb" },
-        images: [{ id: "img-2", url: "/products/meera.JPG" }],
-      },
-      {
-        id: "test-3",
-        name: "Traditional Lehenga",
-        price: "299.99",
-        isFeatured: true,
-        category: {
-          id: "cat-3",
-          name: "Lehengas",
-          billboard: { id: "bb-3", label: "Lehengas", imageUrl: "" },
-        },
-        size: { id: "size-3", name: "S", value: "Small" },
-        color: { id: "color-3", name: "Gold", value: "#fbbf24" },
-        images: [{ id: "img-3", url: "/products/jaya.PNG" }],
-      },
-    ];
-
-    testItems.forEach((item, index) => {
-      setTimeout(() => cart.addItem(item), index * 200);
-    });
-  };
-
   if (!isMounted) return null;
 
   return (
@@ -92,28 +40,6 @@ const CartPage = () => {
                   <span className="xs:hidden">Shop</span>
                 </Button>
               </Link>
-            </div>
-
-            {/* TEMPORARY: Test buttons */}
-            <div className="flex items-center space-x-2">
-              <Button
-                onClick={addTestItems}
-                size="sm"
-                variant="outline"
-                className="text-secondary border border-secondary hover:bg-secondary hover:text-background text-xs sm:text-sm px-2 sm:px-3"
-              >
-                <span className="hidden sm:inline">Add Test Items</span>
-                <span className="sm:hidden">Add Items</span>
-              </Button>
-              <Button
-                onClick={cart.removeAll}
-                size="sm"
-                variant="outline"
-                className="text-secondary border border-secondary hover:bg-secondary hover:text-background text-xs sm:text-sm px-2 sm:px-3"
-              >
-                <span className="hidden sm:inline">Clear All</span>
-                <span className="sm:hidden">Clear</span>
-              </Button>
             </div>
           </div>
 

@@ -1,28 +1,28 @@
-import { Facebook, Twitter, Instagram } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ProductImageCarousel } from "@/components/product-image-carousel"
-import { ProductInfo } from "@/components/product-info"
-import { ProductTabs } from "@/components/product-tabs"
-import { RelatedProducts } from "@/components/related-products"
-import { Breadcrumb } from "@/components/breadcrumb"
-import products from "@/data/data"
-import { notFound } from "next/navigation"
+import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ProductImageCarousel } from "@/components/product-image-carousel";
+import { ProductInfo } from "@/components/product-info";
+import { ProductTabs } from "@/components/product-tabs";
+import { RelatedProducts } from "@/components/related-products";
+import { Breadcrumb } from "@/components/breadcrumb";
+import products from "@/data/data";
+import { notFound } from "next/navigation";
 
 export default function SingleProductPage({ params }) {
   // Find the product by ID
-  const product = products.find(p => p.id === parseInt(params.productId))
-  
+  const product = products.find((p) => p.id === parseInt(params.productId));
+
   // If product not found, show 404
   if (!product) {
-    notFound()
+    notFound();
   }
 
   // Get related products (excluding current product)
   const relatedProducts = products
-    .filter(p => p.id !== product.id && p.category === product.category)
+    .filter((p) => p.id !== product.id && p.category === product.category)
     .slice(0, 4)
-    .map(p => ({
+    .map((p) => ({
       id: p.id,
       name: p.name,
       category: p.category,
@@ -31,18 +31,16 @@ export default function SingleProductPage({ params }) {
       image: p.images[0],
       imageHeight: 250,
       imageWidth: 250,
-    }))
+    }));
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },
     { label: "Shop", href: "/" },
     { label: product.name },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-background">
-      
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <Breadcrumb items={breadcrumbItems} />
@@ -54,6 +52,7 @@ export default function SingleProductPage({ params }) {
 
           {/* Product Details */}
           <ProductInfo
+            id={product.id}
             title={product.name}
             price={product.price}
             rating={5} // Default rating since not in data
@@ -63,6 +62,7 @@ export default function SingleProductPage({ params }) {
             tags={[product.category]}
             sizes={product.sizes}
             inStock={product.inStock}
+            images={product.images}
           />
         </div>
 
@@ -76,7 +76,6 @@ export default function SingleProductPage({ params }) {
       </div>
 
       {/* Footer */}
-      
     </div>
-  )
+  );
 }

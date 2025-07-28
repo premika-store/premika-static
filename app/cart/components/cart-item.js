@@ -25,13 +25,13 @@ const CartItem = ({ data }) => {
 
   return (
     <li className="bg-white rounded-lg border border-background p-3 sm:p-4 lg:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
-      <div className="flex flex-col xs:flex-row">
+      <div className="flex flex-row xs:flex-row">
         {/* Product Image */}
-        <div className="relative h-40 w-full xs:h-24 xs:w-24 sm:h-28 sm:w-28 lg:h-32 lg:w-32 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
-          <Link href={`/product/${data.id}`}>
+        <div className="relative  h-56 w-64 xs:h-24 xs:w-24 sm:h-28 sm:w-28 lg:h-36 lg:w-36 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+          <Link href={`/${data.id}`}>
             <Image
               fill
-              src={data.images[0]?.url || "/placeholder-image.png"}
+              src={data.images?.[0] || data.images}
               alt={data.name}
               className="object-cover object-center hover:scale-105 transition-transform duration-200 cursor-pointer"
             />
@@ -39,32 +39,32 @@ const CartItem = ({ data }) => {
         </div>
 
         {/* Product Details */}
-        <div className="flex-1 mt-3 xs:mt-0 xs:ml-3 sm:ml-4 lg:ml-6">
+        <div className="flex-1 mt-3 xs:mt-0 ml-10 ">
           <div className="flex flex-col space-y-3 sm:space-y-0">
             <div className="flex-1">
-              <Link href={`/product/${data.id}`} className="hover:underline">
+              <Link href={`/${data.id}`} className="hover:underline">
                 <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 leading-tight">
                   {data.name}
                 </h3>
               </Link>
 
-              <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-4 text-xs sm:text-sm text-primary mb-3">
-                <div className="flex items-center">
-                  <span className="font-medium">Color:</span>
+              <div className="flex flex-col space-y-2 text-xs sm:text-sm text-primary mb-3">
+                {data.selectedSize && (
                   <div className="flex items-center">
-                    <div
-                      className="w-3 h-3 sm:w-4 sm:h-4 rounded-full border ml-1 border-gray-300 mr-1"
-                      style={{ backgroundColor: data.color.value }}
-                    />
-                    <span>{data.color.name}</span>
+                    <span className="font-medium">Size:</span>
+                    <span className="px-2 py-1 rounded text-xs font-medium">
+                      {data.selectedSize}
+                    </span>
                   </div>
-                </div>
-                <div className="flex items-center">
-                  <span className="font-medium">Size:</span>
-                  <span className=" px-2 py-1 rounded text-xs font-medium">
-                    {data.size.name}
-                  </span>
-                </div>
+                )}
+                {data.quantity && (
+                  <div className="flex items-center">
+                    <span className="font-medium">Quantity:</span>
+                    <span className="px-2 py-1 rounded text-xs font-medium">
+                      {data.quantity}
+                    </span>
+                  </div>
+                )}
               </div>
 
               <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">

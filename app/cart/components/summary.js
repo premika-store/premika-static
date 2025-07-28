@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
+import Link from "next/link";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -196,16 +197,16 @@ const Summary = () => {
           </div>
         </div>
 
-        {/* Checkout Button */}
-        <Button
-          onClick={onCheckout}
-          className="w-full mb-4 py-3 text-lg bg-foreground text-background hover:bg-secondary transition-colors"
-          disabled={isLoading}
-        >
-          {isLoading ? "Processing..." : "Proceed to Checkout"}
-        </Button>
+          <Link href="/checkout" className="block">
+            <Button
+              className="w-full mb-4 py-3 text-lg bg-foreground text-background hover:bg-secondary transition-colors"
+              disabled={isLoading}
+            >
+              {isLoading ? "Processing..." : "Proceed to Checkout"}
+            </Button>
+          </Link>
 
-        {/* Security & Trust Indicators */}
+          {/* Security & Trust Indicators */}
         <div className="space-y-3 text-sm text-foreground mb-6">
           <div className="flex items-center space-x-2">
             <ShieldCheck className="h-4 w-4 text-green-500" />

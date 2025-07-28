@@ -14,8 +14,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import useSizeChartModal from "@/hooks/use-size-chart-modal";
+import useCart from "@/hooks/use-cart";
+import Link from "next/link";
 
 export function ProductInfo({
+  id,
   title,
   price,
   rating,
@@ -25,10 +28,26 @@ export function ProductInfo({
   tags,
   sizes,
   inStock,
+  images,
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
   const sizeChartModal = useSizeChartModal();
+  const cart = useCart();
+
+  const handleAddToCart = () => {
+    const item = {
+      id: id, // Use the actual product ID
+      title,
+      name: title, // Add name field for cart display
+      price,
+      quantity,
+      selectedSize,
+      inStock,
+      images,
+    };
+    cart.addItem(item);
+  };
 
   const handleQuantityChange = (e) => {
     const value = Number.parseInt(e.target.value);
@@ -66,8 +85,12 @@ export function ProductInfo({
 
         {/* Stock Status */}
         <div className="mb-4">
-          <span className={`text-sm font-medium ${inStock ? 'text-green-600' : 'text-red-600'}`}>
-            {inStock ? '✓ In Stock' : '✗ Out of Stock'}
+          <span
+            className={`text-sm font-medium ${
+              inStock ? "text-green-600" : "text-red-600"
+            }`}
+          >
+            {inStock ? "✓ In Stock" : "✗ Out of Stock"}
           </span>
         </div>
       </div>
@@ -88,14 +111,14 @@ export function ProductInfo({
                 disabled={!size.inStock}
                 className={`px-4 py-2 text-sm border rounded-md transition-colors ${
                   selectedSize === size.label
-                    ? 'bg-foreground text-background border-foreground'
+                    ? "bg-foreground text-background border-foreground"
                     : size.inStock
-                    ? 'border-gray-300 hover:border-foreground'
-                    : 'border-gray-200 text-gray-400 cursor-not-allowed'
+                    ? "border-gray-300 hover:border-foreground"
+                    : "border-gray-200 text-gray-400 cursor-not-allowed"
                 }`}
               >
                 {size.label}
-                {!size.inStock && ' (Out of Stock)'}
+                {!size.inStock && " (Out of Stock)"}
               </button>
             ))}
           </div>
@@ -126,12 +149,23 @@ export function ProductInfo({
             +
           </button>
         </div>
-        <Button 
-          className="bg-foreground hover:bg-secondary text-background px-8 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
-          disabled={!inStock || (sizes && sizes.length > 0 && !selectedSize)}
-        >
-          {!inStock ? 'OUT OF STOCK' : 'ADD TO CART'}
-        </Button>
+        <Link href="/cart" className="block">
+          {inStock && !(sizes && sizes.length > 0 && !selectedSize) ? (
+            <Button
+              onClick={handleAddToCart}
+              className="bg-foreground hover:bg-secondary text-background px-8 py-2"
+            >
+              ADD TO CART
+            </Button>
+          ) : (
+            <Button
+              className="bg-foreground hover:bg-secondary text-background px-8 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={true}
+            >
+              {!inStock ? "OUT OF STOCK" : "SELECT SIZE"}
+            </Button>
+          )}
+        </Link>
       </div>
 
       <div className="flex items-center space-x-6 text-sm">
