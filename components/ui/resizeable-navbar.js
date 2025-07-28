@@ -139,7 +139,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
 
 export const MobileNavToggle = ({ isOpen, onClick }) => {
   return (
-    <button onClick={onClick} className="p-1">
+    <button onClick={onClick} className="p-1 mr-3">
       {isOpen ? (
         <X className="h-6 w-6 text-background dark:text-white" />
       ) : (
