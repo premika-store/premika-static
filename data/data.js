@@ -2,7 +2,7 @@
 
 const products = [
     {
-        id: 1,
+        id: "monika",
         name: "Monika",
         price: 599,
         description: "100% cotton, halter neck kurti",
@@ -21,7 +21,7 @@ const products = [
         ],
     },
     {
-        id: 2,
+        id: "mastani",
         name: "Mastani",
         price: 599,
         description: "halter neck kurti",
@@ -39,7 +39,7 @@ const products = [
         ],
     },
     {
-        id: 3,
+        id: "naina",
         name: "Naina",
         price: 599,
         description: "100% cotton, halter neck kurti",
@@ -58,7 +58,7 @@ const products = [
         ],
     },
     {
-        id: 4,
+        id: "heer",
         name: "Heer",
         price: 599,
         description: "halter neck kurti",
@@ -76,7 +76,7 @@ const products = [
         ],
     },
     {
-        id: 5,
+        id: "geet",
         name: "Geet",
         price: 599,
         description: "100% cotton, halter neck kurti",
@@ -95,7 +95,7 @@ const products = [
         ],
     },
     {
-        id: 6,
+        id: "babita",
         name: "Babita",
         price: 599,
         description: "Kurti with high side slits",
@@ -113,7 +113,7 @@ const products = [
         ],
     },
     {
-        id: 7,
+        id: "asha",
         name: "Asha",
         price: 599,
         description: "100% cotton, short kurti with bell sleeves",
@@ -132,7 +132,7 @@ const products = [
         ],
     },
     {
-        id: 8,
+        id: "rekha",
         name: "Rekha",
         price: 599,
         description: "Noodle strap kurti",
@@ -150,7 +150,7 @@ const products = [
         ],
     },
     {
-        id: 9,
+        id: "meera",
         name: "Meera",
         price: 599,
         description: "100% cotton, short Asymmetrical Kurti",
@@ -169,7 +169,7 @@ const products = [
         ],
     },
     {
-        id: 10,
+        id: "jaya",
         name: "Jaya",
         price: 599,
         description: "Asymmetrical Kurti",
@@ -187,7 +187,7 @@ const products = [
         ],
     },
     {
-        id: 11,
+        id: "neelam",
         name: "Neelam",
         price: 599,
         description:
@@ -207,7 +207,7 @@ const products = [
         ],
     },
     {
-        id: 12,
+        id: "piku",
         name: "Piku",
         price: 599,
         description:

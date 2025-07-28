@@ -10,8 +10,8 @@ import products from "@/data/data";
 import { notFound } from "next/navigation";
 
 export default function SingleProductPage({ params }) {
-  // Find the product by ID
-  const product = products.find((p) => p.id === parseInt(params.productId));
+  // Find the product by ID (now string comparison)
+  const product = products.find((p) => p.id === params.productId);
 
   // If product not found, show 404
   if (!product) {
