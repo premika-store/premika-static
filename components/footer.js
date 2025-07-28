@@ -71,9 +71,14 @@ export function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer">
+              <a
+                href="mailto:premika.shop@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors cursor-pointer"
+              >
                 <span className="text-sm font-bold">G</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>

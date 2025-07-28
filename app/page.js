@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import ProductCard from "@/components/product-card";
 import products from "@/data/data";
+import Navbarr from "@/components/resize-navbar";
 
 export default function ProductsPage() {
   const [availabilityFilter, setAvailabilityFilter] = useState("");
@@ -34,7 +35,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Section */}
+      <Navbarr/>
       <div className=" border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
