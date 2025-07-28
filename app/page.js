@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react";
 import ProductCard from "@/components/product-card";
 import products from "@/data/data";
-import Navbarr from "@/components/resize-navbar";
 
 export default function ProductsPage() {
   const [availabilityFilter, setAvailabilityFilter] = useState("");
@@ -35,15 +34,14 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbarr/>
       <div className=" border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">
-              Jaipur Janani's
+              Premika
             </h1>
             <p className="text-lg text-primary italic">
-              "Pink City, Pinker Drama."
+              "Prem se bani, Premika ke liye."
             </p>
           </div>
         </div>

@@ -14,9 +14,11 @@ import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import Link from "next/link";
 import useCart from "@/hooks/use-cart";
+import useSizeChartModal from "@/hooks/use-size-chart-modal";
 
 export default function Navbarr() {
   const cart = useCart();
+  const sizeChartModal = useSizeChartModal();
   const navItems = [
     {
       name: "Home",
@@ -31,7 +33,11 @@ export default function Navbarr() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className=" w-full sticky top-0 z-50">
+    <div
+      className={`w-full sticky top-0 z-50 ${
+        sizeChartModal.isOpen ? "pointer-events-none" : ""
+      }`}
+    >
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
