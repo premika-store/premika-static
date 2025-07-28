@@ -12,8 +12,14 @@ const generatedSignature = (razorpayOrderId, razorpayPaymentId) => {
 };
 
 export async function POST(request) {
-  const { orderId, razorpayPaymentId, razorpaySignature, customerInfo } =
-    await request.json();
+  const {
+    orderId,
+    razorpayPaymentId,
+    razorpaySignature,
+    customerInfo,
+    cartItems,
+    orderSummary,
+  } = await request.json();
 
   const signature = generatedSignature(orderId, razorpayPaymentId);
   if (signature !== razorpaySignature) {
@@ -28,9 +34,12 @@ export async function POST(request) {
     orderId,
     paymentId: razorpayPaymentId,
     customer: customerInfo,
+    orderSummary,
   });
 
-  // Here you can save the customer information to your database
+  console.log("Order items:", cartItems);
+
+  // Here you can save the customer information and order details to your database
   // The customer info is already saved to Razorpay dashboard via the order creation
   // You might want to save it to your own database as well
   try {
@@ -39,10 +48,14 @@ export async function POST(request) {
     //   orderId,
     //   paymentId: razorpayPaymentId,
     //   customerInfo,
+    //   cartItems,
+    //   orderSummary,
     //   status: 'completed'
     // });
 
     console.log("Order completed for customer:", customerInfo.name);
+    console.log("Total items ordered:", cartItems?.length || 0);
+    console.log("Order total:", orderSummary?.total || 0);
   } catch (error) {
     console.error("Error saving customer data:", error);
   }

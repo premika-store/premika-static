@@ -39,7 +39,7 @@ const Summary = () => {
 
   // Calculate pricing
   const subtotal = items.reduce((total, item) => {
-    return total + Number(item.price);
+    return total + Number(item.price) * (item.quantity || 1);
   }, 0);
 
   // Shipping calculation
@@ -197,16 +197,16 @@ const Summary = () => {
           </div>
         </div>
 
-          <Link href="/checkout" className="block">
-            <Button
-              className="w-full mb-4 py-3 text-lg bg-foreground text-background hover:bg-secondary transition-colors"
-              disabled={isLoading}
-            >
-              {isLoading ? "Processing..." : "Proceed to Checkout"}
-            </Button>
-          </Link>
+        <Link href="/checkout" className="block">
+          <Button
+            className="w-full mb-4 py-3 text-lg bg-foreground text-background hover:bg-secondary transition-colors"
+            disabled={isLoading}
+          >
+            {isLoading ? "Processing..." : "Proceed to Checkout"}
+          </Button>
+        </Link>
 
-          {/* Security & Trust Indicators */}
+        {/* Security & Trust Indicators */}
         <div className="space-y-3 text-sm text-foreground mb-6">
           <div className="flex items-center space-x-2">
             <ShieldCheck className="h-4 w-4 text-green-500" />

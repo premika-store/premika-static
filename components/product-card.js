@@ -48,17 +48,12 @@ export default function ProductCard({ product }) {
                     <span className="text-lg font-bold text-foreground">Rs. {product.price.toFixed(2)}</span>
                 </div>
 
-                {/* Add to Cart Button */}
+                {/* View Product Button */}
                 <button 
                     className="w-full px-4 py-2 text-sm font-medium text-background bg-foreground border border-secondary rounded-md hover:bg-popover hover:font-bold hover:text-foreground hover:border-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!product.inStock}
-                    onClick={(e) => {
-                        e.preventDefault();
-                        // Handle add to cart functionality here
-                        console.log("Add to cart:", product.name);
-                    }}
                 >
-                    {product.inStock ? "Add to Cart" : "Out of Stock"}
+                    {product.inStock ? "View Details" : "Out of Stock"}
                 </button>
             </div>
         </div>

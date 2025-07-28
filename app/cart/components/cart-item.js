@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { toast } from "react-hot-toast";
-import { X, Heart } from "lucide-react";
+import { X, Heart, Plus, Minus } from "lucide-react";
 import Link from "next/link";
 
 import IconButton from "@/components/ui/icon-button";
@@ -14,13 +14,25 @@ const CartItem = ({ data }) => {
   const cart = useCart();
 
   const onRemove = () => {
-    cart.removeItem(data.id);
+    cart.removeItem(data.id, data.selectedSize);
   };
 
   const onMoveToWishlist = () => {
     // This would typically save to wishlist store
-    cart.removeItem(data.id);
+    cart.removeItem(data.id, data.selectedSize);
     toast.success("Item moved to wishlist");
+  };
+
+  const onIncreaseQuantity = () => {
+    const newQuantity = (data.quantity || 1) + 1;
+    cart.updateQuantity(data.id, data.selectedSize, newQuantity);
+  };
+
+  const onDecreaseQuantity = () => {
+    const currentQuantity = data.quantity || 1;
+    if (currentQuantity > 1) {
+      cart.updateQuantity(data.id, data.selectedSize, currentQuantity - 1);
+    }
   };
 
   return (
@@ -58,18 +70,36 @@ const CartItem = ({ data }) => {
                   </div>
                 )}
                 {data.quantity && (
-                  <div className="flex items-center">
+                  <div className="flex items-center space-x-2">
                     <span className="font-medium">Quantity:</span>
-                    <span className="px-2 py-1 rounded text-xs font-medium">
-                      {data.quantity}
-                    </span>
+                    <div className="flex items-center space-x-2 bg-gray-100 rounded-md p-1">
+                      <button
+                        onClick={onDecreaseQuantity}
+                        disabled={data.quantity <= 1}
+                        className="p-1 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <Minus size={14} />
+                      </button>
+                      <span className="px-2 py-1 min-w-[2rem] text-center text-xs font-medium">
+                        {data.quantity}
+                      </span>
+                      <button
+                        onClick={onIncreaseQuantity}
+                        className="p-1 rounded hover:bg-gray-200"
+                      >
+                        <Plus size={14} />
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
 
               <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
                 <div className="text-lg sm:text-xl font-bold text-secondary">
-                  <Currency value={data.price} />
+                  <Currency value={data.price * (data.quantity || 1)} />
+                  <div className="text-sm text-gray-500 font-normal">
+                    <Currency value={data.price} /> each
+                  </div>
                 </div>
 
                 {/* Action Buttons */}

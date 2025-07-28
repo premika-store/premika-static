@@ -29,7 +29,7 @@ const CartPage = () => {
           {/* Header */}
           <div className="flex flex-col space-y-4 mb-6 sm:flex-row sm:items-center sm:justify-between sm:space-y-0 sm:mb-8">
             <div className="flex items-center space-x-2 sm:space-x-4">
-              <Link href="/products">
+              <Link href="/">
                 <Button
                   variant="outline"
                   size="sm"
@@ -95,7 +95,10 @@ const CartPage = () => {
                   </div>
                   <ul className="space-y-3 sm:space-y-4">
                     {cart.items.map((item) => (
-                      <CartItem key={item.id} data={item} />
+                      <CartItem
+                        key={`${item.id}-${item.selectedSize}`}
+                        data={item}
+                      />
                     ))}
                   </ul>
                 </div>
