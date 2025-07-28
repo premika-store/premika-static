@@ -280,15 +280,15 @@ export default function Home() {
         src="https://checkout.razorpay.com/v1/checkout.js"
       />
 
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
-        <h2 className="text-2xl font-bold mb-6 text-center text-black">
+      <div className="bg-[#E0BCA2] p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <h2 className="text-2xl font-bold mb-6 text-center text-secondary">
           Checkout
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Customer Information Form */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-black">
+            <h3 className="text-lg font-bold text-secondary">
               Customer Information
             </h3>
 
@@ -296,8 +296,8 @@ export default function Home() {
               type="text"
               placeholder="Full Name *"
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.name ? "border-red-500" : "border-gray-300"
-              } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                errors.name ? "border-foreground" : "border-[#B67B5C]"
+              } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
               value={customerInfo.name}
               onChange={(e) => {
                 // Only allow letters and spaces, filter out numbers and special characters
@@ -312,15 +312,15 @@ export default function Home() {
               required
             />
             {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+              <p className="text-foreground text-sm mt-1">{errors.name}</p>
             )}
 
             <input
               type="email"
               placeholder="Email Address *"
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.email ? "border-red-500" : "border-gray-300"
-              } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                errors.email ? "border-foreground" : "border-[#B67B5C]"
+              } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
               value={customerInfo.email}
               onChange={(e) => {
                 setCustomerInfo({ ...customerInfo, email: e.target.value });
@@ -333,15 +333,15 @@ export default function Home() {
               required
             />
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              <p className="text-foreground text-sm mt-1">{errors.email}</p>
             )}
 
             <input
               type="tel"
               placeholder="Phone Number (10 digits) *"
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.phone ? "border-red-500" : "border-gray-300"
-              } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                errors.phone ? "border-foreground" : "border-[#B67B5C]"
+              } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
               value={customerInfo.phone}
               onChange={(e) => {
                 // Only allow numbers and limit to 10 digits
@@ -359,7 +359,7 @@ export default function Home() {
               required
             />
             {errors.phone && (
-              <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+              <p className="text-foreground text-sm mt-1">{errors.phone}</p>
             )}
 
             <h4 className="text-md font-semibold text-black mt-4">
@@ -370,8 +370,8 @@ export default function Home() {
               type="text"
               placeholder="Address Line 1 *"
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.addressLine1 ? "border-red-500" : "border-gray-300"
-              } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                errors.addressLine1 ? "border-foreground" : "border-[#B67B5C]"
+              } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
               value={customerInfo.address.line1}
               onChange={(e) => {
                 setCustomerInfo({
@@ -388,13 +388,15 @@ export default function Home() {
               required
             />
             {errors.addressLine1 && (
-              <p className="text-red-500 text-sm mt-1">{errors.addressLine1}</p>
+              <p className="text-foreground text-sm mt-1">
+                {errors.addressLine1}
+              </p>
             )}
 
             <input
               type="text"
               placeholder="Address Line 2"
-              className="w-full px-4 py-2 rounded-md border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 rounded-md border border-[#B67B5C] bg-background text-secondary focus:outline-none focus:ring-2 focus:ring-primary"
               value={customerInfo.address.line2}
               onChange={(e) =>
                 setCustomerInfo({
@@ -410,8 +412,8 @@ export default function Home() {
                   type="text"
                   placeholder="City *"
                   className={`w-full px-4 py-2 rounded-md border ${
-                    errors.city ? "border-red-500" : "border-gray-300"
-                  } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    errors.city ? "border-foreground" : "border-[#B67B5C]"
+                  } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
                   value={customerInfo.address.city}
                   onChange={(e) => {
                     // Only allow letters and spaces
@@ -432,7 +434,7 @@ export default function Home() {
                   required
                 />
                 {errors.city && (
-                  <p className="text-red-500 text-sm mt-1">{errors.city}</p>
+                  <p className="text-foreground text-sm mt-1">{errors.city}</p>
                 )}
               </div>
 
@@ -441,8 +443,8 @@ export default function Home() {
                   type="text"
                   placeholder="State *"
                   className={`w-full px-4 py-2 rounded-md border ${
-                    errors.state ? "border-red-500" : "border-gray-300"
-                  } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                    errors.state ? "border-foreground" : "border-[#B67B5C]"
+                  } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
                   value={customerInfo.address.state}
                   onChange={(e) => {
                     // Only allow letters and spaces
@@ -463,7 +465,7 @@ export default function Home() {
                   required
                 />
                 {errors.state && (
-                  <p className="text-red-500 text-sm mt-1">{errors.state}</p>
+                  <p className="text-foreground text-sm mt-1">{errors.state}</p>
                 )}
               </div>
             </div>
@@ -472,8 +474,8 @@ export default function Home() {
               type="text"
               placeholder="Postal Code (6 digits) *"
               className={`w-full px-4 py-2 rounded-md border ${
-                errors.postalCode ? "border-red-500" : "border-gray-300"
-              } text-black focus:outline-none focus:ring-2 focus:ring-blue-500`}
+                errors.postalCode ? "border-foreground" : "border-[#B67B5C]"
+              } text-secondary bg-background focus:outline-none focus:ring-2 focus:ring-primary`}
               value={customerInfo.address.postal_code}
               onChange={(e) => {
                 // Only allow numbers and limit to 6 digits
@@ -500,15 +502,17 @@ export default function Home() {
               required
             />
             {errors.postalCode && (
-              <p className="text-red-500 text-sm mt-1">{errors.postalCode}</p>
+              <p className="text-foreground text-sm mt-1">
+                {errors.postalCode}
+              </p>
             )}
           </div>
 
           {/* Order Summary */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-black">Order Summary</h3>
+            <h3 className="text-lg font-bold text-secondary">Order Summary</h3>
 
-            <div className="bg-gray-50 p-4 rounded-lg">
+            <div className="bg-gray-50 p-4 rounded-lg border border-primary">
               <div className="space-y-3">
                 {cart.items.map((item) => (
                   <div
@@ -516,36 +520,36 @@ export default function Home() {
                     className="flex justify-between items-center"
                   >
                     <div className="flex-1">
-                      <p className="font-medium text-black">{item.name}</p>
-                      <p className="text-sm text-gray-600">
+                      <p className="font-medium text-secondary">{item.name}</p>
+                      <p className="text-sm text-[#B67B5C]">
                         Size: {item.selectedSize} | Qty: {item.quantity || 1}
                       </p>
                     </div>
-                    <p className="font-medium text-black">
+                    <p className="font-bold text-primary">
                       ₹{item.price * (item.quantity || 1)}
                     </p>
                   </div>
                 ))}
 
-                <hr className="my-3" />
+                <hr className="my-3 border-[#E0BCA2]" />
 
-                <div className="flex justify-between text-black">
+                <div className="flex justify-between text-secondary">
                   <span>Subtotal:</span>
-                  <span>₹{totalAmount}</span>
+                  <span className="font-bold text-primary">₹{totalAmount}</span>
                 </div>
 
-                <div className="flex justify-between text-black">
+                <div className="flex justify-between text-secondary">
                   <span>Shipping:</span>
-                  <span>
+                  <span className="font-bold text-primary">
                     {shippingCost === 0 ? "Free" : `₹${shippingCost}`}
                   </span>
                 </div>
 
-                <hr className="my-3" />
+                <hr className="my-3 border-[#E0BCA2]" />
 
-                <div className="flex justify-between text-lg font-bold text-black">
-                  <span>Total:</span>
-                  <span>₹{finalAmount}</span>
+                <div className="flex justify-between text-lg font-bold text-secondary">
+                  <span className="font-bold text-foreground">Total:</span>
+                  <span className="font-bold text-foreground">₹{finalAmount}</span>
                 </div>
               </div>
             </div>
@@ -554,9 +558,9 @@ export default function Home() {
               className={`w-full ${
                 isLoading ||
                 Object.values(errors).some((error) => error !== null)
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-green-500 hover:bg-green-600"
-              } text-white px-4 py-2 rounded-md transition-colors flex items-center justify-center`}
+                  ? "bg-background text-foreground cursor-not-allowed"
+                  : "bg-primary hover:bg-foreground"
+              } text-background px-4 py-2 rounded-md transition-colors flex items-center justify-center`}
               onClick={createOrder}
               disabled={
                 isLoading ||
