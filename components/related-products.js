@@ -51,14 +51,14 @@ export function RelatedProducts({ products }) {
             </div>
 
             {/* Product Info */}
-            <div className="p-4 space-y-3">
+            <div className="p-4 space-y-1">
+              <h3 className="text-m font-bold text-foreground line-clamp-2 leading-tight">
+                {product.name}
+              </h3>
               <div className="text-xs text-primary mb-1">
                 {product.category}
               </div>
-              <h3 className="text-sm font-medium text-foreground line-clamp-2 leading-tight">
-                {product.name}
-              </h3>
-
+              
               {/* Price */}
               <div className="flex items-center gap-2">
                 <span className="text-lg font-bold text-foreground">

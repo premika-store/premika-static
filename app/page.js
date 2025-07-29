@@ -41,7 +41,7 @@ export default function ProductsPage() {
               Premika
             </h1>
             <p className="text-lg text-primary italic">
-              "Prem se bani, Premika ke liye."
+              &quot;Prem se bani, Premika ke liye.&quot;
             </p>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Component() {
           <div className="inline-flex items-center gap-2 mb-4">
             <Shield className="h-14 w-12 " />
             <h1 className="text-4xl md:text-6xl font-bold mb-1 tracking-tight text-background">
-              Premika Store's
+              Premika Store&apos;s
             </h1>
           </div>
           <p className="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto leading-relaxed text-background">
