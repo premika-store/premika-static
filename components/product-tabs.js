@@ -24,7 +24,7 @@ export function ProductTabs({ description, reviews }) {
             ) : (
               <div className="space-y-4">
                 {reviews.map((review, index) => (
-                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                  <div key={index} className="border-b border-primary pb-4 last:border-b-0">
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="font-semibold">{review.name || 'Anonymous'}</h4>
                       <span className="text-sm text-gray-500">{review.date}</span>
@@ -34,7 +34,7 @@ export function ProductTabs({ description, reviews }) {
                         <span className="text-yellow-500">{'★'.repeat(review.rating)}{'☆'.repeat(5-review.rating)}</span>
                       </div>
                     )}
-                    <p className="text-gray-700">{review.comment}</p>
+                    <p className="text-primary">{review.comment}</p>
                   </div>
                 ))}
               </div>

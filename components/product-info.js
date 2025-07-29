@@ -197,10 +197,32 @@ export function ProductInfo({
         <div className="flex items-center space-x-4">
           <span className="text-sm font-medium">Share this product:</span>
           <div className="flex space-x-2">
-            <Facebook className="w-5 h-5 text-tertiary hover:text-blue-600 cursor-pointer transition-colors" />
-            <Twitter className="w-5 h-5 text-tertiary hover:text-blue-400 cursor-pointer transition-colors" />
-            <Instagram className="w-5 h-5 text-tertiary hover:text-pink-600 cursor-pointer transition-colors" />
-            <Linkedin className="w-5 h-5 text-tertiary hover:text-blue-700 cursor-pointer transition-colors" />
+            <a
+              href={`https://www.facebook.com/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="w-5 h-5 text-tertiary hover:text-blue-600 cursor-pointer transition-colors" />
+            </a>
+            <a
+              href={`https://twitter.com/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Twitter className="w-5 h-5 text-tertiary hover:text-blue-400 cursor-pointer transition-colors" />
+            </a>
+            <a
+              href={`https://www.instagram.com/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-5 h-5 text-tertiary hover:text-pink-600 cursor-pointer transition-colors" />
+            </a>
+            <a
+              href={`https://www.linkedin.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
           </div>
         </div>
       </div>

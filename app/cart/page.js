@@ -66,7 +66,7 @@ const CartPage = () => {
                 Looks like you haven&apos;t added any items to your cart yet.
                 Start shopping to fill it up!
               </p>
-              <Link href="/products">
+              <Link href="/">
                 <Button
                   size="lg"
                   className="px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base text-background bg-foreground hover:bg-primary"
@@ -109,10 +109,10 @@ const CartPage = () => {
                     <Lightbulb /> Shopping Tips
                   </h4>
                   <ul className="list-disc pl-5 text-xs sm:text-sm text-foreground space-y-1">
-                    <li>Free shipping on orders over $100</li>
-                    <li>Easy returns within 30 days</li>
-                    <li>Secure checkout with multiple payment options</li>
-                    <li>Secure checkout</li>
+                    <li>Free shipping on all orders!</li>
+                    <li>Secure checkout with multiple payment options.</li>
+                    <li>Not sure about your size? Check our size guide before checking out.</li>
+                    <li>Your payment and personal information are always safe with us.</li>
                   </ul>
                 </div>
               </div>

@@ -34,7 +34,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className=" border-b">
+      <div className=" border-b border-[#B67B5C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">

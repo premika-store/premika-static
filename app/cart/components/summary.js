@@ -79,10 +79,10 @@ const Summary = () => {
   const applyCoupon = () => {
     // Mock coupon validation
     const validCoupons = {
-      SAVE10: 10,
-      WELCOME15: 15,
-      SUMMER20: 20,
-      FIRST25: 25,
+      // SAVE10: 10,
+      // WELCOME15: 15,
+      // SUMMER20: 20,
+      // FIRST25: 25,
     };
 
     if (validCoupons[couponCode.toUpperCase()]) {
@@ -177,10 +177,10 @@ const Summary = () => {
           )}
 
           {/* Tax */}
-          <div className="flex justify-between text-foreground">
+          {/* <div className="flex justify-between text-foreground">
             <span>Tax (8%)</span>
             <Currency value={tax} />
-          </div>
+          </div> */}
 
           {/* Total */}
           <div className="border-t border-background pt-4">
@@ -208,22 +208,22 @@ const Summary = () => {
 
         {/* Security & Trust Indicators */}
         <div className="space-y-3 text-sm text-foreground mb-6">
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <ShieldCheck className="h-4 w-4 text-green-500" />
             <span>Secure 256-bit SSL encryption</span>
           </div>
           <div className="flex items-center space-x-2">
             <Truck className="h-4 w-4 text-blue-500" />
             <span>Free shipping on orders over $100</span>
-          </div>
+          </div> */}
           <div className="flex items-center space-x-2">
             <CreditCard className="h-4 w-4 text-purple-500" />
             <span>Multiple payment options accepted</span>
           </div>
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <Gift className="h-4 w-4 text-red-500" />
             <span>Easy returns within 30 days</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Coupon Code Section */}
@@ -251,7 +251,7 @@ const Summary = () => {
             </Button>
           </div>
           <div className="mt-2 text-xs text-[#E0BCA2]">
-            <p>Try: SAVE10, WELCOME15, SUMMER20, FIRST25</p>
+            {/* <p>Try: SAVE10, WELCOME15, SUMMER20, FIRST25</p> */}
           </div>
         </div>
       </div>
