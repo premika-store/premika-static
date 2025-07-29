@@ -1,6 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-export function ProductTabs({ description, reviewCount }) {
+export function ProductTabs({ description, reviews }) {
+  const reviewCount = Array.isArray(reviews) ? reviews.length : 0;
+
   return (
     <div className="w-full">
       <Tabs defaultValue="description" className="w-full">
@@ -11,23 +13,32 @@ export function ProductTabs({ description, reviewCount }) {
         <TabsContent value="description" className="mt-8">
           <div className="prose prose-gray max-w-none">
             <p className="text-foreground leading-relaxed text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentula augue nec est vestibulum auctor.
-              Donec risus est, rutrum vitae cursus rutrum, auctor sit imperdiet. Pellentesque facilisis mi mollis
-              finibus pellentesque cursus at, suscipit et ninim.
-            </p>
-            <p className="text-foreground leading-relaxed mt-4 text-justify">
-              Pellentesque aliquam, sem eget laoreet ultrices, ipsum mauris feugiat ipsum, quis fermentum tortor ante
-              eget velit. Donec ac tempor ante. Fusce ultricies massa mauris. Fusce aliquam, mauris eget sagittis
-              ultrices, ipsum mauris aliquam ex, sed elementor mauris ipsum nec est, et magna risus mauris lorem ipsum
-              dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, mauris eros egestas
-              risus, ut accumsan nibh dolor quis, ac sodales. Cras risque mauris ex, consequat vel dignissim et, lacinia
-              ut urna. Donec gravida fermentum tellus. Ut non mauris lorem. Aenean tempor mauris diam.
-            </p>
+              {description}
+            </p>   
           </div>
         </TabsContent>
         <TabsContent value="reviews" className="mt-8">
           <div className="text-foreground">
-            <p>No reviews yet. Be the first to review this product!</p>
+            {reviewCount === 0 ? (
+              <p>No reviews yet. Be the first to review this product!</p>
+            ) : (
+              <div className="space-y-4">
+                {reviews.map((review, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-semibold">{review.name || 'Anonymous'}</h4>
+                      <span className="text-sm text-gray-500">{review.date}</span>
+                    </div>
+                    {review.rating && (
+                      <div className="flex items-center mb-2">
+                        <span className="text-yellow-500">{'★'.repeat(review.rating)}{'☆'.repeat(5-review.rating)}</span>
+                      </div>
+                    )}
+                    <p className="text-gray-700">{review.comment}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </TabsContent>
       </Tabs>

@@ -57,7 +57,7 @@ export default function SingleProductPage({ params }) {
             price={product.price}
             rating={5} // Default rating since not in data
             reviewCount={1} // Default review count
-            description={product.description}
+            description={product.shortDescription}
             categories={[product.category]}
             tags={[product.category]}
             sizes={product.sizes}
@@ -68,7 +68,7 @@ export default function SingleProductPage({ params }) {
 
         {/* Product Description Tabs */}
         <div className="mb-16">
-          <ProductTabs description={product.description} reviewCount={1} />
+          <ProductTabs description={product.longDescription} reviews={product.reviews} reviewCount={1} />
         </div>
 
         {/* Related Products */}

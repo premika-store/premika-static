@@ -41,8 +41,8 @@ export function ProductImageCarousel({ images, alt }) {
         <Image
           src={images[currentIndex] || "/placeholder.svg"}
           alt={alt}
-          width={400}
-          height={600}
+          width={480}
+          height={720}
           className="w-full h-full object-cover transition-opacity duration-300"
         />
 
@@ -94,8 +94,8 @@ export function ProductImageCarousel({ images, alt }) {
             <Image
               src={image || "/placeholder.svg"}
               alt={`${alt} thumbnail ${index + 1}`}
-              width={64}
-              height={64}
+              width={240}
+              height={480}
               className="w-full h-full object-cover"
             />
           </button>
