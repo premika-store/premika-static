@@ -47,9 +47,9 @@ export default function Navbarr() {
             <Link href="/cart">
               <NavbarButton className="text-foreground bg-background flex items-center gap-2 relative">
                 <ShoppingCart size={20} />
-                <span className="hidden sm:inline">Cart</span>
+                <span className="hidden font sm:inline">Cart</span>
                 {cart.items.length > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-2 -right-2 bg-[#B67B5C] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                     {cart.items.length}
                   </span>
                 )}

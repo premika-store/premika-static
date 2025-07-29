@@ -72,11 +72,11 @@ const CartItem = ({ data }) => {
                 {data.quantity && (
                   <div className="flex items-center space-x-2">
                     <span className="font-medium">Quantity:</span>
-                    <div className="flex items-center space-x-2 bg-gray-100 rounded-md p-1">
+                    <div className="flex items-center space-x-2 bg-orange-50 rounded-md p-1">
                       <button
                         onClick={onDecreaseQuantity}
                         disabled={data.quantity <= 1}
-                        className="p-1 rounded hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="p-1 rounded hover:bg-orange-100 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <Minus size={14} />
                       </button>
@@ -85,7 +85,7 @@ const CartItem = ({ data }) => {
                       </span>
                       <button
                         onClick={onIncreaseQuantity}
-                        className="p-1 rounded hover:bg-gray-200"
+                        className="p-1 rounded hover:bg-orange-100"
                       >
                         <Plus size={14} />
                       </button>
