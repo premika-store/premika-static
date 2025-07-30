@@ -1,7 +1,16 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
-import { AlertTriangle, Clock, Package, Shield, Truck, CreditCard, RotateCcw, Ruler } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+import {
+  AlertTriangle,
+  Clock,
+  Package,
+  Shield,
+  Truck,
+  CreditCard,
+  RotateCcw,
+  Ruler,
+} from "lucide-react";
 
 export default function Component() {
   return (
@@ -204,9 +213,10 @@ export default function Component() {
                     </div>
                   </div>
                   <p className="text-sm text-secondary bg-muted/50 p-3 rounded-lg pt-3">
-                    <strong className="text-secondary">Note:</strong> Delivery times may vary slightly
-                    depending on your location and courier services. We will
-                    provide tracking information once your order is shipped.
+                    <strong className="text-secondary">Note:</strong> Delivery
+                    times may vary slightly depending on your location and
+                    courier services. We will provide tracking information once
+                    your order is shipped.
                   </p>
                 </div>
               </CardContent>
@@ -227,28 +237,36 @@ export default function Component() {
               <div className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="p-4 bg-muted/30 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-secondary">Order Confirmation</h4>
+                    <h4 className="font-semibold mb-2 text-secondary">
+                      Order Confirmation
+                    </h4>
                     <p className="text-sm text-secondary">
                       All orders are subject to availability and confirmation of
                       the order price.
                     </p>
                   </div>
                   <div className="p-4 bg-muted/30 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-secondary">Product Images</h4>
+                    <h4 className="font-semibold mb-2 text-secondary">
+                      Product Images
+                    </h4>
                     <p className="text-sm text-secondary">
                       Colors may vary slightly due to screen settings and
                       lighting conditions.
                     </p>
                   </div>
                   <div className="p-4 bg-muted/30 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-secondary">Privacy</h4>
+                    <h4 className="font-semibold mb-2 text-secondary">
+                      Privacy
+                    </h4>
                     <p className="text-sm text-secondary">
                       Your personal information is protected and will not be
                       shared with third parties.
                     </p>
                   </div>
                   <div className="p-4 bg-muted/30 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-secondary">Customer Support</h4>
+                    <h4 className="font-semibold mb-2 text-secondary">
+                      Customer Support
+                    </h4>
                     <p className="text-sm text-secondary">
                       Contact our support team for any queries before placing
                       your order.
@@ -272,9 +290,9 @@ export default function Component() {
               For any queries, feel free to contact our support team before
               placing your order.
             </p>
-            <div className="inline-flex items-center gap-2 text-primary font-semibold text-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 text-primary font-semibold text-lg sm:text-xl">
               <span>Thank you for shopping with</span>
-              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-lg">
+              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-lg inline-block">
                 Premika!
               </span>
             </div>

@@ -91,7 +91,7 @@ export default function Navbarr() {
                   <ShoppingCart size={20} />
                   <span>Cart</span>
                   {cart.items.length > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                       {cart.items.reduce(
                         (total, item) => total + (item.quantity || 1),
                         0
