@@ -47,7 +47,7 @@ const products = [
             "Grace meets bold in the Mastani Kurti, tailored in pure cotton with a soft double lining for extra comfort and coverage. Its elegant halter neck, timeless white hue, and daring backless design make it a standout for any occasion.",
         images: [
             "/Mastani/Mastani 1.png",
-            "/Mastani/Mastani 2.png",
+            "/Mastani/Mastani 2.webp",
             "/Mastani/Mastani 3.png",
             "/Mastani/Mastani 4.png",
         ],
@@ -376,7 +376,7 @@ const products = [
             "Sleek, stylish, and subtly bold—the Neelam Kurti features a crisp square neckline, elegant full sleeves, and a tie-up back that perfectly snatches the waist. A modern essential for everyday chic.",
         images: [
             "/Neelam/Neelam 1.png",
-            "/Neelam/Neelam 2.png",
+            "/Neelam/Neelam 2.PNG",
             "/Neelam/Neelam 3.png",
             "/Neelam/Neelam 4.png",
         ],
@@ -441,81 +441,81 @@ const products = [
             },
         ],
     },
-    // {
-    //     id: "Indu",
-    //     name: "Indu",
-    //     price: 599,
-    //     shortDescription: "100% cotton, full sleeves sweetheart kurti",
-    //     longDescription:
-    //         "Elegant and enchanting, the Indu Kurti features a sweetheart neckline and full sleeves, crafted from pure cotton for a soft, luxurious feel. Perfect for adding a touch of sophistication to your wardrobe.",
-    //     images: [
-    //             "/Indu/Indu 1.png",
-    //             "/Indu/Indu 2.png",
-    //             "/Indu/Indu 3.png",
-    //             "/Indu/Indu 4.png",
-    //     ],
-    //     category: "clothing",
-    //     inStock: false,
-    //     sizes: [
-    //         { label: "XS", inStock: false },
-    //         { label: "S", inStock: false },
-    //         { label: "M", inStock: false },
-    //         { label: "L", inStock: false },
-    //         { label: "XL", inStock: false },
-    //     ],
-    //     reviews: [
-    //         {
-    //             name: "Manisha",
-    //             date: "2025-05-05",
-    //             rating: 5,
-    //             comment: "The sweetheart neckline is so elegant and the cotton fabric feels luxurious. Love the full sleeves!"
-    //         },
-    //         {
-    //             name: "Preeti",
-    //             date: "2025-06-01",
-    //             rating: 5,
-    //             comment: "Adds a sophisticated touch to my wardrobe. The fit and feel are just perfect."
-    //         },
-    //     ],
-    // },
+    {
+        id: "Indu",
+        name: "Indu",
+        price: 599,
+        shortDescription: "100% cotton, full sleeves sweetheart kurti",
+        longDescription:
+            "Elegant and enchanting, the Indu Kurti features a sweetheart neckline and full sleeves, crafted from pure cotton for a soft, luxurious feel. Perfect for adding a touch of sophistication to your wardrobe.",
+        images: [
+                "/Indu/Indu 1.png",
+                "/Indu/Indu 2.png",
+                "/Indu/Indu 3.png",
+                "/Indu/Indu 4.png",
+        ],
+        category: "clothing",
+        inStock: false,
+        sizes: [
+            { label: "XS", inStock: false },
+            { label: "S", inStock: false },
+            { label: "M", inStock: false },
+            { label: "L", inStock: false },
+            { label: "XL", inStock: false },
+        ],
+        reviews: [
+            {
+                name: "Manisha",
+                date: "2025-05-05",
+                rating: 5,
+                comment: "The sweetheart neckline is so elegant and the cotton fabric feels luxurious. Love the full sleeves!"
+            },
+            {
+                name: "Preeti",
+                date: "2025-06-01",
+                rating: 5,
+                comment: "Adds a sophisticated touch to my wardrobe. The fit and feel are just perfect."
+            },
+        ],
+    },
 
-    // {
-    //     id: "lata",
-    //     name: "lata",
-    //     price: 599,
-    //     shortDescription: "100% cotton, noodle strap kurti",
-    //     longDescription:
-    //         "Lightweight and breezy, the Lata Kurti features delicate noodle straps and a relaxed fit, crafted from 100% cotton for ultimate comfort. Perfect for warm days or layering in cooler weather.",
-    //     images: [
-    //             "/lata/lata 1.png",
-    //             "/lata/lata 2.png",
-    //             "/lata/lata 3.png",
-    //             "/lata/lata 4.png",
-    //     ],
-    //     category: "clothing",
-    //     inStock: false,
-    //     sizes: [
-    //         { label: "XS", inStock: false },
-    //         { label: "S", inStock: false },
-    //         { label: "M", inStock: false },
-    //         { label: "L", inStock: false },
-    //         { label: "XL", inStock: false },
-    //     ],
-    //     reviews: [
-    //         {
-    //             name: "Rupal",
-    //             date: "2025-05-07",
-    //             rating: 4,
-    //             comment: "The noodle straps and relaxed fit make this kurti perfect for hot days. So light and comfy!"
-    //         },
-    //         {
-    //             name: "Jasleen",
-    //             date: "2025-06-17",
-    //             rating: 5,
-    //             comment: "Love the 100% cotton fabric. It's easy to layer and feels great on the skin."
-    //         },
-    //     ],
-    // },
+    {
+        id: "lata",
+        name: "lata",
+        price: 599,
+        shortDescription: "100% cotton, noodle strap kurti",
+        longDescription:
+            "Lightweight and breezy, the Lata Kurti features delicate noodle straps and a relaxed fit, crafted from 100% cotton for ultimate comfort. Perfect for warm days or layering in cooler weather.",
+        images: [
+                "/lata/lata 1.png",
+                "/lata/lata 2.png",
+                "/lata/lata 3.png",
+                "/lata/lata 4.png",
+        ],
+        category: "clothing",
+        inStock: false,
+        sizes: [
+            { label: "XS", inStock: false },
+            { label: "S", inStock: false },
+            { label: "M", inStock: false },
+            { label: "L", inStock: false },
+            { label: "XL", inStock: false },
+        ],
+        reviews: [
+            {
+                name: "Rupal",
+                date: "2025-05-07",
+                rating: 4,
+                comment: "The noodle straps and relaxed fit make this kurti perfect for hot days. So light and comfy!"
+            },
+            {
+                name: "Jasleen",
+                date: "2025-06-17",
+                rating: 5,
+                comment: "Love the 100% cotton fabric. It's easy to layer and feels great on the skin."
+            },
+        ],
+    },
 ];
 
 export default products;

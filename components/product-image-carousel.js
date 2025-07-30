@@ -80,11 +80,11 @@ export function ProductImageCarousel({ images, alt }) {
       </div>
 
       {/* Thumbnail Navigation */}
-      <div className="flex flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-2 items-center justify-center mt-4 md:mt-0 overflow-x-auto md:overflow-x-visible">
+      <div className="flex w-fit flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-2 items-center justify-center mt-4 md:mt-0 overflow-x-auto md:overflow-x-visible">
         {images.map((image, index) => (
           <button
             key={index}
-            className={`flex-shrink-0 w-24 h-26 md:w-28 md:h-32 rounded border-2 overflow-hidden transition-all ${
+            className={`flex-shrink-0 w-20 h-26 md:w-28 md:h-32 rounded border-2 overflow-hidden transition-all ${
               index === currentIndex
                 ? "border-foreground ring-2 ring-primary"
                 : "border-tertiary hover:border-foreground"
