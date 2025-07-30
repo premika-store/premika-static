@@ -278,8 +278,6 @@ export default function Component() {
           </Card>
         </div>
 
-        <Separator className="my-8" />
-
         {/* Footer */}
         <Card className="bg-gradient-to-r from-primary/5 via-tertiary/5 to-primary/5 border-primary ">
           <CardContent className="pt-6 text-center text-secondary">

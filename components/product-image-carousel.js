@@ -44,6 +44,8 @@ export function ProductImageCarousel({ images, alt }) {
           width={480}
           height={720}
           className="w-full h-full object-cover transition-opacity duration-300"
+          priority={true}
+          loading="eager"
         />
 
         {/* Navigation Arrows */}
@@ -82,9 +84,9 @@ export function ProductImageCarousel({ images, alt }) {
       {/* Thumbnail Navigation */}
       <div className="flex w-fit flex-row md:flex-col space-x-2 md:space-x-0 md:space-y-2 items-center justify-center mt-4 md:mt-0 overflow-x-auto md:overflow-x-visible">
         {images.map((image, index) => (
-          <button
+          <div
             key={index}
-            className={`flex-shrink-0 w-20 h-26 md:w-28 md:h-32 rounded border-2 overflow-hidden transition-all ${
+            className={`flex-shrink-0 w-20 h-26 md:w-28 md:h-32 rounded border-2 overflow-hidden transition-all cursor-pointer ${
               index === currentIndex
                 ? "border-foreground ring-2 ring-primary"
                 : "border-tertiary hover:border-foreground"
@@ -94,11 +96,13 @@ export function ProductImageCarousel({ images, alt }) {
             <Image
               src={image || "/placeholder.svg"}
               alt={`${alt} thumbnail ${index + 1}`}
-              width={240}
-              height={480}
+              width={120}
+              height={160}
               className="w-full h-full object-cover"
+              priority={index <= 3}
+              loading={index <= 3 ? "eager" : "lazy"}
             />
-          </button>
+          </div>
         ))}
       </div>
     </div>
