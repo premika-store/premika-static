@@ -43,10 +43,10 @@ export const NavBody = ({ children, className, visible }) => {
           : "none",
         width: visible ? "40%" : "100%",
         transform: visible ? "translateY(20px)" : "translateY(0px)",
-        transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-foreground px-4 py-2 lg:flex dark:bg-transparent",
+        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-foreground px-4 py-2 lg:flex dark:bg-transparent transition-all duration-400 ease-out",
         visible && "bg-foreground dark:bg-neutral-950/80",
         className
       )}
