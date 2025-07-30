@@ -57,7 +57,7 @@ export default function SingleProductPage({ params }) {
             title={product.name}
             price={product.price}
             rating={5} // Default rating since not in data
-            reviewCount={1} // Default review count
+            reviewCount={product.reviews.length} 
             description={product.shortDescription}
             categories={[product.category]}
             tags={[product.category]}

@@ -37,9 +37,7 @@ export default function ProductsPage() {
       <div className=" border-b border-[#B67B5C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-foreground mb-2">
-              Premika
-            </h1>
+            <h1 className="text-3xl font-bold text-foreground mb-2">Premika</h1>
             <p className="text-lg text-primary italic">
               &quot;Prem se bani, Premika ke liye.&quot;
             </p>
@@ -49,7 +47,7 @@ export default function ProductsPage() {
 
       {/* Filters and Sort Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-background py-6">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div className="flex flex-row justify-between items-start gap-4 mb-8">
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-sm font-medium text-foreground">Filter:</span>
             <select
@@ -76,17 +74,14 @@ export default function ProductsPage() {
                   setAvailabilityFilter("");
                   setSortBy("featured");
                 }}
-                className="px-3 py-2 text-sm font-medium text-red-600 border border-red-300 rounded-md hover:bg-red-50 transition-colors duration-200"
+                className="px-3 py-2 text-sm font-bold text-foreground border border-red-300 rounded-md hover:bg-red-50 transition-colors duration-200"
               >
                 Clear All
               </button>
             )}
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-foreground">
-              {filteredAndSortedProducts.length} products
-            </span>
+          <div className="flex flex-col items-end gap-2">
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-foreground">
                 Sort by:
@@ -116,11 +111,14 @@ export default function ProductsPage() {
                 </option>
               </select>
             </div>
+            <span className="text-sm text-foreground">
+              {filteredAndSortedProducts.length} products
+            </span>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredAndSortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

@@ -14,7 +14,7 @@ export function RelatedProducts({ products }) {
         <div className="mt-4 w-24 h-1 bg-foreground mx-auto"></div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <Link key={product.id} href={`/${product.id}`} className="block">
             <div className="group relative bg-background rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer">
@@ -27,7 +27,9 @@ export function RelatedProducts({ products }) {
                 {/* Main Product Image */}
                 <Image
                   src={
-                    hoveredProductId === product.id && product.images && product.images.length > 1
+                    hoveredProductId === product.id &&
+                    product.images &&
+                    product.images.length > 1
                       ? product.images[1]
                       : product.images?.[0] || "/placeholder.svg"
                   }
