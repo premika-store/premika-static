@@ -35,7 +35,7 @@ export function ProductImageCarousel({ images, alt }) {
     <div className="flex flex-col md:flex-row md:space-x-4 items-center justify-center">
       {/* Main Image */}
       <div
-        className="relative bg-white w-92 h-92 rounded-lg overflow-hidden group flex items-center justify-center"
+        className="relative bg-white w-92 h-92 rounded-lg overflow-hidden group flex items-center justify-center object-cover"
         style={{ aspectRatio: "3/4" }}
       >
         <Image
