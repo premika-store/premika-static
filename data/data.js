@@ -46,10 +46,10 @@ const products = [
         longDescription:
             "Grace meets bold in the Mastani Kurti, tailored in pure cotton with a soft double lining for extra comfort and coverage. Its elegant halter neck, timeless white hue, and daring backless design make it a standout for any occasion.",
         images: [
-            "/Mastani/Mastani 1.png",
-            "/Mastani/Mastani 2.webp",
-            "/Mastani/Mastani 3.png",
-            "/Mastani/Mastani 4.png",
+            "/Mastani/Mastani1.png",
+            "/Mastani/Mastani2.webp",
+            "/Mastani/Mastani3.png",
+            "/Mastani/Mastani4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -82,10 +82,10 @@ const products = [
         longDescription:
             "Make a striking impression with the Naina Kurti, crafted from pure cotton with a soft double lining for comfort and elegance. The halter neck, deep blue shade, and bold backless cut bring a perfect mix of grace and modern flair.",
         images: [
-            "/Naina/Naina 1.png",
-            "/Naina/Naina 2.png",
-            "/Naina/Naina 3.png",
-            "/Naina/Naina 4.png",
+            "/Naina/Naina1.png",
+            "/Naina/Naina2.png",
+            "/Naina/Naina3.png",
+            "/Naina/Naina4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -119,10 +119,10 @@ const products = [
         longDescription:
             "Delicate yet daring, the Heer Kurti comes in a soft light pink shade, crafted from pure cotton with double lining for comfort and grace. Its elegant halter neck and backless style blend femininity with a bold, modern touch.",
         images: [
-            "/Heer/Heer 1.png",
-            "/Heer/Heer 2.png",
-            "/Heer/Heer 3.png",
-            "/Heer/Heer 4.png",
+            "/Heer/Heer1.png",
+            "/Heer/Heer2.png",
+            "/Heer/Heer3.png",
+            "/Heer/Heer4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -155,10 +155,10 @@ const products = [
         longDescription:
             "Bold and beautiful, the Geet Kurti stuns in a rich dark green hue. Made from pure cotton with double lining, it offers all-day comfort with a luxe feel. Featuring a flattering halter neck and daring backless design, it's perfect for making a stylish statement.",
         images: [
-            "/Geet/Geet 1.jpg",
-            "/Geet/Geet 2.png",
-            "/Geet/Geet 3.png",
-            "/Geet/Geet 4.png",
+            "/Geet/Geet1.jpg",
+            "/Geet/Geet2.png",
+            "/Geet/Geet3.png",
+            "/Geet/Geet4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -192,10 +192,10 @@ const products = [
         longDescription:
             "Bold and stylish, the Babita Kurti in classic black features daring high side slits for a contemporary edge. Perfect for making a statement with effortless confidence.",
         images: [
-            "/Babita/Babita 1.png",
-            "/Babita/Babita 2.png",
-            "/Babita/Babita 3.png",
-            "/Babita/Babita 4.png",
+            "/Babita/Babita1.png",
+            "/Babita/Babita2.png",
+            "/Babita/Babita3.png",
+            "/Babita/Babita4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -228,10 +228,10 @@ const products = [
         longDescription:
             "Grace meets playfulness in the Asha Kurti, featuring delicate blue bell sleeves that add a charming flair. This short kurti blends comfort with style, perfect for adding a fresh twist to your everyday wardrobe.",
         images: [
-            "/Asha/Asha 1.png",
-            "/Asha/Asha 2.png",
-            "/Asha/Asha 3.png",
-            "/Asha/Asha 4.png",
+            "/Asha/Asha1.png",
+            "/Asha/Asha2.png",
+            "/Asha/Asha3.png",
+            "/Asha/Asha4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -265,10 +265,10 @@ const products = [
         longDescription:
             "Feminine and flirty, the Rekha Kurti features delicate noodle straps and a lovely pink shade, perfect for warm days and casual outings. This short kurti combines simplicity with subtle elegance.",
         images: [
-            "/Rekha/Rekha 1.png",
-            "/Rekha/Rekha 2.png",
-            "/Rekha/Rekha 3.png",
-            "/Rekha/Rekha 4.png",
+            "/Rekha/Rekha1.png",
+            "/Rekha/Rekha2.png",
+            "/Rekha/Rekha3.png",
+            "/Rekha/Rekha4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -301,10 +301,10 @@ const products = [
         longDescription:
             "Bold and unique, the Meera Kurti in warm rust features trendy tie-up sleeve straps and a stylish asymmetrical cut for a modern, edgy look. Perfect for those who love to stand out with effortless style.",
         images: [
-            "/Meera/Meera 1.png",
-            "/Meera/Meera 2.png",
-            "/Meera/Meera 3.png",
-            "/Meera/Meera 4.png",
+            "/Meera/Meera1.png",
+            "/Meera/Meera2.png",
+            "/Meera/Meera3.png",
+            "/Meera/Meera4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -338,10 +338,10 @@ const products = [
         longDescription:
             "Classic and captivating, the Jaya Kurti in serene blue offers timeless style with a modern touch. Perfect for day-to-night wear, it's your go-to for effortless elegance.",
         images: [
-            "/Jaya/Jaya 1.png",
-            "/Jaya/Jaya 2.png",
-            "/Jaya/Jaya 3.png",
-            "/Jaya/Jaya 4.png",
+            "/Jaya/Jaya1.png",
+            "/Jaya/Jaya2.png",
+            "/Jaya/Jaya3.png",
+            "/Jaya/Jaya4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -375,10 +375,10 @@ const products = [
         longDescription:
             "Sleek, stylish, and subtly bold—the Neelam Kurti features a crisp square neckline, elegant full sleeves, and a tie-up back that perfectly snatches the waist. A modern essential for everyday chic.",
         images: [
-            "/Neelam/Neelam 1.png",
-            "/Neelam/Neelam 2.PNG",
-            "/Neelam/Neelam 3.png",
-            "/Neelam/Neelam 4.png",
+            "/Neelam/Neelam1.png",
+            "/Neelam/Neelam2.PNG",
+            "/Neelam/Neelam3.png",
+            "/Neelam/Neelam4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -413,10 +413,10 @@ const products = [
         longDescription:
             "Timeless and fresh, the Piku Kurti in classic white features a sharp square neckline, graceful full sleeves, and a chic tie-up back to accentuate your waist. Perfect for effortless elegance any day.",
         images: [
-            "/Piku/Piku 1.jpg",
-            "/Piku/Piku 2.png",
-            "/Piku/Piku 3.png",
-            "/Piku/Piku 4.png",
+            "/Piku/Piku1.jpg",
+            "/Piku/Piku2.png",
+            "/Piku/Piku3.png",
+            "/Piku/Piku4.png",
         ],
         category: "clothing",
         inStock: true,
@@ -449,10 +449,10 @@ const products = [
         longDescription:
             "Elegant and enchanting, the Indu Kurti features a sweetheart neckline and full sleeves, crafted from pure cotton for a soft, luxurious feel. Perfect for adding a touch of sophistication to your wardrobe.",
         images: [
-                "/Indu/Indu 1.png",
-                "/Indu/Indu 2.png",
-                "/Indu/Indu 3.png",
-                "/Indu/Indu 4.png",
+                "/Indu/Indu1.png",
+                "/Indu/Indu2.png",
+                "/Indu/Indu3.png",
+                "/Indu/Indu4.png",
         ],
         category: "clothing",
         inStock: false,
@@ -487,10 +487,10 @@ const products = [
         longDescription:
             "Lightweight and breezy, the Lata Kurti features delicate noodle straps and a relaxed fit, crafted from 100% cotton for ultimate comfort. Perfect for warm days or layering in cooler weather.",
         images: [
-                "/lata/lata 1.png",
-                "/lata/lata 2.png",
-                "/lata/lata 3.png",
-                "/lata/lata 4.png",
+                "/Lata/Lata1.png",
+                "/Lata/Lata2.png",
+                "/Lata/Lata3.png",
+                "/Lata/Lata4.png",
         ],
         category: "clothing",
         inStock: false,

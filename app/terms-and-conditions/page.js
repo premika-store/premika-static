@@ -12,6 +12,60 @@ import {
   Ruler,
 } from "lucide-react";
 
+export function generateMetadata() {
+  return {
+    title: "Terms and Conditions - Premika Store",
+    description:
+      "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+    keywords:
+      "premika store terms conditions, payment policy, return policy, delivery information, size guidelines, no cod, prepaid only, women clothing terms, fashion store policy",
+    authors: [{ name: "Premika Store" }],
+    creator: "Premika Store",
+    publisher: "Premika Store",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_IN",
+      url: "https://premika-store.com/terms-and-conditions",
+      siteName: "Premika Store",
+      title: "Terms and Conditions - Premika Store",
+      description:
+        "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+      images: [
+        {
+          url: "https://premika-store.com/logo.png",
+          width: 1200,
+          height: 630,
+          alt: "Premika Store Terms and Conditions",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@premika_store",
+      creator: "@premika_store",
+      title: "Terms and Conditions - Premika Store",
+      description:
+        "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+      images: ["https://premika-store.com/logo.png"],
+    },
+    alternates: {
+      canonical: "https://premika-store.com/terms-and-conditions",
+    },
+    category: "E-commerce",
+  };
+}
+
 export default function Component() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-tertiary/10">

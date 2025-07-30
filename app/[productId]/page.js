@@ -9,6 +9,27 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import products from "@/data/data";
 import { notFound } from "next/navigation";
 
+// Generate basic metadata for each product page
+export async function generateMetadata({ params }) {
+  const product = products.find((p) => p.id === params.productId);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+      description: "The requested product could not be found.",
+    };
+  }
+
+  return {
+    title: `${product.name}`,
+    description: `${
+      product.description
+    } - Available at Premika Store for ₹${product.price}. ${
+      product.inStock ? "In Stock" : "Out of Stock"
+    }.`,
+  };
+}
+
 export default function SingleProductPage({ params }) {
   // Find the product by ID (now string comparison)
   const product = products.find((p) => p.id === params.productId);
@@ -57,7 +78,7 @@ export default function SingleProductPage({ params }) {
             title={product.name}
             price={product.price}
             rating={5} // Default rating since not in data
-            reviewCount={product.reviews.length} 
+            reviewCount={product.reviews.length}
             description={product.shortDescription}
             categories={[product.category]}
             tags={[product.category]}
