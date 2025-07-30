@@ -481,7 +481,7 @@ const products = [
 
     {
         id: "lata",
-        name: "lata",
+        name: "Lata",
         price: 599,
         shortDescription: "100% cotton, noodle strap kurti",
         longDescription:
