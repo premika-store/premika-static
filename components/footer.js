@@ -138,12 +138,12 @@ export function Footer() {
         {/* Desktop Layout */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-18">
           {/* Premika Column */}
-          <div className="space-y-4 pl-6">
+          <div className="space-y-4 text-center">
             <h3 className="text-2xl font-bold mb-4">Premika</h3>
             <p className="text-[#E0BCA2] text-base italic mb-4">
               &ldquo;Prem se bani, Premika ke liye&rdquo;
             </p>
-            <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed text-justify">
+            <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed">
               Born from love and friendship, Premika reimagines Indian wear with
               care and intention. We create clothing that feels personal,
               rooted, and quietly beautiful - designed with love, crafted for
@@ -152,7 +152,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links Column */}
-          <div className="space-y-4 pl-28">
+          <div className="space-y-4 text-center">
             <h4 className="font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3 text-sm text-[#E0BCA2]">
               <li>
@@ -188,8 +188,8 @@ export function Footer() {
           </div>
 
           {/* Contact Us Column */}
-          <div className="space-y-4 pl-16">
-            <h4 className="font-bold  mb-6">Contact Us</h4>
+          <div className="space-y-4 text-center">
+            <h4 className="font-bold mb-6">Contact Us</h4>
             <div className="space-y-3 text-sm">
               <p>
                 <span className="font-medium">PHONE:</span>{" "}
@@ -206,7 +206,7 @@ export function Footer() {
               </p>
             </div>
 
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center">
               <a
                 href="https://www.instagram.com/premikastore/"
                 target="_blank"
