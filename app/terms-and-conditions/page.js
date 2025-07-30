@@ -16,7 +16,7 @@ export function generateMetadata() {
   return {
     title: "Terms and Conditions - Premika Store",
     description:
-      "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+      "Read Premika Store&apos;s terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
     keywords:
       "premika store terms conditions, payment policy, return policy, delivery information, size guidelines, no cod, prepaid only, women clothing terms, fashion store policy",
     authors: [{ name: "Premika Store" }],
@@ -40,7 +40,7 @@ export function generateMetadata() {
       siteName: "Premika Store",
       title: "Terms and Conditions - Premika Store",
       description:
-        "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+        "Read Premika Store&apos;s terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
       images: [
         {
           url: "https://premika-store.com/logo.png",
@@ -56,7 +56,7 @@ export function generateMetadata() {
       creator: "@premika_store",
       title: "Terms and Conditions - Premika Store",
       description:
-        "Read Premika Store's terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
+        "Read Premika Store&apos;s terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
       images: ["https://premika-store.com/logo.png"],
     },
     alternates: {
@@ -527,7 +527,7 @@ export default function Component() {
                   </h4>
                   <p className="text-secondary mb-6">
                     Have questions about our products, orders, or policies?
-                    We're here to help!
+                    We&apos;re here to help!
                   </p>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
