@@ -37,11 +37,11 @@ export default function ProductCard({ product }) {
             </div>
 
             {/* Product Info */}
-            <div className="p-4 space-y-3">
-                <h3 className="text-sm font-medium text-foreground line-clamp-2 leading-tight">{product.name}</h3>
+            <div className="p-4 space-y-1">
+                <h3 className="text-m font-bold text-foreground line-clamp-2 leading-tight">{product.name}</h3>
 
                 {/* Description */}
-                <p className="text-xs text-gray-600 line-clamp-2">{product.description}</p>
+                <p className="text-xs text-primary line-clamp-1">{product.shortDescription}</p>
 
                 {/* Price */}
                 <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ export default function ProductCard({ product }) {
 
                 {/* View Product Button */}
                 <button 
-                    className="w-full px-4 py-2 text-sm font-medium text-background bg-foreground border border-secondary rounded-md hover:bg-popover hover:font-bold hover:text-foreground hover:border-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-2 text-sm font-medium text-background bg-foreground border border-secondary rounded-md hover:bg-popover hover:font-bold hover:text-foreground hover:border-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!product.inStock}
                 >
                     {product.inStock ? "View Details" : "Out of Stock"}

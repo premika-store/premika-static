@@ -28,6 +28,7 @@ export default function SingleProductPage({ params }) {
       category: p.category,
       price: p.price,
       rating: 5, // Default rating since not in data
+      images: p.images, // Pass the full images array
       image: p.images[0],
       imageHeight: 250,
       imageWidth: 250,
@@ -56,7 +57,7 @@ export default function SingleProductPage({ params }) {
             title={product.name}
             price={product.price}
             rating={5} // Default rating since not in data
-            reviewCount={1} // Default review count
+            reviewCount={product.reviews.length} 
             description={product.shortDescription}
             categories={[product.category]}
             tags={[product.category]}
@@ -68,7 +69,11 @@ export default function SingleProductPage({ params }) {
 
         {/* Product Description Tabs */}
         <div className="mb-16">
-          <ProductTabs description={product.longDescription} reviews={product.reviews} reviewCount={1} />
+          <ProductTabs
+            description={product.longDescription}
+            reviews={product.reviews}
+            reviewCount={1}
+          />
         </div>
 
         {/* Related Products */}
