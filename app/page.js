@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Image from "next/image";
 import ProductCard from "@/components/product-card";
 import products from "@/data/data";
 
@@ -37,7 +38,13 @@ export default function ProductsPage() {
       <div className=" border-b border-[#B67B5C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-foreground mb-2">Premika</h1>
+            <Image 
+              src="/text-logo.png" 
+              alt="Premika Logo" 
+              width={200} 
+              height={64} 
+              className="mx-auto max-h-40 " 
+            />
             <p className="text-xl text-primary italic font-semibold">
               &quot;Prem se bana, Premika ke liye.&quot;
             </p>

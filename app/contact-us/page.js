@@ -17,12 +17,29 @@ export function generateMetadata() {
   return {
     title: "Contact Us - Premika Store",
     description:
-      "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We're here to help!",
+      "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We&apos;re here to help!",
     keywords:
       "premika store contact, customer support, email support, contact premika, fashion store contact, women clothing support, order queries, product questions",
     authors: [{ name: "Premika Store" }],
     creator: "Premika Store",
     publisher: "Premika Store",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL("https://premika.shop"),
+    applicationName: "Premika Store",
+    referrer: "origin-when-cross-origin",
+    themeColor: [
+      { media: "(prefers-color-scheme: light)", color: "#B67B5C" },
+      { media: "(prefers-color-scheme: dark)", color: "#B67B5C" },
+    ],
+    verification: {
+      google: "google-site-verification-code",
+      yandex: "yandex-verification-code",
+      yahoo: "yahoo-site-verification-code",
+    },
     robots: {
       index: true,
       follow: true,
@@ -37,19 +54,23 @@ export function generateMetadata() {
     openGraph: {
       type: "website",
       locale: "en_IN",
-      url: "https://premika-store.com/contact",
+      url: "https://premika.shop/contact-us",
       siteName: "Premika Store",
       title: "Contact Us - Premika Store",
       description:
-        "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We're here to help!",
+        "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We&apos;re here to help!",
       images: [
         {
-          url: "https://premika-store.com/logo.png",
+          url: "https://premika.shop/logo.png",
           width: 1200,
           height: 630,
           alt: "Premika Store Contact Us",
+          type: "image/png",
         },
       ],
+      emails: ["premika.shop@gmail.com"],
+      phoneNumbers: ["+919599215195"],
+      countryName: "India",
     },
     twitter: {
       card: "summary_large_image",
@@ -57,13 +78,37 @@ export function generateMetadata() {
       creator: "@premika_store",
       title: "Contact Us - Premika Store",
       description:
-        "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We're here to help!",
-      images: ["https://premika-store.com/logo.png"],
+        "Get in touch with Premika Store for any questions about our products, orders, or policies. Email support available with 24-48 hour response time. We&apos;re here to help!",
+      images: [
+        {
+          url: "https://premika.shop/logo.png",
+          alt: "Premika Store Contact Us",
+        },
+      ],
     },
     alternates: {
-      canonical: "https://premika-store.com/contact",
+      canonical: "https://premika.shop/contact-us",
+      languages: {
+        "en-IN": "https://premika.shop/contact-us",
+        "x-default": "https://premika.shop/contact-us",
+      },
     },
     category: "E-commerce",
+    classification: "Customer Support",
+    other: {
+      "contact:email": "premika.shop@gmail.com",
+      "contact:phone": "+919599215195",
+      "business:hours": "Monday-Friday 9AM-6PM IST",
+      "support:response_time": "24-48 hours",
+    },
+  };
+}
+
+export function generateViewport() {
+  return {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
   };
 }
 

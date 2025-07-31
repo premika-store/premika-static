@@ -30,7 +30,7 @@ export default function Navbarr() {
     },
     {
       name: "Contact Us",
-      link: "/contact",
+      link: "/contact-us",
     },
   ];
 
