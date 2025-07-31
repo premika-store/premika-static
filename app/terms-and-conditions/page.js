@@ -102,35 +102,81 @@ export default function Component() {
 
         {/* Policy Cards */}
         <div className="space-y-6">
-          {/* Row 1: Payment Policy */}
-          <Card className="group hover:shadow-xl transition-all duration-300 border-primary  bg-[#E0BCA2]">
-            <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-              <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
-                <div className=" bg-primary/10 rounded-lg ">
-                  <CreditCard className="h-6 w-6 text-primary" />
-                </div>
-                Payment Policy
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0 text-foreground" />
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2 text-secondary">
-                      No Cash on Delivery (COD)
-                    </h4>
-                    <p className="text-secondary leading-relaxed">
-                      We do not offer Cash on Delivery services. All orders must
-                      be prepaid through the available payment options at
-                      checkout including credit/debit cards, UPI, net banking,
-                      and digital wallets.
-                    </p>
+          {/* Row 1: Payment Policy and Size Information in 2 columns */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Payment Policy */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
+              <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
+                <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
+                  <div className=" bg-primary/10 rounded-lg">
+                    <CreditCard className="h-6 w-6 text-primary" />
+                  </div>
+                  Payment Policy
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className="h-5 w-5 mt-1 flex-shrink-0 text-foreground" />
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2 text-secondary">
+                        No Cash on Delivery (COD)
+                      </h4>
+                      <p className="text-secondary leading-relaxed">
+                        We do not offer Cash on Delivery services. All orders
+                        must be prepaid through the available payment options at
+                        checkout including credit/debit cards, UPI, net banking,
+                        and digital wallets.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+
+            {/* Size Information */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
+              <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
+                <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
+                  <div className=" bg-primary/10 rounded-lg">
+                    <Ruler className="h-6 w-6 text-primary" />
+                  </div>
+                  Size Information
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="bg-tertiary/10 border border-[#B67B5C] rounded-lg p-4">
+                    <h4 className="font-semibold text-lg mb-3 text-secondary">
+                      Important Size Guidelines
+                    </h4>
+                    <ul className="space-y-2 ml-4">
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-secondary">
+                          Please refer to our size chart before placing your
+                          order
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-secondary">
+                          All sizes mentioned are in inches
+                        </span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-secondary">
+                          Accurate measurements help ensure a perfect fit and
+                          avoid sizing issues
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Row 2: Return & Exchange Policy with 2 columns */}
           <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
@@ -198,86 +244,7 @@ export default function Component() {
             </CardContent>
           </Card>
 
-          {/* Row 3: Size Information and Delivery Information in 2 columns */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Size Information */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
-              <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-                <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Ruler className="h-6 w-6 text-primary" />
-                  </div>
-                  Size Information
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="bg-tertiary/10 border border-[#B67B5C] rounded-lg p-4">
-                    <h4 className="font-semibold text-lg mb-3 text-secondary">
-                      Important Size Guidelines
-                    </h4>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-secondary">
-                          Please refer to our size chart before placing your
-                          order
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-secondary">
-                          All sizes mentioned are in inches
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-secondary">
-                          Accurate measurements help ensure a perfect fit and
-                          avoid sizing issues
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Delivery Information */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-primary  bg-[#E0BCA2]">
-              <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-                <CardTitle className="flex items-center gap-3 text-2xl text-secondaryb">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Truck className="h-6 w-6 text-primary" />
-                  </div>
-                  Delivery Information
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-10">
-                  <div className="flex items-center gap-3 p-4 bg-primary/5 rounded-lg border border-[#B67B5C]">
-                    <Clock className="h-6 w-6 text-primary flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-lg text-secondary">
-                        Estimated Delivery Time
-                      </h4>
-                      <p className="text-secondary">
-                        8–9 business days from order confirmation
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-secondary bg-muted/50 p-3 rounded-lg pt-3">
-                    <strong className="text-secondary">Note:</strong> Delivery
-                    times may vary slightly depending on your location and
-                    courier services. We will provide tracking information once
-                    your order is shipped.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Additional Terms */}
+          {/* Row 3: Additional Terms */}
           <Card className="group hover:shadow-xl transition-all duration-300 border-primary  bg-[#E0BCA2]">
             <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
               <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
@@ -289,7 +256,7 @@ export default function Component() {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-3 gap-4">
                   <div className="p-4 bg-muted/30 rounded-lg">
                     <h4 className="font-semibold mb-2 text-secondary">
                       Order Confirmation
@@ -310,15 +277,6 @@ export default function Component() {
                   </div>
                   <div className="p-4 bg-muted/30 rounded-lg">
                     <h4 className="font-semibold mb-2 text-secondary">
-                      Privacy
-                    </h4>
-                    <p className="text-sm text-secondary">
-                      Your personal information is protected and will not be
-                      shared with third parties.
-                    </p>
-                  </div>
-                  <div className="p-4 bg-muted/30 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-secondary">
                       Customer Support
                     </h4>
                     <p className="text-sm text-secondary">
@@ -326,123 +284,6 @@ export default function Component() {
                       your order.
                     </p>
                   </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Privacy Policy */}
-          <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
-            <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-              <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <Shield className="h-6 w-6 text-primary" />
-                </div>
-                Privacy Policy
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="bg-primary/5 border border-secondary rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-3 text-primary">
-                    Information Collection & Use
-                  </h4>
-                  <ul className="space-y-2 ml-4">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        We collect personal information such as name, email,
-                        phone number, and address only for order processing and
-                        delivery
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Payment information is processed securely through our
-                        payment gateway and is not stored on our servers
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Your information will never be shared with third parties
-                        for marketing purposes
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        We use cookies to improve your shopping experience and
-                        website functionality
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Shipping Policy */}
-          <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
-            <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-              <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <Truck className="h-6 w-6 text-primary" />
-                </div>
-                Shipping Policy
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-primary/5 border border-secondary rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-3 text-primary">
-                    Shipping Information
-                  </h4>
-                  <ul className="space-y-2 ml-4">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Free shipping on all orders across India
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Estimated delivery time: 8-9 business days
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Orders are processed within 1-2 business days
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-tertiary/10 border border-[#B67B5C] rounded-lg p-4">
-                  <h4 className="font-semibold text-lg mb-3 text-secondary">
-                    Shipping Restrictions
-                  </h4>
-                  <ul className="space-y-2 ml-4">
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">We ship globally</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Delivery times may vary during festivals and peak
-                        seasons
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary">
-                        Tracking information will be provided once shipped
-                      </span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </CardContent>
@@ -504,60 +345,6 @@ export default function Component() {
                       </span>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Contact Us */}
-          <Card className="group hover:shadow-xl transition-all duration-300 border-primary bg-[#E0BCA2]">
-            <CardHeader className="bg-gradient-to-r from-tertiary/10 to-primary/5">
-              <CardTitle className="flex items-center gap-3 text-2xl text-secondary">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <Package className="h-6 w-6 text-primary" />
-                </div>
-                Contact Us
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div className="text-center">
-                  <h4 className="font-semibold text-lg mb-4 text-secondary">
-                    Get in Touch with Premika Store
-                  </h4>
-                  <p className="text-secondary mb-6">
-                    Have questions about our products, orders, or policies?
-                    We&apos;re here to help!
-                  </p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-primary/5 border border-secondary rounded-lg p-4 text-center">
-                    <h5 className="font-semibold text-primary mb-2">
-                      Email Support
-                    </h5>
-                    <p className="text-secondary text-sm mb-2">
-                      For all inquiries and support
-                    </p>
-                    <p className="font-medium text-secondary">
-                      premika.shop@gmail.com
-                    </p>
-                  </div>
-                  <div className="bg-tertiary/10 border border-[#B67B5C] rounded-lg p-4 text-center">
-                    <h5 className="font-semibold text-secondary mb-2">
-                      Response Time
-                    </h5>
-                    <p className="text-secondary text-sm mb-2">
-                      We typically respond within
-                    </p>
-                    <p className="font-medium text-secondary">24-48 hours</p>
-                  </div>
-                </div>
-                <div className="bg-muted/30 rounded-lg p-4 text-center">
-                  <p className="text-secondary text-sm">
-                    <strong>Note:</strong> For order-related queries, please
-                    include your order number and registered email address for
-                    faster assistance.
-                  </p>
                 </div>
               </div>
             </CardContent>

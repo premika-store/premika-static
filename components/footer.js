@@ -19,7 +19,7 @@ export function Footer() {
           <div className="space-y-4 mb-6">
             <h3 className="text-2xl font-bold mb-4">Premika</h3>
             <p className="text-[#E0BCA2] text-base italic mb-4">
-              &ldquo;Prem se bani, Premika ke liye&rdquo;
+              &ldquo;Prem se bana, Premika ke liye&rdquo;
             </p>
             <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed text-justify">
               Born from love and friendship, Premika reimagines Indian wear with
@@ -45,40 +45,41 @@ export function Footer() {
                 />
               </button>
               {isQuickLinksOpen && (
-                <ul className="space-y-3 text-sm text-[#E0BCA2]">
-                  <li>
-                    <Link
-                      href="/"
-                      className="hover:text-white transition-colors"
-                    >
-                      Products
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/cart"
-                      className="hover:text-white transition-colors"
-                    >
-                      Cart
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/terms-and-conditions"
-                      className="hover:text-white transition-colors"
-                    >
-                      Terms & Conditions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/terms-and-conditions"
-                      className="hover:text-white transition-colors"
-                    >
-                      Returns & Exchanges
-                    </Link>
-                  </li>
-                </ul>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-[#E0BCA2]">
+                  <Link href="/" className="hover:text-white transition-colors">
+                    Products
+                  </Link>
+                  <Link
+                    href="/cart"
+                    className="hover:text-white transition-colors"
+                  >
+                    Cart
+                  </Link>
+                  <Link
+                    href="/terms-and-conditions"
+                    className="hover:text-white transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  <Link
+                    href="/privacy-policy"
+                    className="hover:text-white transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    href="/shipping-policy"
+                    className="hover:text-white transition-colors col-span-1"
+                  >
+                    Shipping Policy
+                  </Link>
+                  <Link
+                    href="/terms-and-conditions"
+                    className="hover:text-white transition-colors col-span-1"
+                  >
+                    Returns and Exchange
+                  </Link>
+                </div>
               )}
             </div>
 
@@ -154,37 +155,38 @@ export function Footer() {
           {/* Quick Links Column */}
           <div className="space-y-4 text-center">
             <h4 className="font-bold mb-6">Quick Links</h4>
-            <ul className="space-y-3 text-sm text-[#E0BCA2]">
-              <li>
-                <Link href="/" className="hover:text-white transition-colors">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cart"
-                  className="hover:text-white transition-colors"
-                >
-                  Cart
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms-and-conditions"
-                  className="hover:text-white transition-colors"
-                >
-                  Terms & Conditions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms-and-conditions"
-                  className="hover:text-white transition-colors"
-                >
-                  Returns & Exchanges
-                </Link>
-              </li>
-            </ul>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-[#E0BCA2]">
+              <Link href="/" className="hover:text-white transition-colors">
+                Products
+              </Link>
+              <Link href="/cart" className="hover:text-white transition-colors">
+                Cart
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="hover:text-white transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/shipping-policy"
+                className="hover:text-white transition-colors col-span-1"
+              >
+                Shipping Policy
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="hover:text-white transition-colors col-span-1"
+              >
+                Returns and Exchange
+              </Link>
+            </div>
           </div>
 
           {/* Contact Us Column */}

@@ -28,6 +28,10 @@ export default function Navbarr() {
       name: "Terms & Conditions",
       link: "/terms-and-conditions",
     },
+    {
+      name: "Contact Us",
+      link: "/contact",
+    },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

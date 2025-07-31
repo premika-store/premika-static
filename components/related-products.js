@@ -79,9 +79,10 @@ export function RelatedProducts({ products }) {
                     e.preventDefault();
                     // Handle add to cart functionality here
                     console.log("Add to cart:", product.name);
+                    window.location.href = `/${product.id}`;
                   }}
                 >
-                  Add to Cart
+                  View Product
                 </button>
               </div>
             </div>

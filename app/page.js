@@ -39,7 +39,7 @@ export default function ProductsPage() {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-foreground mb-2">Premika</h1>
             <p className="text-xl text-primary italic font-semibold">
-              &quot;Prem se bani, Premika ke liye.&quot;
+              &quot;Prem se bana, Premika ke liye.&quot;
             </p>
           </div>
         </div>
