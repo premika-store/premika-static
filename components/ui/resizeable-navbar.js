@@ -162,7 +162,7 @@ export const NavbarLogo = () => {
         height={30}
         className="rounded"
       />
-      <span className="font-bold text-background dark:text-white">Premika</span>
+      <span className="font-bold text-background text-md md:text-lg dark:text-white">Premika</span>
     </Link>
   );
 };

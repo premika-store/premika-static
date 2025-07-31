@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Instagram, Facebook, Twitter, ChevronDown } from "lucide-react";
 import { Input } from "./ui/input";
 import { useState } from "react";
+import { Carattere } from "next/font/google";
+
+const carattere = Carattere({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-carattere",
+});
 
 export function Footer() {
   const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
@@ -18,7 +26,9 @@ export function Footer() {
           {/* Premika Section */}
           <div className="space-y-4 mb-6">
             <h3 className="text-2xl font-bold mb-4">Premika</h3>
-            <p className="text-[#E0BCA2] text-base italic mb-4">
+            <p
+              className={`text-[#E0BCA2] text-base italic mb-4 ${carattere.className}`}
+            >
               &ldquo;Prem se bana, Premika ke liye&rdquo;
             </p>
             <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed text-justify">
@@ -140,8 +150,10 @@ export function Footer() {
         <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-18">
           {/* Premika Column */}
           <div className="space-y-4 text-center">
-            <h3 className="text-2xl font-bold mb-4">Premika</h3>
-            <p className="text-[#E0BCA2] text-base italic mb-4">
+            <h3 className={`text-3xl font-bold mb-4 `}>Premika</h3>
+            <p
+              className={`text-[#E0BCA2] text-2xl italic mb-4 ${carattere.className}`}
+            >
               &ldquo;Prem se bani, Premika ke liye&rdquo;
             </p>
             <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed">

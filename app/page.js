@@ -1,9 +1,18 @@
 "use client";
 
+import { Carattere } from "next/font/google";
+
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import ProductCard from "@/components/product-card";
 import products from "@/data/data";
+
+const carattere = Carattere({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-carattere",
+});
 
 export default function ProductsPage() {
   const [availabilityFilter, setAvailabilityFilter] = useState("");
@@ -36,16 +45,16 @@ export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className=" border-b border-[#B67B5C]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
           <div className="text-center">
             <Image 
               src="/text-logo.png" 
               alt="Premika Logo" 
               width={200} 
               height={64} 
-              className="mx-auto max-h-40 " 
+              className="mx-auto max-h-24 sm:max-h-32 lg:max-h-40" 
             />
-            <p className="text-xl text-primary italic font-semibold">
+            <p className={`text-lg sm:text-2xl lg:text-3xl text-primary font-bold ${carattere.className}`}>
               &quot;Prem se bana, Premika ke liye.&quot;
             </p>
           </div>
@@ -53,14 +62,14 @@ export default function ProductsPage() {
       </div>
 
       {/* Filters and Sort Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-background py-6">
-        <div className="flex flex-row justify-between items-start gap-4 mb-8">
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="text-sm font-medium text-foreground">Filter:</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-background py-4 sm:py-6">
+        <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-4 mb-6 sm:mb-8">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 w-full sm:w-auto">
+            <span className="text-xs sm:text-sm font-medium text-foreground">Filter:</span>
             <select
               value={availabilityFilter}
               onChange={(e) => setAvailabilityFilter(e.target.value)}
-              className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              className="px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary min-w-0 flex-1 sm:flex-none"
             >
               <option value="" className="bg-popover text-foreground">
                 Availability
@@ -81,22 +90,22 @@ export default function ProductsPage() {
                   setAvailabilityFilter("");
                   setSortBy("featured");
                 }}
-                className="px-3 py-2 text-sm font-bold text-foreground border border-red-300 rounded-md hover:bg-red-50 transition-colors duration-200"
+                className="px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm font-bold text-foreground border border-red-300 rounded-md hover:bg-red-50 transition-colors duration-200"
               >
                 Clear All
               </button>
             )}
           </div>
 
-          <div className="flex flex-col items-end gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-foreground">
+          <div className="flex flex-col items-start sm:items-end gap-2 w-full sm:w-auto">
+            <div className="flex items-center gap-2 w-full sm:w-auto">
+              <span className="text-xs sm:text-sm font-medium text-foreground">
                 Sort by:
               </span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-3 py-2 text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                className="px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm border border-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary min-w-0 flex-1 sm:flex-none"
               >
                 <option value="featured" className="bg-popover text-foreground">
                   Featured
@@ -118,14 +127,14 @@ export default function ProductsPage() {
                 </option>
               </select>
             </div>
-            <span className="text-sm text-foreground">
+            <span className="text-xs sm:text-sm text-foreground">
               {filteredAndSortedProducts.length} products
             </span>
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {filteredAndSortedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -133,8 +142,8 @@ export default function ProductsPage() {
 
         {/* No products message */}
         {filteredAndSortedProducts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-lg text-gray-500">
+          <div className="text-center py-8 sm:py-12">
+            <p className="text-base sm:text-lg text-gray-500 px-4">
               No products found matching your criteria.
             </p>
             <button
@@ -142,7 +151,7 @@ export default function ProductsPage() {
                 setAvailabilityFilter("");
                 setSortBy("featured");
               }}
-              className="mt-4 px-6 py-2 text-sm font-medium text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
+              className="mt-4 px-4 py-2 sm:px-6 sm:py-2 text-xs sm:text-sm font-medium text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-colors duration-200"
             >
               Clear Filters
             </button>
@@ -150,8 +159,8 @@ export default function ProductsPage() {
         )}
 
         {/* Load More Button */}
-        {/* <div className="text-center mt-12">
-          <button className="px-8 py-3 text-sm font-medium text-foreground bg-popover border border-foreground hover:font-bold rounded-lg hover:text-foreground hover:border-2 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground">
+        {/* <div className="text-center mt-8 sm:mt-12">
+          <button className="px-6 py-2 sm:px-8 sm:py-3 text-xs sm:text-sm font-medium text-foreground bg-popover border border-foreground hover:font-bold rounded-lg hover:text-foreground hover:border-2 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foreground">
             Load More Products
           </button>
         </div> */}
