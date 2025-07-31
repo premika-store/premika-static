@@ -36,14 +36,14 @@ export function generateMetadata() {
     openGraph: {
       type: "website",
       locale: "en_IN",
-      url: "https://premika-store.com/terms-and-conditions",
+      url: "https://premika.shop/terms-and-conditions",
       siteName: "Premika Store",
       title: "Terms and Conditions - Premika Store",
       description:
         "Read Premika Store&apos;s terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
       images: [
         {
-          url: "https://premika-store.com/logo.png",
+          url: "https://premika.shop/logo.png",
           width: 1200,
           height: 630,
           alt: "Premika Store Terms and Conditions",
@@ -57,10 +57,10 @@ export function generateMetadata() {
       title: "Terms and Conditions - Premika Store",
       description:
         "Read Premika Store&apos;s terms and conditions including our payment policy, return policy, delivery information, and size guidelines. No COD, prepaid only. 8-9 days delivery.",
-      images: ["https://premika-store.com/logo.png"],
+      images: ["https://premika.shop/logo.png"],
     },
     alternates: {
-      canonical: "https://premika-store.com/terms-and-conditions",
+      canonical: "https://premika.shop/terms-and-conditions",
     },
     category: "E-commerce",
   };

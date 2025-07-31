@@ -41,7 +41,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://premika-store.com"), // Replace with your actual domain
+  metadataBase: new URL("https://premika.shop"), // Replace with your actual domain
   alternates: {
     canonical: "/",
   },
@@ -49,7 +49,7 @@ export const metadata = {
     title: "Premika - Premium Designer Kurtis Online",
     description:
       "Discover premium women's fashion at Premika. Shop designer kurtis, halter neck tops, cotton kurtas & ethnic wear. Free shipping on orders over ₹500.",
-    url: "https://premika-store.com", // Replace with your actual domain
+    url: "https://premika.shop", // Replace with your actual domain
     siteName: "Premika Store",
     images: [
       {
