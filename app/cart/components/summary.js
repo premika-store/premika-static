@@ -52,12 +52,8 @@ const Summary = () => {
     : 0;
   const totalDiscount = couponDiscount;
 
-  // Tax calculation (8%)
-  const taxableAmount = subtotal - totalDiscount;
-  const tax = taxableAmount * 0.08;
-
-  // Final total
-  const totalPrice = subtotal - totalDiscount + shippingCost + tax;
+  // Final total (no tax added)
+  const totalPrice = subtotal - totalDiscount + shippingCost;
 
   const onCheckout = async () => {
     try {

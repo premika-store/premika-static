@@ -103,14 +103,14 @@ const CartItem = ({ data }) => {
 
             {/* Action Buttons - Mobile: Side of info, Desktop: Bottom */}
             <div className="flex flex-col sm:hidden items-center gap-2">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 onClick={onMoveToWishlist}
                 className="flex items-center text-foreground hover:text-background hover:bg-primary p-2 min-w-[40px] justify-center"
               >
                 <Heart size={14} />
-              </Button>
+              </Button> */}
 
               <IconButton
                 onClick={onRemove}
@@ -134,7 +134,7 @@ const CartItem = ({ data }) => {
 
             {/* Action Buttons - Desktop: Bottom right */}
             <div className="order-1 sm:order-2 hidden sm:flex items-center justify-end gap-2 sm:gap-3">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="sm"
                 onClick={onMoveToWishlist}
@@ -142,7 +142,7 @@ const CartItem = ({ data }) => {
               >
                 <Heart size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
                 <span className="hidden xs:inline">Save for Later</span>
-              </Button>
+              </Button> */}
 
               <IconButton
                 onClick={onRemove}
