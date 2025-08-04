@@ -154,7 +154,7 @@ export function Footer() {
             <p
               className={`text-[#E0BCA2] text-2xl italic mb-4 ${carattere.className}`}
             >
-              &ldquo;Prem se bani, Premika ke liye&rdquo;
+              &ldquo;Prem se bana, Premika ke liye&rdquo;
             </p>
             <p className="text-[#E0BCA2] text-sm mb-6 leading-relaxed">
               Born from love and friendship, Premika reimagines Indian wear with

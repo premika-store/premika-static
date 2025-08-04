@@ -42,9 +42,9 @@ const Summary = () => {
     return total + Number(item.price) * (item.quantity || 1);
   }, 0);
 
-  // Shipping calculation
-  const freeShippingThreshold = 100;
-  const shippingCost = subtotal >= freeShippingThreshold ? 0 : 15;
+  // Free shipping for all orders
+  const freeShippingThreshold = 0; // Always free shipping
+  const shippingCost = 0;
 
   // Discount calculation
   const couponDiscount = appliedCoupon
@@ -52,8 +52,8 @@ const Summary = () => {
     : 0;
   const totalDiscount = couponDiscount;
 
-  // Final total (no tax added)
-  const totalPrice = subtotal - totalDiscount + shippingCost;
+  // Final total (no tax added, no shipping charges)
+  const totalPrice = subtotal - totalDiscount;
 
   const onCheckout = async () => {
     try {
@@ -155,30 +155,8 @@ const Summary = () => {
               <Truck size={14} className="sm:w-4 sm:h-4" />
               <span>Shipping</span>
             </div>
-            {shippingCost === 0 ? (
-              <span className="text-green-600 font-medium">FREE</span>
-            ) : (
-              <Currency value={shippingCost} />
-            )}
+            <span className="text-green-600 font-medium">FREE</span>
           </div>
-
-          {/* Free Shipping Progress */}
-          {subtotal < freeShippingThreshold && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 sm:p-3">
-              <p className="text-xs sm:text-sm text-blue-800">
-                🚚 Add <Currency value={freeShippingThreshold - subtotal} />{" "}
-                more for free shipping!
-              </p>
-              <div className="mt-1 sm:mt-2 bg-blue-200 rounded-full h-1.5 sm:h-2">
-                <div
-                  className="bg-blue-500 h-1.5 sm:h-2 rounded-full transition-all duration-300"
-                  style={{
-                    width: `${(subtotal / freeShippingThreshold) * 100}%`,
-                  }}
-                />
-              </div>
-            </div>
-          )}
 
           {/* Tax */}
           {/* <div className="flex justify-between text-foreground">
