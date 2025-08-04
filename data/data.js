@@ -4,7 +4,7 @@ const products = [
   {
     id: "monika",
     name: "Monika",
-    price: 1,
+    price: 599,
     shortDescription: "100% cotton, halter neck kurti",
     longDescription:
       "Fresh and fearless, the Monika Kurti shines in a breezy mint green. Made from pure cotton with double lining, it features a flattering halter neck and striking backless design, blending comfort with contemporary charm.",
