@@ -4,7 +4,7 @@ const products = [
   {
     id: "monika",
     name: "Monika",
-    price: 1,
+    price: 599,
     shortDescription: "100% cotton, halter neck kurti",
     longDescription:
       "Fresh and fearless, the Monika Kurti shines in a breezy mint green. Made from pure cotton with double lining, it features a flattering halter neck and striking backless design, blending comfort with contemporary charm.",
@@ -246,13 +246,13 @@ const products = [
       "/Asha/Asha4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {

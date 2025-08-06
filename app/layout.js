@@ -1,4 +1,5 @@
 import { Urbanist } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -6,8 +7,12 @@ import { Footer } from "@/components/footer";
 import ModalProdivder from "@/providers/modal-provider";
 import ToastProvider from "@/providers/toast-provider";
 import Navbarr from "@/components/resize-navbar";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const font = Urbanist({ subsets: ["latin"] });
+
+// Google Analytics ID
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata = {
   title: {
@@ -115,7 +120,31 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        {GA_TRACKING_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TRACKING_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+      </head>
       <body className={`${font.className} relative`}>
+        {/* Google Analytics Page View Tracking */}
+        {GA_TRACKING_ID && <GoogleAnalytics />}
+
         <div className="bg-background">
           <Navbarr />
           <ModalProdivder />

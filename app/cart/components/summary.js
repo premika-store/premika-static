@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import {
@@ -18,7 +18,7 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import Link from "next/link";
 
-const Summary = () => {
+const SummaryContent = () => {
   const searchParams = useSearchParams();
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
@@ -248,6 +248,14 @@ const Summary = () => {
         </div>
       )}
     </div>
+  );
+};
+
+const Summary = () => {
+  return (
+    <Suspense fallback={<div>Loading cart summary...</div>}>
+      <SummaryContent />
+    </Suspense>
   );
 };
 
