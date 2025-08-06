@@ -3,31 +3,24 @@ import * as analytics from "@/lib/analytics";
 
 export const useAnalytics = () => {
   return {
-    // E-commerce tracking
-    trackPurchase: analytics.trackPurchase,
-    trackAddToCart: analytics.trackAddToCart,
-    trackRemoveFromCart: analytics.trackRemoveFromCart,
-    trackViewItem: analytics.trackViewItem,
-    trackBeginCheckout: analytics.trackBeginCheckout,
-
-    // Custom events for Premika
-    trackSizeSelection: analytics.trackSizeSelection,
-    trackImageClick: analytics.trackImageClick,
-    trackEmailSignup: analytics.trackEmailSignup,
+    // Basic interaction tracking
+    trackButtonClick: analytics.trackButtonClick,
+    trackPageInteraction: analytics.trackPageInteraction,
     trackContactForm: analytics.trackContactForm,
+    trackNavigation: analytics.trackNavigation,
 
     // Generic event tracking
     trackEvent: analytics.event,
   };
 };
 
-// Hook for automatic product view tracking
-export const useProductView = (product) => {
-  const { trackViewItem } = useAnalytics();
+// Hook for automatic page view tracking
+export const usePageView = (pageName) => {
+  const { trackPageInteraction } = useAnalytics();
 
   useEffect(() => {
-    if (product) {
-      trackViewItem(product);
+    if (pageName) {
+      trackPageInteraction("page_view");
     }
-  }, [product, trackViewItem]);
+  }, [pageName, trackPageInteraction]);
 };
