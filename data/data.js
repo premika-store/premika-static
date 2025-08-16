@@ -2,6 +2,88 @@
 
 const products = [
   {
+    id: "barkha",
+    name: "Barkha",
+    price: 649,
+    shortDescription:
+      "Crafted in pure cotton, this elegant piece features graceful bell sleeves and a chic corset back for a modern twist on tradition",
+    longDescription:
+      "The Barkha Kurti blends comfort with elegance. Made from pure cotton, it's breathable and perfect for all day wear. Featuring graceful bell sleeves and a flattering corset back, this kurti adds a modern twist to a classic silhouette,ideal for both casual outings and festive occasions.",
+    images: [
+      "/Barkha/Barkha1.png",
+      "/Barkha/Barkha2.png",
+      "/Barkha/Barkha3.png",
+      "/Barkha/Barkha4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sita",
+        date: "2025-08-15",
+        rating: 5,
+        comment:
+          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+      },
+      {
+        name: "Sarla",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
+    id: "Hema",
+    name: "Hema",
+    price: 599,
+    shortDescription:
+      "Crafted in pure cotton, this feminine piece features a soft sweetheart neckline and a flattering corset back.",
+    longDescription:
+      "The Hema Kurti is made from breathable pure cotton, designed for comfort and elegance. A soft sweetheart neckline brings a romantic touch, while the corset back adds a modern, form-enhancing detail. Feminine and flattering, Hema is perfect for both everyday grace and special moments.",
+    images: [
+      "/Hema/Hema1.png",
+      "/Hema/Hema2.png",
+      "/Hema/Hema3.png",
+      "/Hema/Hema4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Khushi",
+        date: "2025-08-15",
+        rating: 5,
+        comment:
+          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+      },
+      {
+        name: "Saumya",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
     id: "monika",
     name: "Monika",
     price: 599,
@@ -17,6 +99,7 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
@@ -56,6 +139,8 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "L", inStock: false },
@@ -94,6 +179,7 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
@@ -133,6 +219,8 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "L", inStock: true },
@@ -171,6 +259,7 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
@@ -210,9 +299,11 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
     reviews: [
@@ -287,9 +378,11 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
     reviews: [
@@ -364,9 +457,10 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "XS", inStock: true },
       { label: "XL", inStock: true },
     ],
     reviews: [
@@ -403,6 +497,7 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
@@ -443,9 +538,11 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
     reviews: [
