@@ -26,17 +26,6 @@ const SummaryContent = () => {
   const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState(null);
 
-  useEffect(() => {
-    if (searchParams && searchParams.get("success")) {
-      toast.success("Payment completed");
-      removeAll();
-    }
-
-    if (searchParams && searchParams.get("canceled")) {
-      toast.error("Something went wrong. Please try again.");
-    }
-  }, [searchParams, removeAll]);
-
   // Calculate pricing
   const subtotal = items.reduce((total, item) => {
     return total + Number(item.price) * (item.quantity || 1);

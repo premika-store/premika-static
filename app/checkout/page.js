@@ -237,28 +237,103 @@ export default function Home() {
             const data = await res.json();
             console.log(data);
             if (data.isOk) {
-              // Clear cart and show success
+              // Clear cart and redirect to success page
               cart.removeAll();
               toast.success(
-                "Payment successful! Your order has been confirmed."
+                "Payment successful! Redirecting to confirmation page..."
               );
               setTimeout(() => {
-                router.push("/?success=true");
-              }, 2000);
+                const successUrl = new URL(
+                  "/order-success",
+                  window.location.origin
+                );
+                successUrl.searchParams.set(
+                  "orderId",
+                  response.razorpay_order_id
+                );
+                successUrl.searchParams.set("amount", finalAmount * 100);
+                successUrl.searchParams.set("customerName", customerInfo.name);
+                router.push(successUrl.toString());
+              }, 1500);
             } else {
-              toast.error(
-                "Payment verification failed. Please contact support."
-              );
+              // Redirect to failure page with verification error
+              toast.error("Payment verification failed. Redirecting...");
+              setTimeout(() => {
+                const failureUrl = new URL(
+                  "/order-failure",
+                  window.location.origin
+                );
+                failureUrl.searchParams.set("reason", "verification_failed");
+                failureUrl.searchParams.set(
+                  "orderId",
+                  response.razorpay_order_id
+                );
+                router.push(failureUrl.toString());
+              }, 1500);
             }
           } catch (error) {
             console.error("Payment verification error:", error);
-            toast.error("Payment verification failed. Please contact support.");
+            toast.error("Payment verification failed. Redirecting...");
+            setTimeout(() => {
+              const failureUrl = new URL(
+                "/order-failure",
+                window.location.origin
+              );
+              failureUrl.searchParams.set("reason", "verification_failed");
+              failureUrl.searchParams.set(
+                "orderId",
+                response.razorpay_order_id || "unknown"
+              );
+              router.push(failureUrl.toString());
+            }, 1500);
           }
+        },
+        error: function (response) {
+          setIsLoading(false);
+          console.error("Razorpay payment error:", response);
+
+          // Map Razorpay error codes to user-friendly messages
+          let errorReason = "payment_failed";
+          if (response.error) {
+            const errorCode = response.error.code;
+            const errorDescription = response.error.description;
+
+            if (errorCode === "BAD_REQUEST_ERROR") {
+              errorReason = "card_error";
+            } else if (errorCode === "GATEWAY_ERROR") {
+              errorReason = "gateway_error";
+            } else if (errorCode === "NETWORK_ERROR") {
+              errorReason = "network_error";
+            } else if (errorDescription && errorDescription.includes("bank")) {
+              errorReason = "bank_error";
+            }
+          }
+
+          toast.error("Payment failed. Redirecting...");
+          setTimeout(() => {
+            const failureUrl = new URL(
+              "/order-failure",
+              window.location.origin
+            );
+            failureUrl.searchParams.set("reason", errorReason);
+            if (response.error?.code) {
+              failureUrl.searchParams.set("code", response.error.code);
+            }
+            router.push(failureUrl.toString());
+          }, 1500);
         },
         modal: {
           ondismiss: function () {
             setIsLoading(false);
             toast("Payment cancelled by user", { icon: "⚠️" });
+            setTimeout(() => {
+              const failureUrl = new URL(
+                "/order-failure",
+                window.location.origin
+              );
+              failureUrl.searchParams.set("reason", "payment_cancelled");
+              router.push(failureUrl.toString());
+            }, 1500);
           },
         },
       };
@@ -267,7 +342,12 @@ export default function Home() {
       payment.open();
     } catch (error) {
       console.error("Error creating order:", error);
-      toast.error("Failed to create order. Please try again.");
+      toast.error("Failed to create order. Redirecting...");
+      setTimeout(() => {
+        const failureUrl = new URL("/order-failure", window.location.origin);
+        failureUrl.searchParams.set("reason", "gateway_error");
+        router.push(failureUrl.toString());
+      }, 1500);
     } finally {
       setIsLoading(false);
     }
@@ -307,9 +387,7 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h1 className="text-4xl font-bold text-primary">
-                Checkout
-              </h1>
+              <h1 className="text-4xl font-bold text-primary">Checkout</h1>
             </div>
 
             {/* Progress Steps */}
@@ -1019,7 +1097,7 @@ export default function Home() {
                         </svg>
                       </>
                     )}
-                  </button>                 
+                  </button>
                 </div>
               </div>
             </div>
