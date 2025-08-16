@@ -35,108 +35,112 @@ const OrderSuccessContent = () => {
   return (
     <div className="min-h-screen bg-background">
       <Container>
-        <div className="flex items-center justify-center min-h-screen py-12">
-          <div className="w-full max-w-md">
-            {/* Success Icon */}
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-6">
-                <CheckCircle className="w-12 h-12 text-green-600" />
+        <div className="pt-12">
+          <div className="flex justify-center">
+            <div className="w-full max-w-md">
+              {/* Success Icon */}
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-foreground rounded-full mb-6">
+                  <CheckCircle className="w-12 h-12 text-background" />
+                </div>
+                <h1 className="text-3xl font-bold text-foreground mb-4">
+                  Payment Successful!
+                </h1>
+                <p className="text-tertiary text-lg">
+                  Thank you for your order. Your payment has been processed
+                  successfully.
+                </p>
               </div>
-              <h1 className="text-3xl font-bold text-foreground mb-4">
-                Payment Successful!
-              </h1>
-              <p className="text-tertiary text-lg">
-                Thank you for your order. Your payment has been processed
-                successfully.
-              </p>
-            </div>
 
-            {/* Order Details */}
-            {orderDetails && (
-              <div className="bg-gray-50 rounded-lg p-6 mb-8">
-                <h2 className="text-xl font-semibold text-foreground mb-4">
-                  Order Details
-                </h2>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-tertiary">Order ID:</span>
-                    <span className="font-medium text-foreground">
-                      {orderDetails.orderId}
-                    </span>
-                  </div>
-                  {orderDetails.amount && (
+              {/* Order Details */}
+              {orderDetails && (
+                <div className="bg-muted rounded-lg p-6 mb-8">
+                  <h2 className="text-xl font-semibold text-foreground mb-4">
+                    Order Details
+                  </h2>
+                  <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-tertiary">Amount Paid:</span>
+                      <span className="text-tertiary">Order ID:</span>
                       <span className="font-medium text-foreground">
-                        ₹{(orderDetails.amount / 100).toLocaleString()}
+                        {orderDetails.orderId}
                       </span>
                     </div>
-                  )}
-                  {orderDetails.customerName && (
-                    <div className="flex justify-between">
-                      <span className="text-tertiary">Customer:</span>
-                      <span className="font-medium text-foreground">
-                        {orderDetails.customerName}
-                      </span>
-                    </div>
-                  )}
+                    {orderDetails.amount && (
+                      <div className="flex justify-between">
+                        <span className="text-tertiary">Amount Paid:</span>
+                        <span className="font-medium text-foreground">
+                          ₹{(orderDetails.amount / 100).toLocaleString()}
+                        </span>
+                      </div>
+                    )}
+                    {orderDetails.customerName && (
+                      <div className="flex justify-between">
+                        <span className="text-tertiary">Customer:</span>
+                        <span className="font-medium text-foreground">
+                          {orderDetails.customerName}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* What Next Section - Full Width */}
+        <div className="pb-12">
+          <div className="space-y-6 mb-8 px-4">
+            <h2 className="text-xl font-semibold text-foreground text-center">
+              What&apos;s Next?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex flex-col items-center text-center space-y-3 p-4 bg-[#E0BCA2] rounded-lg">
+                <Mail className="w-8 h-8 text-foreground flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-foreground">
+                    Confirmation Email
+                  </h3>
+                  <p className="text-foreground text-sm">
+                    You&apos;ll receive an order confirmation email shortly with
+                    all the details.
+                  </p>
                 </div>
               </div>
-            )}
 
-            {/* What's Next Section */}
-            <div className="space-y-6 mb-8">
-              <h2 className="text-xl font-semibold text-foreground">
-                What's Next?
-              </h2>
-
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4 p-4 bg-blue-50 rounded-lg">
-                  <Mail className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-blue-800">
-                      Confirmation Email
-                    </h3>
-                    <p className="text-blue-600 text-sm">
-                      You'll receive an order confirmation email shortly with
-                      all the details.
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center text-center space-y-3 p-4 bg-[#E0BCA2] rounded-lg">
+                <MessageSquare className="w-8 h-8 text-foreground flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-foreground">SMS Updates</h3>
+                  <p className="text-foreground text-sm">
+                    You&apos;ll receive SMS updates with tracking information
+                    once your order is shipped.
+                  </p>
                 </div>
+              </div>
 
-                <div className="flex items-start space-x-4 p-4 bg-purple-50 rounded-lg">
-                  <MessageSquare className="w-6 h-6 text-purple-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-purple-800">
-                      SMS Updates
-                    </h3>
-                    <p className="text-purple-600 text-sm">
-                      You'll receive SMS updates with tracking information once
-                      your order is shipped.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4 p-4 bg-green-50 rounded-lg">
-                  <Package className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-green-800">
-                      Order Processing
-                    </h3>
-                    <p className="text-green-600 text-sm">
-                      Your order will be processed within 1-2 business days and
-                      shipped soon after.
-                    </p>
-                  </div>
+              <div className="flex flex-col items-center text-center space-y-3 p-4 bg-[#E0BCA2] rounded-lg">
+                <Package className="w-8 h-8 text-foreground flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-foreground">
+                    Order Processing
+                  </h3>
+                  <p className="text-foreground text-sm">
+                    Your order will be processed within 1-2 business days and
+                    shipped soon after.
+                  </p>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Action Buttons */}
-            <div className="space-y-4">
+          {/* Action Buttons */}
+          <div className="flex justify-center">
+            <div className="w-full max-w-md space-y-4">
               <Link href="/" className="block">
                 <Button
-                  className="w-full bg-primary hover:bg-secondary text-primary-foreground"
+                  className="w-full bg-primary hover:bg-secondary text-background"
                   size="lg"
                 >
                   Continue Shopping
@@ -156,7 +160,7 @@ const OrderSuccessContent = () => {
               <Link href="/" className="block">
                 <Button
                   variant="ghost"
-                  className="w-full text-tertiary hover:text-foreground"
+                  className="w-full text-tertiary hover:text-background hover:bg-primary"
                   size="sm"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
