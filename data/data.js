@@ -2,6 +2,407 @@
 
 const products = [
   {
+    id: "durga",
+    name: "Durga",
+    price: 899,
+    shortDescription:
+      "Durga is a bold black top featuring intricate lace detailing and a dramatic backless design. Long in the front and daring at the back, it’s a perfect blend of elegance and edge.",
+    longDescription:
+      "Durga is a striking black top designed to make a statement. It features delicate lace detailing in the front, adding a touch of softness to its bold silhouette. The front is elongated for a graceful fall, while the back is open and dramatic — completely backless. Perfect for evening outings or special events, it balances mystery and elegance effortlessly. Durga is confidence stitched into fabric, made for those who dress with intention. Pair it with fitted bottoms or a skirt to let the top speak for itself.",
+    images: [
+      "/Durga/Durga1.webp",
+      "/Durga/Durga2.webp",
+      "/Durga/Durga3.webp",
+      "/Durga/Durga4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Simran",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "Absolutely love the dramatic backless design! The lace details in the front balance it so well — elegant yet daring.",
+      },
+      {
+        name: "Avni",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "The fit is great and it looks very stylish for evening outings. Would have loved a bit more lining, but overall stunning!",
+      },
+    ],
+  },
+  {
+    id: "shakti",
+    name: "Shakti",
+    price: 899,
+    shortDescription:
+      "Shakti is a powerful red top with intricate lace detailing and a dramatic backless design. Long in the front and open at the back, it’s made to turn heads with elegance and fire.",
+    longDescription:
+      "Shakti is a bold and beautiful red top that commands attention. Featuring delicate lace detailing in the front, it brings softness to its striking silhouette. The front drapes long and elegantly, while the open back adds a daring edge. Crafted for evenings that call for confidence and grace, it’s both sensual and sophisticated. Perfectly paired with sleek bottoms or statement jewelry, Shakti lets your presence speak. It’s not just a top — it’s power in red.",
+    images: [
+      "/Shakti/Shakti1.webp",
+      "/Shakti/Shakti2.webp",
+      "/Shakti/Shakti3.webp",
+      "/Shakti/Shakti4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Rhea",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The vibrant red is absolutely stunning! The lace adds elegance, and the open back makes it bold and unforgettable.",
+      },
+      {
+        name: "Tanvi",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Really love the design — it’s powerful and chic. The long front drape makes it graceful while the back is super dramatic.",
+      },
+    ],
+  },
+  {
+    id: "harsha",
+    name: "Harsha",
+    price: 599,
+    shortDescription:
+      "Harsha is a pure cotton yellow short kurti with a round neck and delicate noodle straps. It features lively floral prints, making it a cheerful and breezy option for sunny days.",
+    longDescription:
+      "Harsha is a vibrant yellow short kurti crafted from pure cotton, designed for comfort and effortless style. Featuring a round neck and fine noodle straps, it's adorned with playful floral prints that add a touch of freshness. Lightweight and airy, it's ideal for casual summer outings or lounging in style. Pair it with denims or skirts for a fun, relaxed look.",
+    images: [
+      "/Harsha/Harsha1.jpg",
+      "/Harsha/Harsha2.jpg",
+      "/Harsha/Harsha3.jpg",
+      "/Harsha/Harsha4.jpg",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-07-09",
+        rating: 5,
+        comment:
+          "Love the vibrant yellow color and beautiful floral prints! The cotton fabric is so soft and breathable.",
+      },
+      {
+        name: "Khushi",
+        date: "2025-07-09",
+        rating: 4,
+        comment:
+          "The noodle straps are delicate and the round neck is flattering. Perfect for summer days!",
+      },
+    ],
+  },
+  {
+    id: "neha",
+    name: "Neha",
+    price: 599,
+    shortDescription:
+      "Neha is a pure cotton short kurti featuring delicate noodle straps and a round neck. Its white base is adorned with vibrant multicolour floral prints, making it a breezy and stylish pick for summer days",
+    longDescription:
+      "Neha is a pure cotton short kurti with a round neck and delicate noodle straps. Its white base is brightened with multicolour floral prints, giving it a fresh, summery vibe. Lightweight and breezy, it's perfect for casual days out or relaxed indoor wear. Pair it with jeans, shorts, or skirts for an effortlessly chic look.",
+    images: [
+      "/Neha/Neha1.jpg",
+      "/Neha/Neha2.jpg",
+      "/Neha/Neha3.jpg",
+      "/Neha/Neha4.jpg",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Ananya",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The multicolour floral prints on the white base look so fresh and summery! The cotton fabric feels super light and comfy, perfect for hot days.",
+      },
+      {
+        name: "Kritika",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Love the round neck and noodle straps design. It’s stylish yet casual, and the breezy fit makes it great for everyday wear.",
+      },
+    ],
+  },
+  {
+    id: "radha",
+    name: "Radha",
+    price: 599,
+    shortDescription:
+      "Radha is a green pure cotton kurti designed for comfort and style. It features elegant side knots on both sides, adding a modern twist to its traditional charm.",
+    longDescription:
+      "Radha is a pure cotton kurti in a soothing green shade. Soft, breathable, and perfect for everyday wear. Features stylish side knots on both sides. Adds a unique twist to a classic design. Comfortable fit with a touch of elegance. Ideal for casual outings or daily wear. Pairs well with jeans, leggings, or palazzos. Easy to style and gentle on the skin. Simple yet effortlessly chic. Radha brings comfort and style together.",
+    images: [
+      "/Radha/Radha1.jpg",
+      "/Radha/Radha2.jpg",
+      "/Radha/Radha3.jpg",
+      "/Radha/Radha4.jpg",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Ishita",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The soothing green color is beautiful and the side knots add such a unique touch! Very comfortable for daily wear.",
+      },
+      {
+        name: "Meera",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Love the modern twist with side knots on a classic kurti. The cotton fabric is soft and breathable, perfect for summers.",
+      },
+    ],
+  },
+  {
+    id: "sanjh",
+    name: "Sanjh",
+    price: 649,
+    shortDescription:
+      "Sanjh is a chic one-shoulder kurti in a soft butter yellow hue, crafted from pure cotton. Featuring a unique blend of a single sleeve on one side and delicate noodle straps on the other, it effortlessly blends tradition with a modern twist.",
+    longDescription:
+      "Sanjh is a stylish one-shoulder kurti made from pure cotton. It features a full sleeve on one side and noodle straps on the other. The asymmetrical design adds a modern, playful twist. Soft butter yellow brings a calm, sunny charm. Lightweight and breathable for all-day comfort. Perfect for brunches, gatherings, or casual evenings. Pair it with trousers, skirts, or even jeans. Effortlessly blends tradition with contemporary style. A subtle statement for the modern woman. Sanjh is where comfort meets quiet elegance.",
+    images: [
+      "/Sanjh/Sanjh1.webp",
+      "/Sanjh/Sanjh2.webp",
+      "/Sanjh/Sanjh3.webp",
+      "/Sanjh/Sanjh4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Naina",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The one-shoulder design with a sleeve on one side and noodle strap on the other is so unique! The butter yellow shade is soft and elegant.",
+      },
+      {
+        name: "Tanya",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Really like the modern asymmetrical look. The cotton fabric feels light and airy, perfect for day outings.",
+      },
+    ],
+  },
+  {
+    id: "shreya",
+    name: "Shreya",
+    price: 599,
+    shortDescription:
+      "Shreya is a striking red kurti with a sweetheart neckline and corset-style back, crafted from pure cotton. Designed with breathable fabric, it combines elegance and comfort for a confident, modern look.",
+    longDescription:
+      "Shreya is a vibrant red kurti made from pure, breathable cotton. It features a romantic sweetheart neckline and a structured corset back for a flattering fit. Designed to balance comfort with bold style, it’s perfect for festive days or evening outings. The airy fabric keeps you cool while adding a graceful flow to every move. Pair it with flared pants or a sleek skirt for an effortlessly elegant look. Shreya is where timeless charm meets modern edge.",
+    images: [
+      "/Shreya/Shreya1.png",
+      "/Shreya/Shreya2.webp",
+      "/Shreya/Shreya3.webp",
+      "/Shreya/Shreya4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Aditi",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The sweetheart neckline and corset back give such a flattering fit. The red is vibrant and perfect for festive wear.",
+      },
+      {
+        name: "Rhea",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Love the bold yet elegant style. The cotton fabric keeps it comfortable even for long wear.",
+      },
+    ],
+  },
+  
+  {
+    id: "nazakat",
+    name: "Nazakat",
+    price: 649,
+    shortDescription:
+      "Nazakat is a graceful georgette kurti featuring elegant bell sleeves, a corset back, and double lining for added comfort. Flowing and feminine, it’s designed to make a subtle yet striking statement.",
+    longDescription:
+      "Nazakat is a flowy georgette kurti that exudes quiet elegance. It features romantic bell sleeves and a structured corset back for a flattering shape. Designed with double lining, it offers both comfort and coverage without compromising on style. The lightweight georgette drapes beautifully, perfect for special occasions or evening wear. Nazakat moves with grace and ease, capturing attention with every step. A timeless piece that balances softness with strength.",
+    images: [
+      "/Nazakat/Nazakat1.webp",
+      "/Nazakat/Nazakat2.webp",
+      "/Nazakat/Nazakat3.webp",
+      "/Nazakat/Nazakat4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sana",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The bell sleeves are so elegant and the corset back gives a lovely shape. The georgette drapes beautifully.",
+      },
+      {
+        name: "Farah",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Really like the graceful flow of the fabric. The double lining makes it comfortable while keeping the design stylish.",
+      },
+    ],
+  },
+  {
+    id: "masakali",
+    name: "Masakali",
+    price: 649,
+    shortDescription:
+      "Masakali is a breezy blue georgette kurti with delicate white prints, featuring elegant bell sleeves and a flattering corset back. Light, airy, and effortlessly graceful, it’s made for days when you want to feel free yet put-together.",
+    longDescription:
+      "Masakali is a dreamy georgette kurti in a soft blue shade adorned with subtle white prints. It features graceful bell sleeves and a corset back that adds shape without sacrificing comfort. Lightweight and flowy, the georgette fabric drapes beautifully with every movement. Designed for ease and elegance, it's ideal for daytime outings or relaxed festive gatherings. The airy silhouette and thoughtful detailing make it a versatile, go-to piece. Masakali is where comfort meets charm — effortlessly and beautifully.",
+    images: [
+      "/Masakali/Masakali1.webp",
+      "/Masakali/Masakali2.webp",
+      "/Masakali/Masakali3.webp",
+      "/Masakali/Masakali4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The blue shade with white prints is so calming and pretty. The bell sleeves give it such a graceful look.",
+      },
+      {
+        name: "Sneha",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Very airy and flowy, perfect for warm days. The corset back adds structure without losing comfort.",
+      },
+    ],
+  },
+{
+    id: "nishtha",
+    name: "Nishtha",
+    price: 599,
+    shortDescription:
+      "Nishtha is a bold red kurti made from pure cotton, featuring a double V neckline and the same elegant print as Shreya. Designed with breathable fabric, it offers a flattering silhouette with modern charm and all-day comfort.",
+    longDescription:
+      "Nishtha is a striking red kurti crafted from pure, breathable cotton. It shares the same elegant print as Shreya but features a unique double V neckline for a modern edge. The silhouette is flattering yet comfortable, perfect for day-to-night wear. Its airy fabric ensures ease and movement, even in warmer weather. Effortlessly stylish, it pairs beautifully with trousers, skirts, or statement accessories. Nishtha is a blend of bold color, thoughtful design, and everyday elegance.",
+    images: [
+      "/Nishtha/Nishtha1.webp",
+      "/Nishtha/Nishtha2.webp",
+      "/Nishtha/Nishtha3.webp",
+      "/Nishtha/Nishtha4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Shalini",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The double V neckline is such a stylish detail. Love how the red stands out while still feeling very comfortable.",
+      },
+      {
+        name: "Divya",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "The fit is flattering and the breathable cotton is perfect for all-day wear. Great for both casual and festive occasions.",
+      },
+    ],
+  },
+  {
     id: "barkha",
     name: "Barkha",
     price: 649,
@@ -31,14 +432,14 @@ const products = [
         date: "2025-08-15",
         rating: 5,
         comment:
-          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+          "The graceful bell sleeves are so elegant and the corset back gives a perfect fit! Modern yet traditional.",
       },
       {
         name: "Sarla",
         date: "2025-06-07",
         rating: 4,
         comment:
-          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+          "Love the pure cotton fabric and the unique corset back design. Great for both casual and festive wear.",
       },
     ],
   },
@@ -72,14 +473,14 @@ const products = [
         date: "2025-08-15",
         rating: 5,
         comment:
-          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+          "The soft sweetheart neckline is so romantic and feminine! The corset back gives a beautiful silhouette.",
       },
       {
         name: "Saumya",
         date: "2025-06-07",
         rating: 4,
         comment:
-          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+          "Love the cotton fabric and the elegant design. Perfect for both everyday wear and special occasions.",
       },
     ],
   },
@@ -541,7 +942,7 @@ const products = [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
-      { label: "M", inStock: true },
+      { label: "M", inStock: false },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
