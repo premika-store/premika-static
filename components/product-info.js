@@ -175,7 +175,7 @@ export function ProductInfo({
               </button>
             ))}
           </div>
-          <div className="bg-primary border border-gray-300 rounded-lg p-3 text-sm text-background"> 
+          <div className="bg-muted/30 border border-primary rounded-lg p-3 text-sm text-secondary">
             <h4 className="font-medium mb-1">👗 Perfect Fit Guide</h4>
             <p className="text-xs leading-relaxed">
               This feature helps us recommend the ideal length for your kurti
