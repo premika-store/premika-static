@@ -82,7 +82,7 @@ const CartItem = ({ data }) => {
                 {data.selectedHeight && (
                   <div className="flex items-center gap-2">
                     <span className="font-medium">Height:</span>
-                    <span className="px-2 py-1 bg-blue-100 rounded text-xs sm:text-sm font-medium">
+                    <span className="px-2 py-1 bg-gray-100 rounded text-xs sm:text-sm font-medium">
                       {data.selectedHeight === "up-to-5-3" && "Up to 5'3\""}
                       {data.selectedHeight === "5-4-to-5-6" && "5'4\" - 5'6\""}
                       {data.selectedHeight === "5-6-and-above" &&
