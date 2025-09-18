@@ -11,10 +11,7 @@ import { Button } from "@/components/ui/button";
 import CartItem from "./components/cart-item";
 import Summary from "./components/summary";
 
-
 const CartPage = () => {
-
-  
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -111,7 +108,7 @@ const CartPage = () => {
                   <ul className="space-y-3 sm:space-y-4 md:space-y-5">
                     {cart.items.map((item) => (
                       <CartItem
-                        key={`${item.id}-${item.selectedSize}`}
+                        key={`${item.id}-${item.selectedSize}-${item.selectedHeight}`}
                         data={item}
                       />
                     ))}

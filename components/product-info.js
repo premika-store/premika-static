@@ -27,11 +27,15 @@ export function ProductInfo({
   categories,
   tags,
   sizes,
+  heights,
   inStock,
   images,
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
+  const [selectedHeight, setSelectedHeight] = useState(
+    heights?.find((h) => h.default)?.value || heights?.[0]?.value || ""
+  );
   const sizeChartModal = useSizeChartModal();
   const cart = useCart();
 
@@ -43,6 +47,7 @@ export function ProductInfo({
       price,
       quantity,
       selectedSize,
+      selectedHeight,
       inStock,
       images,
     };
@@ -121,6 +126,59 @@ export function ProductInfo({
                 {!size.inStock && " (Out of Stock)"}
               </button>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Height Selection */}
+      {heights && heights.length > 0 && (
+        <div className="space-y-3">
+          <div className="flex items-center gap-2">
+            <h3 className="text-sm font-medium">Height Range:</h3>
+            <div className="group relative">
+              <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </button>
+              <div className="invisible group-hover:visible absolute bottom-6 left-0 bg-gray-900 text-white text-xs rounded py-2 px-3 whitespace-nowrap z-10 shadow-lg">
+                Choose your height range for the best fit
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {heights.map((height) => (
+              <button
+                key={height.value}
+                onClick={() => setSelectedHeight(height.value)}
+                className={`px-4 py-2 text-sm border rounded-md transition-colors ${
+                  selectedHeight === height.value
+                    ? "bg-foreground text-background border-foreground"
+                    : "border-gray-300 hover:border-foreground"
+                }`}
+              >
+                {height.label}
+              </button>
+            ))}
+          </div>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
+            <h4 className="font-medium mb-1">👗 Perfect Fit Guide</h4>
+            <p className="text-xs leading-relaxed">
+              This feature helps us recommend the ideal length for your kurti
+              based on your height. Our garments are designed with different
+              proportions to ensure the perfect fit and style for every body
+              type. Choose your height range for the most flattering fit.
+            </p>
           </div>
         </div>
       )}

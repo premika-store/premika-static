@@ -22,11 +22,9 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${product.name}`,
-    description: `${
-      product.description
-    } - Available at Premika Store for ₹${product.price}. ${
-      product.inStock ? "In Stock" : "Out of Stock"
-    }.`,
+    description: `${product.description} - Available at Premika Store for ₹${
+      product.price
+    }. ${product.inStock ? "In Stock" : "Out of Stock"}.`,
   };
 }
 
@@ -83,6 +81,7 @@ export default function SingleProductPage({ params }) {
             categories={[product.category]}
             tags={[product.category]}
             sizes={product.sizes}
+            heights={product.heights}
             inStock={product.inStock}
             images={product.images}
           />

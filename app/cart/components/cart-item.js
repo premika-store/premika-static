@@ -14,24 +14,34 @@ const CartItem = ({ data }) => {
   const cart = useCart();
 
   const onRemove = () => {
-    cart.removeItem(data.id, data.selectedSize);
+    cart.removeItem(data.id, data.selectedSize, data.selectedHeight);
   };
 
   const onMoveToWishlist = () => {
     // This would typically save to wishlist store
-    cart.removeItem(data.id, data.selectedSize);
+    cart.removeItem(data.id, data.selectedSize, data.selectedHeight);
     toast.success("Item moved to wishlist");
   };
 
   const onIncreaseQuantity = () => {
     const newQuantity = (data.quantity || 1) + 1;
-    cart.updateQuantity(data.id, data.selectedSize, newQuantity);
+    cart.updateQuantity(
+      data.id,
+      data.selectedSize,
+      data.selectedHeight,
+      newQuantity
+    );
   };
 
   const onDecreaseQuantity = () => {
     const currentQuantity = data.quantity || 1;
     if (currentQuantity > 1) {
-      cart.updateQuantity(data.id, data.selectedSize, currentQuantity - 1);
+      cart.updateQuantity(
+        data.id,
+        data.selectedSize,
+        data.selectedHeight,
+        currentQuantity - 1
+      );
     }
   };
 
@@ -66,6 +76,17 @@ const CartItem = ({ data }) => {
                     <span className="font-medium">Size:</span>
                     <span className="px-2 py-1 bg-gray-100 rounded text-xs sm:text-sm font-medium">
                       {data.selectedSize}
+                    </span>
+                  </div>
+                )}
+                {data.selectedHeight && (
+                  <div className="flex items-center gap-2">
+                    <span className="font-medium">Height:</span>
+                    <span className="px-2 py-1 bg-blue-100 rounded text-xs sm:text-sm font-medium">
+                      {data.selectedHeight === "up-to-5-3" && "Up to 5'3\""}
+                      {data.selectedHeight === "5-4-to-5-6" && "5'4\" - 5'6\""}
+                      {data.selectedHeight === "5-6-and-above" &&
+                        "5'6\" and above"}
                     </span>
                   </div>
                 )}

@@ -60,6 +60,7 @@ export async function POST(req) {
             price: item.price,
             quantity: item.quantity || 1,
             selectedSize: item.selectedSize,
+            selectedHeight: item.selectedHeight,
             category: item.category,
             description: item.description,
           })) || []

@@ -8,10 +8,12 @@ const useCart = create(
       items: [],
       addItem: (data) => {
         const currentItems = get().items;
-        // Find existing item with same ID and size
+        // Find existing item with same ID, size, and height
         const existingItemIndex = currentItems.findIndex(
           (item) =>
-            item.id === data.id && item.selectedSize === data.selectedSize
+            item.id === data.id &&
+            item.selectedSize === data.selectedSize &&
+            item.selectedHeight === data.selectedHeight
         );
 
         if (existingItemIndex !== -1) {
@@ -28,7 +30,7 @@ const useCart = create(
 
           set({ items: updatedItems });
           toast.success(
-            `Updated quantity to ${newQuantity} for ${data.name} (Size: ${data.selectedSize})`
+            `Updated quantity to ${newQuantity} for ${data.name} (Size: ${data.selectedSize}, Height: ${data.selectedHeight})`
           );
         } else {
           // Add new item with quantity
@@ -38,31 +40,43 @@ const useCart = create(
           };
           set({ items: [...currentItems, newItem] });
           toast.success(
-            `${data.name} (Size: ${data.selectedSize}) added to cart`
+            `${data.name} (Size: ${data.selectedSize}, Height: ${data.selectedHeight}) added to cart`
           );
         }
       },
-      removeItem: (id, selectedSize) => {
+      removeItem: (id, selectedSize, selectedHeight) => {
         const currentItems = get().items;
         const updatedItems = currentItems.filter(
-          (item) => !(item.id === id && item.selectedSize === selectedSize)
+          (item) =>
+            !(
+              item.id === id &&
+              item.selectedSize === selectedSize &&
+              item.selectedHeight === selectedHeight
+            )
         );
         set({ items: updatedItems });
         toast.success("Item removed from cart");
       },
-      updateQuantity: (id, selectedSize, newQuantity) => {
+      updateQuantity: (id, selectedSize, selectedHeight, newQuantity) => {
         const currentItems = get().items;
         if (newQuantity <= 0) {
           // Remove item if quantity is 0 or less
           const updatedItems = currentItems.filter(
-            (item) => !(item.id === id && item.selectedSize === selectedSize)
+            (item) =>
+              !(
+                item.id === id &&
+                item.selectedSize === selectedSize &&
+                item.selectedHeight === selectedHeight
+              )
           );
           set({ items: updatedItems });
           toast.success("Item removed from cart");
         } else {
           // Update quantity
           const updatedItems = currentItems.map((item) =>
-            item.id === id && item.selectedSize === selectedSize
+            item.id === id &&
+            item.selectedSize === selectedSize &&
+            item.selectedHeight === selectedHeight
               ? { ...item, quantity: newQuantity }
               : item
           );

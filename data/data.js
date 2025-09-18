@@ -24,6 +24,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Simran",
@@ -63,6 +68,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -104,6 +114,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Priya",
@@ -143,6 +158,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -184,6 +204,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Ishita",
@@ -223,6 +248,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -264,6 +294,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Aditi",
@@ -281,7 +316,7 @@ const products = [
       },
     ],
   },
-  
+
   {
     id: "nazakat",
     name: "Nazakat",
@@ -304,6 +339,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -345,6 +385,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Priya",
@@ -362,7 +407,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "nishtha",
     name: "Nishtha",
     price: 599,
@@ -384,6 +429,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -426,6 +476,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Sita",
@@ -467,6 +522,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Khushi",
@@ -506,6 +566,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -547,6 +612,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Priya",
@@ -586,6 +656,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -627,6 +702,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Isha",
@@ -666,6 +746,11 @@ const products = [
       { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -707,6 +792,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Sonal",
@@ -745,6 +835,11 @@ const products = [
       { label: "M", inStock: false },
       { label: "L", inStock: false },
       { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -786,6 +881,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Sneha",
@@ -825,6 +925,11 @@ const products = [
       { label: "L", inStock: false },
       { label: "XL", inStock: false },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Pooja",
@@ -863,6 +968,11 @@ const products = [
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -905,6 +1015,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Shreya",
@@ -942,9 +1057,14 @@ const products = [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
-      { label: "M", inStock: false },
+      { label: "M", inStock: true },
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
@@ -985,6 +1105,11 @@ const products = [
       { label: "L", inStock: false },
       { label: "XL", inStock: false },
     ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "Manisha",
@@ -1024,6 +1149,11 @@ const products = [
       { label: "M", inStock: false },
       { label: "L", inStock: false },
       { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
     ],
     reviews: [
       {
