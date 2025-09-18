@@ -203,6 +203,7 @@ export default function Home() {
               price: item.price,
               quantity: item.quantity || 1,
               selectedSize: item.selectedSize,
+              selectedHeight: item.selectedHeight,
               category: item.category,
               description: item.description,
             }))
@@ -933,7 +934,12 @@ export default function Home() {
                               <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
                                 Size: {item.selectedSize}
                               </span>
-                              <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-tertiary/10 text-tertiary">
+                              {item.selectedHeight && (
+                                <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-primary">
+                                  Height: {item.selectedHeight}
+                                </span>
+                              )}
+                              <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-tertiary/10 text-primary">
                                 Qty: {item.quantity || 1}
                               </span>
                             </div>
