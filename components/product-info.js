@@ -101,7 +101,11 @@ export function ProductInfo({
       </div>
 
       <div className="prose prose-sm text-tertiary text-justify">
-        <p>{description}</p>
+        {description.split("<br>").map((line, index) => (
+          <p key={index} className={index > 0 ? "mt-2" : ""}>
+            {line}
+          </p>
+        ))}
       </div>
 
       {/* Size Selection */}

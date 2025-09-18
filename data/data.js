@@ -2,6 +2,97 @@
 
 const products = [
   {
+    id: "ambika",
+    name: "Ambika",
+    price: 1599,
+    shortDescription:
+      "Ambika is a powerful black set featuring our signature backless lace top Durga paired with a full-flared, double-lined skirt. Fierce, fluid, and unapologetically bold.<br>Size Chart For Skirt :<br>Size : S ---- Waist : 26 - 29<br>Size : M --- Waist : 29 - 32<br>Size : L ---- Waist : 33 - 36",
+    longDescription:
+      "Ambika is a statement in all black a striking set that pairs the dramatic lace-back kurti with a voluminous, double-lined skirt. The top flows long in the front and daringly open at the back, while the skirt brings movement and depth with its full flare. Together, they create a look that’s equal parts elegance and attitude — made for presence, not subtlety.",
+    images: [
+      "/Ambika/Ambika1.png",
+      "/Ambika/Ambika2.png",
+      "/Ambika/Ambika3.png",
+      "/Ambika/Ambika4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: false },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "pooja",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+      },
+      {
+        name: "Bhavna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
+    id: "gauri",
+    name: "Gauri",
+    price: 899,
+    shortDescription:
+      "Gauri is a striking purple top with delicate lace detailing and a bold backless cut. Flowing in the front and fearless at the back, it brings together elegance and edge with effortless ease.",
+    longDescription:
+      "Gauri is a bold purple kurti that blends classic charm with a daring twist. Featuring soft lace details and a striking backless design, it’s graceful in the front and fearless at the back. Whether styled up or down, Gauri is made for moments when you want to stand out — without saying a word",
+    images: [
+      "/Gauri/Gauri1.png",
+      "/Gauri/Gauri2.jpg",
+      "/Gauri/Gauri3.png",
+      "/Gauri/Gauri4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "pooja",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+      },
+      {
+        name: "Bhavna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
     id: "durga",
     name: "Durga",
     price: 899,
