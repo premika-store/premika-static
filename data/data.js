@@ -2,6 +2,46 @@
 
 const products = [
   {
+    id: "diya",
+    name: "Diya",
+    price: 1999,
+    shortDescription: "Diya is a graceful Farsi salwar suit with delicate noodle straps and a corset back. It blends ethnic elegance with a modern silhouette, perfect for festive occasions. Effortlessly stylish and uniquely feminine.",
+    longDescription:
+      "Diya is a striking Farsi salwar suit that blends tradition with a modern silhouette. Featuring delicate noodle straps and a structured corset back, it offers a flattering, feminine fit. The soft, flowing fabric contrasts beautifully with the tailored bodice, creating a look that's both graceful and bold. Perfect for festive events or weddings, Diya stands out with its effortless charm. Style it with statement jewelry for a look that's elegant yet contemporary.",
+    images: [
+      "/Diya/Diya1.png",
+      "/Diya/Diya2.png",
+      "/Diya/Diya3.png",
+      "/Diya/Diya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+     { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Divya",
+        date: "2025-10-14",
+        rating: 5,
+        comment:
+          "Perfect for festive occasions — lightweight, flattering, and very chic. Will buy again in another color.",
+      },
+      {
+        name: "Ishu",
+        date: "2025-10-16",
+        rating: 4,
+        comment:
+          "Diya made me feel so confident — the corset back gives great shape without being restrictive.",
+      },
+    ],
+  },
+  {
     id: "ambika",
     name: "Ambika",
     price: 1599,
@@ -513,7 +553,7 @@ const products = [
       "/Nishtha/Nishtha4.webp",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
