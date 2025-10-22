@@ -6,7 +6,7 @@ const products = [
     name: "Ambika",
     price: 1599,
     shortDescription:
-      "Ambika is a powerful black set featuring our signature backless lace top Durga paired with a full-flared, double-lined skirt. Fierce, fluid, and unapologetically bold.<br>Size Chart For Skirt :<br>Size : S ---- Waist : 26 - 29<br>Size : M --- Waist : 29 - 32<br>Size : L ---- Waist : 33 - 36",
+      "Ambika is a powerful black set featuring our signature backless lace top Durga paired with a full-flared, double-lined skirt. Fierce, fluid, and unapologetically bold.<br>View Size Chart For Skirt for the perfect fit.",
     longDescription:
       "Ambika is a statement in all black a striking set that pairs the dramatic lace-back kurti with a voluminous, double-lined skirt. The top flows long in the front and daringly open at the back, while the skirt brings movement and depth with its full flare. Together, they create a look that’s equal parts elegance and attitude — made for presence, not subtlety.",
     images: [
@@ -31,18 +31,25 @@ const products = [
     ],
     reviews: [
       {
-        name: "pooja",
-        date: "2025-05-14",
+        name: "Priya",
+        date: "2025-08-15",
         rating: 5,
         comment:
-          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+          "Absolutely stunning set! The backless lace top is so dramatic and the full-flared skirt flows beautifully. Perfect for special occasions.",
       },
       {
-        name: "Bhavna",
-        date: "2025-06-07",
+        name: "Kavya",
+        date: "2025-09-19",
+        rating: 5,
+        comment:
+          "The all-black look is so powerful and elegant. Love how the double-lined skirt moves when I walk. Definitely a statement piece!",
+      },
+      {
+        name: "Anita",
+        date: "2025-09-19",
         rating: 4,
         comment:
-          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+          "The lace detailing on the top is exquisite and the skirt has such a lovely volume. Great quality fabric and fits perfectly.",
       },
     ],
   },
@@ -77,18 +84,25 @@ const products = [
     ],
     reviews: [
       {
-        name: "pooja",
-        date: "2025-05-14",
+        name: "Shreya",
+        date: "2025-09-19",
         rating: 5,
         comment:
-          "The asymmetrical cut is so stylish and modern. The rust color is very unique.",
+          "The purple color is absolutely gorgeous! The lace detailing adds such elegance and the backless design is so bold and beautiful.",
       },
       {
-        name: "Bhavna",
-        date: "2025-06-07",
+        name: "Rhea",
+        date: "2025-09-19",
+        rating: 5,
+        comment:
+          "Love how it flows in the front and is fearless at the back. Perfect blend of classic charm with a daring twist. Gets compliments every time!",
+      },
+      {
+        name: "Meera",
+        date: "2025-09-12",
         rating: 4,
         comment:
-          "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+          "The soft lace details are beautiful and the striking backless design makes it perfect for special occasions. Very well made!",
       },
     ],
   },

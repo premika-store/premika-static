@@ -36,8 +36,13 @@ export function ProductInfo({
   const [selectedHeight, setSelectedHeight] = useState(
     heights?.find((h) => h.default)?.value || heights?.[0]?.value || ""
   );
+  const [showSkirtSizeChart, setShowSkirtSizeChart] = useState(false);
   const sizeChartModal = useSizeChartModal();
   const cart = useCart();
+
+  // Check if this product has skirt size chart information
+  const hasSkirtSizeChart =
+    description && description.includes("Size Chart For Skirt");
 
   const handleAddToCart = () => {
     const item = {
@@ -242,6 +247,27 @@ export function ProductInfo({
           <Ruler className="w-4 h-4" />
           <span>Size chart</span>
         </button>
+        {hasSkirtSizeChart && (
+          <button
+            className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors"
+            onClick={() => setShowSkirtSizeChart(true)}
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01m3 0h.01M9 11h.01m3 0h.01m0-7h.01M9 7h.01M24 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>Skirt Size Chart</span>
+          </button>
+        )}
       </div>
 
       <div className="border-t pt-6 space-y-2 border-foreground">
@@ -288,6 +314,80 @@ export function ProductInfo({
           </div>
         </div>
       </div>
+
+      {/* Skirt Size Chart Modal */}
+      {showSkirtSizeChart && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 relative">
+            <button
+              onClick={() => setShowSkirtSizeChart(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Skirt Size Chart
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                Waist measurements in inches
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size S</span>
+                <span className="text-gray-700">
+                  Waist: 26&quot; - 29&quot;
+                </span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size M</span>
+                <span className="text-gray-700">
+                  Waist: 29&quot; - 32&quot;
+                </span>
+              </div>
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size L</span>
+                <span className="text-gray-700">
+                  Waist: 33&quot; - 36&quot;
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-muted-foreground/30 rounded-lg">
+              <h4 className="font-medium text-secondary mb-2">
+                📏 How to Measure
+              </h4>
+              <p className="text-sm text-secondary">
+                Measure around the narrowest part of your waist, typically just
+                above your hip bones. Keep the measuring tape snug but not
+                tight.
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowSkirtSizeChart(false)}
+              className="mt-4 w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
