@@ -2,6 +2,87 @@
 
 const products = [
   {
+    id: "badal",
+    name: "Badal",
+    price: 769,
+    shortDescription:
+      "Add a touch of elegance to your wardrobe with the Badal kurti, crafted from luxurious printed velvet. Its stunning blend of white, blue, and orange hues creates a vibrant yet graceful look perfect for festive or casual occasions.",
+    longDescription:
+      "Embrace effortless sophistication with our Badal kurti, designed in soft and sumptuous velvet fabric. The kurti features an exquisite white base adorned with blue and orange prints, bringing a refreshing fusion of tradition and modern style. Perfect for festive gatherings, evening outings, or special occasions, Badal offers comfort, style, and a hint of regal charm making it a standout piece",
+    images: [
+      "/Badal/Badal1.png",
+      "/Badal/Badal2.png",
+      "/Badal/Badal3.png",
+      "/Badal/Badal4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "pooja",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The color combo is chef’s kiss! Looks even better in person 💙🧡",
+      },
+      {
+        name: "Bhavna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Wore it for a family gathering and got endless compliments!",
+      },
+    ],
+  },
+  {
+    id: "mishti",
+    name: "Mishti",
+    price: 769,
+    shortDescription:
+      "Add a pop of colour to your wardrobe with Mishti, a premium black velvet kurti featuring vibrant multicolour prints. Chic, comfortable, and effortlessly elegant perfect for any festive or evening occasion.",
+    longDescription:
+      "Redefine festive elegance with Mishti, crafted in rich premium black velvet and adorned with striking multicolour prints. The contrast of bold hues against the deep black fabric brings a perfect blend of sophistication and vibrance. Designed for comfort and style, Mishti is ideal for celebrations, evening gatherings, or anytime you want to make a subtle yet stunning statement.",
+    images: [
+      "/Mishti/Mishti1.png",
+      "/Mishti/Mishti2.png",
+      "/Mishti/Mishti3.png",
+      "/Mishti/Mishti4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "pooja",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The black velvet feels so luxe, and those colourful prints just pop! Totally obsessed.",
+      },
+      {
+        name: "Bhavna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Such a classy piece - bold, comfy, and effortlessly elegant.",
+      },
+    ],
+  },
+  {
     id: "nazakat",
     name: "Nazakat",
     price: 649,
