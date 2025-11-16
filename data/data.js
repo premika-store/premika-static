@@ -2,10 +2,193 @@
 
 const products = [
   {
+    id: "nazakat",
+    name: "Nazakat",
+    price: 649,
+    shortDescription:
+      "Nazakat is a graceful georgette kurti featuring elegant bell sleeves, a corset back, and double lining for added comfort. Flowing and feminine, it’s designed to make a subtle yet striking statement.",
+    longDescription:
+      "Nazakat is a flowy georgette kurti that exudes quiet elegance. It features romantic bell sleeves and a structured corset back for a flattering shape. Designed with double lining, it offers both comfort and coverage without compromising on style. The lightweight georgette drapes beautifully, perfect for special occasions or evening wear. Nazakat moves with grace and ease, capturing attention with every step. A timeless piece that balances softness with strength.",
+    images: [
+      "/Nazakat/Nazakat1.webp",
+      "/Nazakat/Nazakat2.webp",
+      "/Nazakat/Nazakat3.webp",
+      "/Nazakat/Nazakat4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Sana",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The bell sleeves are so elegant and the corset back gives a lovely shape. The georgette drapes beautifully.",
+      },
+      {
+        name: "Farah",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Really like the graceful flow of the fabric. The double lining makes it comfortable while keeping the design stylish.",
+      },
+    ],
+  },
+  {
+    id: "masakali",
+    name: "Masakali",
+    price: 649,
+    shortDescription:
+      "Masakali is a breezy blue georgette kurti with delicate white prints, featuring elegant bell sleeves and a flattering corset back. Light, airy, and effortlessly graceful, it’s made for days when you want to feel free yet put-together.",
+    longDescription:
+      "Masakali is a dreamy georgette kurti in a soft blue shade adorned with subtle white prints. It features graceful bell sleeves and a corset back that adds shape without sacrificing comfort. Lightweight and flowy, the georgette fabric drapes beautifully with every movement. Designed for ease and elegance, it's ideal for daytime outings or relaxed festive gatherings. The airy silhouette and thoughtful detailing make it a versatile, go-to piece. Masakali is where comfort meets charm — effortlessly and beautifully.",
+    images: [
+      "/Masakali/Masakali1.webp",
+      "/Masakali/Masakali2.webp",
+      "/Masakali/Masakali3.webp",
+      "/Masakali/Masakali4.webp",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The blue shade with white prints is so calming and pretty. The bell sleeves give it such a graceful look.",
+      },
+      {
+        name: "Sneha",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Very airy and flowy, perfect for warm days. The corset back adds structure without losing comfort.",
+      },
+    ],
+  },
+  {
+    id: "neelam",
+    name: "Neelam",
+    price: 599,
+    shortDescription:
+      "100% cotton, short kurti with full sleeves and back tie up for stretched waist",
+    longDescription:
+      "Sleek, stylish, and subtly bold—the Neelam Kurti features a crisp square neckline, elegant full sleeves, and a tie-up back that perfectly snatches the waist. A modern essential for everyday chic.",
+    images: [
+      "/Neelam/Neelam1.png",
+      "/Neelam/Neelam2.png",
+      "/Neelam/Neelam3.png",
+      "/Neelam/Neelam4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Shreya",
+        date: "2025-05-10",
+        rating: 5,
+        comment:
+          "The square neckline and full sleeves look so chic. The tie-up back gives a perfect fit.",
+      },
+      {
+        name: "Garima",
+        date: "2025-06-20",
+        rating: 4,
+        comment:
+          "Love the cotton fabric and the modern design. Great for everyday wear!",
+      },
+    ],
+  },
+  {
+    id: "piku",
+    name: "Piku",
+    price: 599,
+    shortDescription:
+      "short kurti with full sleeves and back tie up for stretched waist",
+    longDescription:
+      "Timeless and fresh, the Piku Kurti in classic white features a sharp square neckline, graceful full sleeves, and a chic tie-up back to accentuate your waist. Perfect for effortless elegance any day.",
+    images: [
+      "/Piku/Piku1.jpg",
+      "/Piku/Piku2.png",
+      "/Piku/Piku3.png",
+      "/Piku/Piku4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Vandana",
+        date: "2025-05-16",
+        rating: 5,
+        comment:
+          "The white color is so classic and the square neckline is very flattering. Love the tie-up back!",
+      },
+      {
+        name: "Deepa",
+        date: "2025-06-11",
+        rating: 4,
+        comment:
+          "Full sleeves make it perfect for any season. The fit is amazing and very comfortable.",
+      },
+    ],
+  },
+  {
     id: "diya",
     name: "Diya",
     price: 1999,
-    shortDescription: "Diya is a graceful Farsi salwar suit with delicate noodle straps and a corset back. It blends ethnic elegance with a modern silhouette, perfect for festive occasions. Effortlessly stylish and uniquely feminine.",
+    shortDescription:
+      "Diya is a graceful Farsi salwar suit with delicate noodle straps and a corset back. It blends ethnic elegance with a modern silhouette, perfect for festive occasions. Effortlessly stylish and uniquely feminine.",
     longDescription:
       "Diya is a striking Farsi salwar suit that blends tradition with a modern silhouette. Featuring delicate noodle straps and a structured corset back, it offers a flattering, feminine fit. The soft, flowing fabric contrasts beautifully with the tailored bodice, creating a look that's both graceful and bold. Perfect for festive events or weddings, Diya stands out with its effortless charm. Style it with statement jewelry for a look that's elegant yet contemporary.",
     images: [
@@ -17,7 +200,7 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
-     { label: "XXS", inStock: true },
+      { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
@@ -462,96 +645,6 @@ const products = [
     ],
   },
 
-  {
-    id: "nazakat",
-    name: "Nazakat",
-    price: 649,
-    shortDescription:
-      "Nazakat is a graceful georgette kurti featuring elegant bell sleeves, a corset back, and double lining for added comfort. Flowing and feminine, it’s designed to make a subtle yet striking statement.",
-    longDescription:
-      "Nazakat is a flowy georgette kurti that exudes quiet elegance. It features romantic bell sleeves and a structured corset back for a flattering shape. Designed with double lining, it offers both comfort and coverage without compromising on style. The lightweight georgette drapes beautifully, perfect for special occasions or evening wear. Nazakat moves with grace and ease, capturing attention with every step. A timeless piece that balances softness with strength.",
-    images: [
-      "/Nazakat/Nazakat1.webp",
-      "/Nazakat/Nazakat2.webp",
-      "/Nazakat/Nazakat3.webp",
-      "/Nazakat/Nazakat4.webp",
-    ],
-    category: "clothing",
-    inStock: true,
-    sizes: [
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Sana",
-        date: "2025-09-09",
-        rating: 5,
-        comment:
-          "The bell sleeves are so elegant and the corset back gives a lovely shape. The georgette drapes beautifully.",
-      },
-      {
-        name: "Farah",
-        date: "2025-09-10",
-        rating: 4,
-        comment:
-          "Really like the graceful flow of the fabric. The double lining makes it comfortable while keeping the design stylish.",
-      },
-    ],
-  },
-  {
-    id: "masakali",
-    name: "Masakali",
-    price: 649,
-    shortDescription:
-      "Masakali is a breezy blue georgette kurti with delicate white prints, featuring elegant bell sleeves and a flattering corset back. Light, airy, and effortlessly graceful, it’s made for days when you want to feel free yet put-together.",
-    longDescription:
-      "Masakali is a dreamy georgette kurti in a soft blue shade adorned with subtle white prints. It features graceful bell sleeves and a corset back that adds shape without sacrificing comfort. Lightweight and flowy, the georgette fabric drapes beautifully with every movement. Designed for ease and elegance, it's ideal for daytime outings or relaxed festive gatherings. The airy silhouette and thoughtful detailing make it a versatile, go-to piece. Masakali is where comfort meets charm — effortlessly and beautifully.",
-    images: [
-      "/Masakali/Masakali1.webp",
-      "/Masakali/Masakali2.webp",
-      "/Masakali/Masakali3.webp",
-      "/Masakali/Masakali4.webp",
-    ],
-    category: "clothing",
-    inStock: true,
-    sizes: [
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Priya",
-        date: "2025-09-09",
-        rating: 5,
-        comment:
-          "The blue shade with white prints is so calming and pretty. The bell sleeves give it such a graceful look.",
-      },
-      {
-        name: "Sneha",
-        date: "2025-09-10",
-        rating: 4,
-        comment:
-          "Very airy and flowy, perfect for warm days. The corset back adds structure without losing comfort.",
-      },
-    ],
-  },
   {
     id: "nishtha",
     name: "Nishtha",
@@ -1133,98 +1226,6 @@ const products = [
         rating: 4,
         comment:
           "Perfect for both day and night looks. The fit is great and the style is timeless.",
-      },
-    ],
-  },
-  {
-    id: "neelam",
-    name: "Neelam",
-    price: 599,
-    shortDescription:
-      "100% cotton, short kurti with full sleeves and back tie up for stretched waist",
-    longDescription:
-      "Sleek, stylish, and subtly bold—the Neelam Kurti features a crisp square neckline, elegant full sleeves, and a tie-up back that perfectly snatches the waist. A modern essential for everyday chic.",
-    images: [
-      "/Neelam/Neelam1.png",
-      "/Neelam/Neelam2.png",
-      "/Neelam/Neelam3.png",
-      "/Neelam/Neelam4.png",
-    ],
-    category: "clothing",
-    inStock: true,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Shreya",
-        date: "2025-05-10",
-        rating: 5,
-        comment:
-          "The square neckline and full sleeves look so chic. The tie-up back gives a perfect fit.",
-      },
-      {
-        name: "Garima",
-        date: "2025-06-20",
-        rating: 4,
-        comment:
-          "Love the cotton fabric and the modern design. Great for everyday wear!",
-      },
-    ],
-  },
-  {
-    id: "piku",
-    name: "Piku",
-    price: 599,
-    shortDescription:
-      "short kurti with full sleeves and back tie up for stretched waist",
-    longDescription:
-      "Timeless and fresh, the Piku Kurti in classic white features a sharp square neckline, graceful full sleeves, and a chic tie-up back to accentuate your waist. Perfect for effortless elegance any day.",
-    images: [
-      "/Piku/Piku1.jpg",
-      "/Piku/Piku2.png",
-      "/Piku/Piku3.png",
-      "/Piku/Piku4.png",
-    ],
-    category: "clothing",
-    inStock: true,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Vandana",
-        date: "2025-05-16",
-        rating: 5,
-        comment:
-          "The white color is so classic and the square neckline is very flattering. Love the tie-up back!",
-      },
-      {
-        name: "Deepa",
-        date: "2025-06-11",
-        rating: 4,
-        comment:
-          "Full sleeves make it perfect for any season. The fit is amazing and very comfortable.",
       },
     ],
   },
