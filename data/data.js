@@ -10,10 +10,10 @@ const products = [
     longDescription:
       "Embrace effortless sophistication with our Badal kurti, designed in soft and sumptuous velvet fabric. The kurti features an exquisite white base adorned with blue and orange prints, bringing a refreshing fusion of tradition and modern style. Perfect for festive gatherings, evening outings, or special occasions, Badal offers comfort, style, and a hint of regal charm making it a standout piece",
     images: [
-      "/Badal/Badal1.png",
-      "/Badal/Badal2.png",
-      "/Badal/Badal3.png",
-      "/Badal/Badal4.png",
+      "/Badal/Badal1.PNG",
+      "/Badal/Badal2.PNG",
+      "/Badal/Badal3.PNG",
+      "/Badal/Badal4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -27,14 +27,14 @@ const products = [
     ],
     reviews: [
       {
-        name: "pooja",
+        name: "Anjali",
         date: "2025-05-14",
         rating: 5,
         comment:
           "The color combo is chef’s kiss! Looks even better in person 💙🧡",
       },
       {
-        name: "Bhavna",
+        name: "Kajal",
         date: "2025-06-07",
         rating: 4,
         comment: "Wore it for a family gathering and got endless compliments!",
@@ -50,7 +50,7 @@ const products = [
     longDescription:
       "Redefine festive elegance with Mishti, crafted in rich premium black velvet and adorned with striking multicolour prints. The contrast of bold hues against the deep black fabric brings a perfect blend of sophistication and vibrance. Designed for comfort and style, Mishti is ideal for celebrations, evening gatherings, or anytime you want to make a subtle yet stunning statement.",
     images: [
-      "/Mishti/Mishti1.png",
+      "/Mishti/Mishti1.PNG",
       "/Mishti/Mishti2.png",
       "/Mishti/Mishti3.png",
       "/Mishti/Mishti4.png",
@@ -67,14 +67,14 @@ const products = [
     ],
     reviews: [
       {
-        name: "pooja",
+        name: "Aakriti",
         date: "2025-05-14",
         rating: 5,
         comment:
           "The black velvet feels so luxe, and those colourful prints just pop! Totally obsessed.",
       },
       {
-        name: "Bhavna",
+        name: "Sanjana",
         date: "2025-06-07",
         rating: 4,
         comment:
