@@ -2,6 +2,170 @@
 
 const products = [
   {
+    id: "Mayuri",
+    name: "Mayuri",
+    price: 599,
+    shortDescription:
+      "Mayuri is a pure cotton short-top kurti featuring a chic zig-zag style slit at the bottom a perfect blend of trend and desi aesthetics.",
+    longDescription:
+      "Introducing Mayuri, a pure cotton short-top kurti designed for women who love modern fashion with a traditional touch. Its standout feature—a zig-zag styled bottom slit—adds movement, charm, and a contemporary edge to the classic kurti look. Soft, breathable, and stylish, Mayuri is the perfect mix of trend and desi aesthetics, ideal for everyday wear, outings, or casual festive styling.",
+    images: [
+      "/Mayuri/Mayuri1.PNG",
+      "/Mayuri/Mayuri2.PNG",
+      "/Mayuri/Mayuri3.PNG",
+      "/Mayuri/Mayuri4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Alisha",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The zig-zag slit at the bottom is such a cute detail! Mayuri feels super comfortable and looks stylish without trying too hard.",
+      },
+      {
+        name: "Riya",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          ". Loved the mix of trendy and traditional. The cotton fabric is soft and perfect for everyday wear. The zig-zag design really stands out.",
+      },
+    ],
+  },
+  {
+    id: "Srishti",
+    name: "Srishti ",
+    price: 699,
+    shortDescription:
+      "Srishti is a pure cotton 2-in-1 kurti with a noodle-strap inner, detachable jacket, and a stylish corset back",
+    longDescription:
+      "Meet Srishti , the kurti that blends comfort with contemporary charm. Made from breathable pure cotton, this unique 2-in-1 design includes a chic noodle-strap inner kurti complemented by a detachable jacket, allowing you to switch between looks effortlessly. The beautifully crafted corset back adds a touch of sophistication and ensures a flattering fit. Whether you're dressing up for a festive event or keeping it casual, Srishti adapts to your style with ease and grace",
+    images: [
+      "/Srishti/Srishti1.PNG",
+      "/Srishti/Srishti2.PNG",
+      "/Srishti/Srishti3.PNG",
+      "/Srishti/Srishti4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Kavya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Loved the versatility! The detachable jacket gives two completely different looks, and the cotton fabric feels so soft. The corset back is a beautiful touch",
+      },
+      {
+        name: "Sneha",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          ". Srishti is perfect for both casual and festive wear. The fit is amazing, and the noodle-strap kurti is super comfortable. Totally worth it!",
+      },
+    ],
+  },
+  {
+    id: "ayushi",
+    name: "Ayushi",
+    price: 699,
+    shortDescription:
+      "Ayushi is a pure cotton 2-in-1 kurti with a noodle-strap inner, detachable jacket, and a stylish corset back",
+    longDescription:
+      "Meet Ayushi, the kurti that blends comfort with contemporary charm. Made from breathable pure cotton, this unique 2-in-1 design includes a chic noodle-strap inner kurti complemented by a detachable jacket, allowing you to switch between looks effortlessly. The beautifully crafted corset back adds a touch of sophistication and ensures a flattering fit. Whether you're dressing up for a festive event or keeping it casual, Ayushi adapts to your style with ease and grace",
+    images: [
+      "/Ayushi/Ayushi1.PNG",
+      "/Ayushi/Ayushi2.PNG",
+      "/Ayushi/Ayushi3.PNG",
+      "/Ayushi/Ayushi4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Ananya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Loved the versatility! The detachable jacket gives two completely different looks, and the cotton fabric feels so soft. The corset back is a beautiful touch",
+      },
+      {
+        name: "Ishita",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          ". Ayushi is perfect for both casual and festive wear. The fit is amazing, and the noodle-strap kurti is super comfortable. Totally worth it!",
+      },
+    ],
+  },
+  {
+    id: "khushi",
+    name: "Khushi",
+    price: 769,
+    shortDescription:
+      "Khushi is a premium velvet winter kurti featuring adorable collar detailing for a warm and stylish look..",
+    longDescription:
+      "Introducing Khushi, a premium velvet kurti crafted to keep you warm while elevating your winter style. Soft, luxurious, and beautifully tailored, Khushi features charming collar detailing that adds a playful yet elegant touch. Perfect for chilly days, festive gatherings, or cozy outings, this kurti blends comfort, sophistication, and seasonal charm in the most effortless way",
+    images: [
+      "/Khushi/Khushi1.PNG",
+      "/Khushi/Khushi2.PNG",
+      "/Khushi/Khushi3.PNG",
+      "/Khushi/Khushi4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Tanya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Khushi is perfect for winter! The velvet feels so soft and luxurious, and the cute collar makes it look effortlessly stylish.",
+      },
+      {
+        name: "Nisha",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          ". A must-have for winter! The fit is great, the fabric is premium, and the collar detailing adds the perfect charm. Totally worth it",
+      },
+    ],
+  },
+  {
     id: "badal",
     name: "Badal",
     price: 769,
@@ -16,7 +180,7 @@ const products = [
       "/Badal/Badal4.PNG",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
@@ -31,7 +195,7 @@ const products = [
         date: "2025-05-14",
         rating: 5,
         comment:
-          "The color combo is chef’s kiss! Looks even better in person 💙🧡",
+          "The color combo is chef's kiss! Looks even better in person 💙🧡",
       },
       {
         name: "Kajal",
@@ -56,7 +220,7 @@ const products = [
       "/Mishti/Mishti4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
@@ -77,8 +241,7 @@ const products = [
         name: "Sanjana",
         date: "2025-06-07",
         rating: 4,
-        comment:
-          "Such a classy piece - bold, comfy, and effortlessly elegant.",
+        comment: "Such a classy piece - bold, comfy, and effortlessly elegant.",
       },
     ],
   },
