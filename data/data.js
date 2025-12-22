@@ -2,18 +2,18 @@
 
 const products = [
   {
-    id: "Mayuri",
-    name: "Mayuri",
-    price: 599,
+    id: "Chahat",
+    name: "Chahat",
+    price: 699,
     shortDescription:
-      "Mayuri is a pure cotton short-top kurti featuring a chic zig-zag style slit at the bottom a perfect blend of trend and desi aesthetics.",
+      "Chahat is a mint green pure cotton 2-in-1 kurti featuring a noodle-strap inner, a detachable jacket, and a graceful corset back that creates a fresh, modern, and elegant look.",
     longDescription:
-      "Introducing Mayuri, a pure cotton short-top kurti designed for women who love modern fashion with a traditional touch. Its standout feature—a zig-zag styled bottom slit—adds movement, charm, and a contemporary edge to the classic kurti look. Soft, breathable, and stylish, Mayuri is the perfect mix of trend and desi aesthetics, ideal for everyday wear, outings, or casual festive styling.",
+      "Introducing Chahat, a mint green pure cotton 2-in-1 kurti designed to blend comfort with contemporary style. It comes with a chic noodle-strap inner and a detachable jacket, allowing you to switch looks effortlessly. The corset-style back adds a flattering fit and a touch of sophistication. Light, breathable, and versatile, Chahat is perfect for casual outings, festive gatherings, and relaxed day-to-evening wear.",
     images: [
-      "/Mayuri/Mayuri1.PNG",
-      "/Mayuri/Mayuri2.PNG",
-      "/Mayuri/Mayuri3.PNG",
-      "/Mayuri/Mayuri4.PNG",
+      "/Chahat/Chahat1.png",
+      "/Chahat/Chahat4.png",
+      "/Chahat/Chahat2.png",
+      "/Chahat/Chahat3.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -27,21 +27,62 @@ const products = [
     ],
     reviews: [
       {
-        name: "Alisha",
+        name: "pooja",
         date: "2025-05-14",
         rating: 5,
         comment:
-          "The zig-zag slit at the bottom is such a cute detail! Mayuri feels super comfortable and looks stylish without trying too hard.",
+          "Loved the versatility! The detachable jacket gives two completely different looks, and the cotton fabric feels so soft. The corset back is a beautiful touch",
       },
       {
-        name: "Riya",
+        name: "Aditi",
         date: "2025-06-07",
         rating: 4,
         comment:
-          ". Loved the mix of trendy and traditional. The cotton fabric is soft and perfect for everyday wear. The zig-zag design really stands out.",
+          ". The mint green color is so refreshing and elegant. I love how versatile Chahat is—you can style it with or without the jacket. The corset back gives a really nice fit",
       },
     ],
   },
+  // {
+  //   id: "Mayuri",
+  //   name: "Mayuri",
+  //   price: 599,
+  //   shortDescription:
+  //     "Mayuri is a pure cotton short-top kurti featuring a chic zig-zag style slit at the bottom a perfect blend of trend and desi aesthetics.",
+  //   longDescription:
+  //     "Introducing Mayuri, a pure cotton short-top kurti designed for women who love modern fashion with a traditional touch. Its standout feature—a zig-zag styled bottom slit—adds movement, charm, and a contemporary edge to the classic kurti look. Soft, breathable, and stylish, Mayuri is the perfect mix of trend and desi aesthetics, ideal for everyday wear, outings, or casual festive styling.",
+  //   images: [
+  //     "/Mayuri/Mayuri1.PNG",
+  //     "/Mayuri/Mayuri2.png",
+  //     "/Mayuri/Mayuri3.png",
+  //     "/Mayuri/Mayuri4.PNG",
+  //   ],
+  //   category: "clothing",
+  //   inStock: true,
+  //   sizes: [
+  //     { label: "XXS", inStock: true },
+  //     { label: "XS", inStock: true },
+  //     { label: "S", inStock: true },
+  //     { label: "M", inStock: true },
+  //     { label: "L", inStock: true },
+  //     { label: "XL", inStock: true },
+  //   ],
+  //   reviews: [
+  //     {
+  //       name: "Alisha",
+  //       date: "2025-05-14",
+  //       rating: 5,
+  //       comment:
+  //         "The zig-zag slit at the bottom is such a cute detail! Mayuri feels super comfortable and looks stylish without trying too hard.",
+  //     },
+  //     {
+  //       name: "Riya",
+  //       date: "2025-06-07",
+  //       rating: 4,
+  //       comment:
+  //         ". Loved the mix of trendy and traditional. The cotton fabric is soft and perfect for everyday wear. The zig-zag design really stands out.",
+  //     },
+  //   ],
+  // },
   {
     id: "Srishti",
     name: "Srishti ",
@@ -54,7 +95,7 @@ const products = [
       "/Srishti/Srishti1.PNG",
       "/Srishti/Srishti2.PNG",
       "/Srishti/Srishti3.PNG",
-      "/Srishti/Srishti4.PNG",
+      "/Srishti/Srishti4.png",
     ],
     category: "clothing",
     inStock: true,
@@ -133,10 +174,10 @@ const products = [
     longDescription:
       "Introducing Khushi, a premium velvet kurti crafted to keep you warm while elevating your winter style. Soft, luxurious, and beautifully tailored, Khushi features charming collar detailing that adds a playful yet elegant touch. Perfect for chilly days, festive gatherings, or cozy outings, this kurti blends comfort, sophistication, and seasonal charm in the most effortless way",
     images: [
-      "/Khushi/Khushi1.PNG",
-      "/Khushi/Khushi2.PNG",
-      "/Khushi/Khushi3.PNG",
-      "/Khushi/Khushi4.PNG",
+      "/Khushi/Khushi1.png",
+      "/Khushi/Khushi2.png",
+      "/Khushi/Khushi3.png",
+      "/Khushi/Khushi4.png",
     ],
     category: "clothing",
     inStock: true,
