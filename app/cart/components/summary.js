@@ -28,7 +28,20 @@ const SummaryContent = () => {
 
   // Calculate pricing
   const subtotal = items.reduce((total, item) => {
-    return total + Number(item.price) * (item.quantity || 1);
+    // Use original price if item is on sale to show proper discount calculation
+    const itemPrice = item.isOnSale
+      ? item.originalPrice || item.price
+      : item.price;
+    return total + Number(itemPrice) * (item.quantity || 1);
+  }, 0);
+
+  // Calculate sale discount
+  const saleDiscount = items.reduce((total, item) => {
+    if (item.isOnSale && item.originalPrice) {
+      const discount = (item.originalPrice - item.price) * (item.quantity || 1);
+      return total + discount;
+    }
+    return total;
   }, 0);
 
   // Free shipping for all orders
@@ -39,10 +52,10 @@ const SummaryContent = () => {
   const couponDiscount = appliedCoupon
     ? (subtotal * appliedCoupon.discount) / 100
     : 0;
-  const totalDiscount = couponDiscount;
+  const totalDiscount = saleDiscount + couponDiscount;
 
-  // Final total (no tax added, no shipping charges)
-  const totalPrice = subtotal - totalDiscount;
+  // Final total (no tax added, no shipping charges) - rounded down to floor
+  const totalPrice = Math.floor(subtotal - totalDiscount);
 
   const onCheckout = async () => {
     try {
@@ -116,6 +129,21 @@ const SummaryContent = () => {
             </span>
             <Currency value={subtotal} />
           </div>
+
+          {/* Sale Discount */}
+          {saleDiscount > 0 && (
+            <div className="flex justify-between text-red-600 text-sm sm:text-base">
+              <div className="flex items-center space-x-1">
+                <Percent size={12} className="sm:w-4 sm:h-4 flex-shrink-0" />
+                <span className="text-xs sm:text-sm">
+                  Sale Discount (10% OFF)
+                </span>
+              </div>
+              <span className="text-sm sm:text-base">
+                -<Currency value={saleDiscount} />
+              </span>
+            </div>
+          )}
 
           {/* Applied Coupon */}
           {appliedCoupon && (
@@ -219,6 +247,14 @@ const SummaryContent = () => {
             💰 Your Savings
           </h3>
           <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
+            {saleDiscount > 0 && (
+              <div className="flex justify-between text-green-800">
+                <span>Sale Discount (10% OFF):</span>
+                <span>
+                  -<Currency value={saleDiscount} />
+                </span>
+              </div>
+            )}
             {appliedCoupon && (
               <div className="flex justify-between text-green-800">
                 <span>Coupon {appliedCoupon.code}:</span>

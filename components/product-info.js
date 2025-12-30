@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import useSizeChartModal from "@/hooks/use-size-chart-modal";
 import useCart from "@/hooks/use-cart";
 import Link from "next/link";
+import { getDiscountedPrice } from "@/data/data";
 
 export function ProductInfo({
   id,
@@ -45,11 +46,15 @@ export function ProductInfo({
     description && description.includes("Size Chart For Skirt");
 
   const handleAddToCart = () => {
+    const pricing = getDiscountedPrice({ id, price });
     const item = {
       id: id, // Use the actual product ID
       title,
       name: title, // Add name field for cart display
-      price,
+      price: pricing.discountedPrice, // Use discounted price for cart
+      originalPrice: pricing.originalPrice, // Keep original price for reference
+      isOnSale: pricing.isOnSale,
+      discount: pricing.discount,
       quantity,
       selectedSize,
       selectedHeight,
@@ -89,8 +94,37 @@ export function ProductInfo({
           </span>
         </div>
 
-        <div className="text-2xl font-bold text-foreground mb-6">
-          Rs. {price.toFixed(2)}
+        <div className="mb-6">
+          {(() => {
+            const pricing = getDiscountedPrice({ id, price });
+            return pricing.isOnSale ? (
+              <div className="space-y-2 sm:space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
+                  <span className="text-xl sm:text-2xl font-bold text-foreground">
+                    Rs. {pricing.discountedPrice.toFixed(2)}
+                  </span>
+                  <span className="text-base sm:text-lg text-gray-500 line-through">
+                    Rs. {pricing.originalPrice.toFixed(2)}
+                  </span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                  <span className="bg-red-500 text-white text-sm px-3 py-1 rounded font-medium w-fit">
+                    {pricing.discount}% OFF
+                  </span>
+                  <span className="text-sm text-green-600 font-medium">
+                    Save Rs.{" "}
+                    {(pricing.originalPrice - pricing.discountedPrice).toFixed(
+                      2
+                    )}
+                  </span>
+                </div>
+              </div>
+            ) : (
+              <div className="text-xl sm:text-2xl font-bold text-foreground">
+                Rs. {price.toFixed(2)}
+              </div>
+            );
+          })()}
         </div>
 
         {/* Stock Status */}

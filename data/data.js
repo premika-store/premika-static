@@ -1,5 +1,30 @@
 // data/products.js
 
+// Products excluded from 10% discount sale
+const EXCLUDED_FROM_SALE = ["Chahat", "Srishti", "ayushi"];
+
+// Calculate discounted price (10% off for eligible products)
+export const getDiscountedPrice = (product) => {
+  if (EXCLUDED_FROM_SALE.includes(product.id)) {
+    return {
+      originalPrice: product.price,
+      discountedPrice: product.price,
+      isOnSale: false,
+      discount: 0,
+    };
+  }
+
+  const discount = 10; // 10% discount
+  const discountedPrice = product.price * (1 - discount / 100);
+
+  return {
+    originalPrice: product.price,
+    discountedPrice: discountedPrice,
+    isOnSale: true,
+    discount: discount,
+  };
+};
+
 const products = [
   {
     id: "Chahat",
@@ -104,8 +129,8 @@ const products = [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {
@@ -483,14 +508,14 @@ const products = [
       "/Diya/Diya4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {
@@ -635,7 +660,7 @@ const products = [
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "XL", inStock: false },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
@@ -1484,13 +1509,13 @@ const products = [
       "/Jaya/Jaya4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "XL", inStock: false },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },

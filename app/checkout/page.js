@@ -113,7 +113,7 @@ export default function Home() {
 
   // No shipping cost - free shipping for all orders
   const shippingCost = 0;
-  const finalAmount = totalAmount;
+  const finalAmount = Math.floor(totalAmount);
 
   useEffect(() => {
     // Check if cart is empty and redirect
@@ -909,11 +909,11 @@ export default function Home() {
                       {cart.items.map((item, index) => (
                         <div
                           key={item.id}
-                          className="flex items-center space-x-4 p-4 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-border mb-4"
+                          className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-border mb-4"
                         >
-                          <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20">
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 flex-shrink-0">
                             <svg
-                              className="w-8 h-8 text-primary"
+                              className="w-6 h-6 sm:w-8 sm:h-8 text-primary"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -926,30 +926,30 @@ export default function Home() {
                               ></path>
                             </svg>
                           </div>
-                          <div className="flex-1">
-                            <h4 className="font-semibold text-foreground text-lg">
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-foreground text-base sm:text-lg truncate">
                               {item.name}
                             </h4>
-                            <div className="flex items-center space-x-4 mt-1">
-                              <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                            <div className="flex flex-wrap items-center gap-2 mt-1">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
                                 Size: {item.selectedSize}
                               </span>
                               {item.selectedHeight && (
-                                <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-primary">
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-primary">
                                   Height: {item.selectedHeight}
                                 </span>
                               )}
-                              <span className="inline-flex items-center  py-0.5 rounded-full text-xs font-medium bg-tertiary/10 text-primary">
+                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-tertiary/10 text-primary">
                                 Qty: {item.quantity || 1}
                               </span>
                             </div>
                           </div>
-                          <div className="text-right">
-                            <p className="text-2xl font-bold text-foreground">
-                              ₹{item.price * (item.quantity || 1)}
+                          <div className="text-right flex-shrink-0">
+                            <p className="text-base sm:text-xl lg:text-2xl font-bold text-foreground break-words">
+                              ₹{(item.price * (item.quantity || 1)).toFixed(2)}
                             </p>
-                            <p className="text-sm text-muted-foreground">
-                              ₹{item.price} each
+                            <p className="text-xs sm:text-sm text-muted-foreground break-words">
+                              ₹{item.price.toFixed(2)} each
                             </p>
                           </div>
                         </div>
@@ -959,31 +959,35 @@ export default function Home() {
                     <div className="border-t border-border pt-6 mt-6">
                       <div className="space-y-3">
                         <div className="flex justify-between items-center text-muted-foreground">
-                          <span className="font-medium">Subtotal:</span>
-                          <span className="text-xl font-semibold text-foreground">
-                            ₹{totalAmount}
+                          <span className="font-medium text-sm sm:text-base">
+                            Subtotal:
+                          </span>
+                          <span className="text-base sm:text-lg lg:text-xl font-semibold text-foreground break-words">
+                            ₹{totalAmount.toFixed(2)}
                           </span>
                         </div>
 
                         <div className="flex justify-between items-center text-muted-foreground">
                           <div className="flex items-center space-x-2">
-                            <span className="font-medium">Shipping:</span>
+                            <span className="font-medium text-sm sm:text-base">
+                              Shipping:
+                            </span>
                             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">
                               Always FREE
                             </span>
                           </div>
-                          <span className="text-xl font-semibold text-foreground">
+                          <span className="text-base sm:text-lg lg:text-xl font-semibold text-foreground">
                             FREE
                           </span>
                         </div>
 
                         <div className="border-t border-border pt-4">
                           <div className="flex justify-between items-center">
-                            <span className="text-xl font-bold text-foreground">
+                            <span className="text-base sm:text-lg lg:text-xl font-bold text-foreground">
                               Total:
                             </span>
-                            <span className="text-3xl font-bold text-foreground">
-                              ₹{finalAmount}
+                            <span className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-foreground break-words">
+                              ₹{finalAmount.toFixed(2)}
                             </span>
                           </div>
                         </div>

@@ -40,9 +40,9 @@ export function RelatedProducts({ products }) {
                 />
 
                 {/* Sale Badge */}
-                {product.onSale && (
-                  <div className="absolute bottom-3 left-3 bg-secondary text-white text-xs font-semibold px-2 py-1 rounded">
-                    SALE
+                {product.isOnSale && (
+                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-red-500 text-white text-xs font-semibold px-1.5 py-0.5 sm:px-2 sm:py-1 rounded shadow-md">
+                    {product.discount}% OFF
                   </div>
                 )}
 
@@ -60,16 +60,20 @@ export function RelatedProducts({ products }) {
                 </div>
 
                 {/* Price */}
-                <div className="flex items-center gap-2">
-                  <span className="text-lg font-bold text-foreground">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                  <span className="text-sm sm:text-base lg:text-lg font-bold text-foreground">
                     Rs. {product.price.toFixed(2)}
                   </span>
-                  {product.originalPrice &&
-                    product.originalPrice > product.price && (
-                      <span className="text-sm text-primary line-through">
+                  {product.isOnSale && product.originalPrice && (
+                    <>
+                      <span className="text-xs sm:text-sm text-gray-500 line-through">
                         Rs. {product.originalPrice.toFixed(2)}
                       </span>
-                    )}
+                      <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded font-medium w-fit">
+                        {product.discount}% OFF
+                      </span>
+                    </>
+                  )}
                 </div>
 
                 {/* Add to Cart Button */}

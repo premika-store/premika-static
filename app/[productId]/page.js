@@ -6,7 +6,7 @@ import { ProductInfo } from "@/components/product-info";
 import { ProductTabs } from "@/components/product-tabs";
 import { RelatedProducts } from "@/components/related-products";
 import { Breadcrumb } from "@/components/breadcrumb";
-import products from "@/data/data";
+import products, { getDiscountedPrice } from "@/data/data";
 import { notFound } from "next/navigation";
 
 // Generate basic metadata for each product page
@@ -20,11 +20,20 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const pricing = getDiscountedPrice(product);
+  const priceDisplay = pricing.isOnSale
+    ? `₹${pricing.discountedPrice.toFixed(2)} (${
+        pricing.discount
+      }% OFF - was ₹${pricing.originalPrice.toFixed(2)})`
+    : `₹${product.price.toFixed(2)}`;
+
   return {
     title: `${product.name}`,
-    description: `${product.description} - Available at Premika Store for ₹${
-      product.price
-    }. ${product.inStock ? "In Stock" : "Out of Stock"}.`,
+    description: `${
+      product.description
+    } - Available at Premika Store for ${priceDisplay}. ${
+      product.inStock ? "In Stock" : "Out of Stock"
+    }.`,
   };
 }
 
@@ -41,17 +50,23 @@ export default function SingleProductPage({ params }) {
   const relatedProducts = products
     .filter((p) => p.id !== product.id && p.category === product.category)
     .slice(0, 4)
-    .map((p) => ({
-      id: p.id,
-      name: p.name,
-      category: p.category,
-      price: p.price,
-      rating: 5, // Default rating since not in data
-      images: p.images, // Pass the full images array
-      image: p.images[0],
-      imageHeight: 250,
-      imageWidth: 250,
-    }));
+    .map((p) => {
+      const pricing = getDiscountedPrice(p);
+      return {
+        id: p.id,
+        name: p.name,
+        category: p.category,
+        price: pricing.discountedPrice,
+        originalPrice: pricing.originalPrice,
+        isOnSale: pricing.isOnSale,
+        discount: pricing.discount,
+        rating: 5, // Default rating since not in data
+        images: p.images, // Pass the full images array
+        image: p.images[0],
+        imageHeight: 250,
+        imageWidth: 250,
+      };
+    });
 
   const breadcrumbItems = [
     { label: "Home", href: "/" },

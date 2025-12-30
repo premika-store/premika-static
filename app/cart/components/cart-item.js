@@ -62,8 +62,8 @@ const CartItem = ({ data }) => {
 
         {/* Product Details */}
         <div className="flex-1 space-y-3 sm:space-y-4">
-          <div className="flex items-start justify-between gap-2">
-            <div className="flex-1 space-y-2 sm:space-y-3">
+          <div className="flex items-start justify-between gap-2 min-w-0">
+            <div className="flex-1 space-y-2 sm:space-y-3 min-w-0">
               <Link href={`/${data.id}`} className="hover:underline">
                 <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-foreground leading-tight line-clamp-2">
                   {data.name}
@@ -123,52 +123,61 @@ const CartItem = ({ data }) => {
             </div>
 
             {/* Action Buttons - Mobile: Side of info, Desktop: Bottom */}
-            <div className="flex flex-col sm:hidden items-center gap-2">
-              {/* <Button
-                variant="ghost"
-                size="sm"
-                onClick={onMoveToWishlist}
-                className="flex items-center text-foreground hover:text-background hover:bg-primary p-2 min-w-[40px] justify-center"
-              >
-                <Heart size={14} />
-              </Button> */}
-
+            <div className="flex flex-col sm:hidden items-center gap-1 flex-shrink-0">
               <IconButton
                 onClick={onRemove}
-                icon={<X size={14} />}
-                className="bg-background hover:bg-red-50 hover:text-red-600 text-foreground p-2 transition-colors"
+                icon={<X size={12} />}
+                className="bg-background hover:bg-red-50 hover:text-red-600 text-foreground p-1.5 transition-colors"
               />
             </div>
           </div>
 
-          <div className="flex flex-col space-y-3 sm:flex-row sm:items-center sm:justify-between sm:space-y-0">
-            <div className="order-2 sm:order-1">
-              <div className="flex items-baseline gap-2 sm:block">
-                <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-secondary">
+          <div className="flex flex-col space-y-3 sm:flex-row sm:items-start sm:justify-between sm:space-y-0 min-w-0">
+            <div className="order-2 sm:order-1 flex-1 min-w-0">
+              <div className="space-y-1 sm:space-y-2">
+                <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-secondary break-words">
                   <Currency value={data.price * (data.quantity || 1)} />
                 </div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-500 font-normal">
-                  <Currency value={data.price} /> each
+                {data.isOnSale && data.originalPrice && (
+                  <div className="text-xs sm:text-sm text-gray-500 line-through break-words">
+                    <Currency
+                      value={data.originalPrice * (data.quantity || 1)}
+                    />
+                  </div>
+                )}
+                <div className="text-xs sm:text-sm text-gray-500 font-normal">
+                  {data.isOnSale ? (
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2">
+                      <div className="flex items-center gap-1">
+                        <Currency
+                          value={data.price}
+                          className="text-green-600 font-medium text-xs sm:text-sm"
+                        />
+                        <span className="text-xs sm:text-sm">each</span>
+                      </div>
+                      <span className="text-xs bg-red-500 text-white px-1.5 py-0.5 rounded font-medium flex-shrink-0">
+                        {data.discount}% OFF
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="break-words">
+                      <Currency
+                        value={data.price}
+                        className="text-xs sm:text-sm"
+                      />{" "}
+                      each
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
 
             {/* Action Buttons - Desktop: Bottom right */}
-            <div className="order-1 sm:order-2 hidden sm:flex items-center justify-end gap-2 sm:gap-3">
-              {/* <Button
-                variant="ghost"
-                size="sm"
-                onClick={onMoveToWishlist}
-                className="flex items-center gap-1 xs:gap-2 text-foreground hover:text-background hover:bg-primary text-xs sm:text-sm md:text-base p-2 xs:px-3 xs:py-2 justify-center min-w-[40px] xs:min-w-fit xs:bg-background xs:border xs:border-background"
-              >
-                <Heart size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                <span className="hidden xs:inline">Save for Later</span>
-              </Button> */}
-
+            <div className="order-1 sm:order-2 hidden sm:flex items-center justify-end gap-2 flex-shrink-0">
               <IconButton
                 onClick={onRemove}
-                icon={<X size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />}
-                className="bg-background hover:bg-red-50 hover:text-red-600 text-foreground p-2 sm:p-3 transition-colors"
+                icon={<X size={12} className="sm:w-3 sm:h-3 md:w-4 md:h-4" />}
+                className="bg-background hover:bg-red-50 hover:text-red-600 text-foreground p-2 transition-colors"
               />
             </div>
           </div>
