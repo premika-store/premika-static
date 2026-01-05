@@ -335,7 +335,7 @@ const products = [
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {
@@ -1501,8 +1501,8 @@ const products = [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
