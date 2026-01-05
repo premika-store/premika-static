@@ -292,7 +292,7 @@ const products = [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
-      { label: "M", inStock: true },
+      { label: "M", inStock: false },
       { label: "L", inStock: false },
       { label: "XL", inStock: false },
     ],
