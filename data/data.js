@@ -1,7 +1,7 @@
 // data/products.js
 
 // Products excluded from 10% discount sale
-const EXCLUDED_FROM_SALE = ["Chahat", "Srishti", "ayushi"];
+const EXCLUDED_FROM_SALE = ["Chahat", "Srishti", "ayushi", "aashi", "simran", "Mehak", "Sneha"];
 
 // Calculate discounted price (10% off for eligible products)
 export const getDiscountedPrice = (product) => {
@@ -26,6 +26,170 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+  {
+    id: "aashi",
+    name: "Aashi",
+    price: 699,
+    shortDescription:
+      ". Aashi Kurti is a stylish pure cotton kurti crafted using two fabrics—printed and plain. Designed in classic red and black tones, it features side tie-up detailing and a comfortable double-lined finish.",
+    longDescription:
+      "The Aashi Kurti brings together contrast and comfort in a timeless design. Made from breathable pure cotton, it combines a printed fabric with a plain red and black base for a striking yet elegant look. The kurti is double-lined for added comfort and structure, while the side tie-up detailing adds a touch of charm and adjustability. Perfect for everyday wear, casual outings, or relaxed festive occasions.",
+    images: [
+      "/Aashi/Aashi1.PNG",
+      "/Aashi/Aashi2.PNG",
+      "/Aashi/Aashi3.PNG",
+      "/Aashi/Aashi4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Ananya",
+        date: "2025-04-18",
+        rating: 5,
+        comment:
+          "Love the mix of printed and plain fabric! The red and black combo is so striking. The side tie-up detail is such a nice touch.",
+      },
+      {
+        name: "Priya",
+        date: "2025-05-22",
+        rating: 4,
+        comment:
+          "Great quality cotton and the double lining makes it feel premium. The contrast design is really eye-catching.",
+      },
+    ],
+  },
+  {
+    id: "simran",
+    name: "Simran",
+    price: 699,
+    shortDescription:
+      "Simaran Kurti is a stylish 2-in-1 outfit featuring a removable jacket and a noodle-strap kurti. Crafted from pure cotton, it is double-lined for comfort and finished with a corset back. Available in a rich brown shade.",
+    longDescription:
+      "The Simaran Kurti is a versatile 2-in-1 ensemble designed for effortless styling. It includes a removable jacket paired with a noodle-strap kurti, allowing you to wear it together or separately. Made from pure cotton, the kurti is double-lined for enhanced comfort and structure. A corset back adds a flattering fit, while the elegant brown color gives it a timeless, earthy charm—perfect for both casual and festive occasions",
+    images: [
+      "/Simran/Simran1.png",
+      "/Simran/Simran2.png",
+      "/Simran/Simran3.png",
+      "/Simran/Simran4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Kavya",
+        date: "2025-03-28",
+        rating: 5,
+        comment:
+          "Absolutely love the 2-in-1 design! The removable jacket makes it so versatile. Can wear it for casual days or dress it up.",
+      },
+      {
+        name: "Meera",
+        date: "2025-04-15",
+        rating: 4,
+        comment:
+          "The brown color is gorgeous and the corset back gives such a flattering fit. The cotton fabric is really comfortable.",
+      },
+    ],
+  },
+  {
+    id: "Mehak",
+    name: "Mehak",
+    price: 699,
+    shortDescription:
+      "Mehak Kurti is a chic, padded, backless kurti crafted from pure cotton. Designed in a rich brown color, it offers comfort with a bold, elegant silhouette.",
+    longDescription:
+      "The Mehak Kurti blends comfort with contemporary style. Made from breathable pure cotton, this brown kurti features built-in padding for support and a stylish backless design that adds a modern edge. Lightweight and comfortable, it is perfect for warm days, casual gatherings, or festive styling when paired with statement accessories.",
+    images: [
+      "/Mehak/Mehak1.PNG",
+      "/Mehak/Mehak2.PNG",
+      "/Mehak/Mehak3.PNG",
+      "/Mehak/Mehak4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Riya",
+        date: "2025-05-10",
+        rating: 5,
+        comment:
+          "The backless design is so chic! Perfect for summer days. The padding gives good support and the brown color is beautiful.",
+      },
+      {
+        name: "Shreya",
+        date: "2025-06-02",
+        rating: 4,
+        comment:
+          "Love the modern edge this kurti has. The cotton is breathable and the fit is really comfortable. Great for casual outings.",
+      },
+    ],
+  },
+  {
+    id: "Sneha",
+    name: "Sneha",
+    price: 749,
+    shortDescription:
+      "Sneha Kurti is a padded, backless kurti crafted from pure cotton. Designed in a soft butter yellow shade, it offers a fresh, elegant look with all-day comfort..",
+    longDescription:
+      "The Sneha Kurti is a perfect blend of simplicity and charm. Made from breathable pure cotton, it features built-in padding for ease and a stylish backless design that adds a modern touch. The soothing butter yellow color brings a light, graceful appeal, making it ideal for summer days, casual outings, and daytime festive occasions.",
+    images: [
+      "/Sneha/Sneha1.png",
+      "/Sneha/Sneha2.png",
+      "/Sneha/Sneha3.png",
+      "/Sneha/Sneha4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Isha",
+        date: "2025-04-25",
+        rating: 5,
+        comment:
+          "The butter yellow color is absolutely gorgeous! So soft and refreshing. The backless design with padding is perfect.",
+      },
+      {
+        name: "Tara",
+        date: "2025-05-18",
+        rating: 4,
+        comment:
+          "Perfect for hot weather! The cotton is so airy and breathable. The color brightens up any day. Love the modern cut.",
+      },
+    ],
+  },
   {
     id: "Chahat",
     name: "Chahat",
