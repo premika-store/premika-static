@@ -13,7 +13,7 @@ const SizeChartModal = () => {
       <div className="w-full max-w-4xl bg-primary mx-4 sm:mx-auto">
         <div className="px-4 sm:px-6 py-4">
           <h2 className="text-xl sm:text-2xl font-bold text-secondary pb-2">
-            Size Chart
+            Size Chart - Female
           </h2>
 
           <div className="mb-6 sm:mb-8">
@@ -118,6 +118,164 @@ const SizeChartModal = () => {
                     </td>
                     <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
                       42
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XXL
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      40
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      35-36
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      44
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-secondary text-center mt-2 opacity-75">
+              All measurements are in inches
+            </p>
+          </div>
+
+          <h2 className="text-xl sm:text-2xl font-bold text-secondary pb-2">
+            Size Chart - Male
+          </h2>
+
+          <div className="mb-6 sm:mb-8">
+            <div className="bg-tertiary rounded-lg shadow-sm">
+              <table className="w-full border-collapse border border-background rounded-lg overflow-hidden">
+                <thead>
+                  <tr className="text-secondary">
+                    <th className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      Size
+                    </th>
+                    <th className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      Chest
+                    </th>
+                    <th className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      Length
+                    </th>
+                    <th className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      Sleeve
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XXXS
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      38
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XXS
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      40
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XS
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      42
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      S
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      44
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      M
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      46
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      L
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      48
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      8
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XL
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      50
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      9
+                    </td>
+                  </tr>
+                  <tr className="text-background">
+                    <td className="border border-background px-1 sm:px-2 py-2 font-medium text-center text-xs sm:text-sm">
+                      XXL
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      52
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      28
+                    </td>
+                    <td className="border border-background px-1 sm:px-2 py-2 text-center text-xs sm:text-sm">
+                      10
                     </td>
                   </tr>
                 </tbody>
