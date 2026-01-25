@@ -1100,7 +1100,7 @@ const products = [
       { label: "S", inStock: false },
       { label: "M", inStock: false },
       { label: "L", inStock: false },
-      { label: "XL", inStock: true },
+      { label: "XL", inStock: false },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
