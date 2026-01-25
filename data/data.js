@@ -185,47 +185,6 @@ const products = [
     ],
   },
   {
-    id: "Mehak",
-    name: "Mehak",
-    price: 749,
-    shortDescription:
-      "Mehak Kurti is a chic, padded, backless kurti crafted from pure cotton. Designed in a rich brown color, it offers comfort with a bold, elegant silhouette.",
-    longDescription:
-      "The Mehak Kurti blends comfort with contemporary style. Made from breathable pure cotton, this brown kurti features built-in padding for support and a stylish backless design that adds a modern edge. Lightweight and comfortable, it is perfect for warm days, casual gatherings, or festive styling when paired with statement accessories.",
-    images: [
-      "/Mehak/Mehak1.PNG",
-      "/Mehak/Mehak2.PNG",
-      "/Mehak/Mehak3.PNG",
-      "/Mehak/Mehak4.PNG",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    reviews: [
-      {
-        name: "Riya",
-        date: "2025-05-10",
-        rating: 5,
-        comment:
-          "The backless design is so chic! Perfect for summer days. The padding gives good support and the brown color is beautiful.",
-      },
-      {
-        name: "Shreya",
-        date: "2025-06-02",
-        rating: 4,
-        comment:
-          "Love the modern edge this kurti has. The cotton is breathable and the fit is really comfortable. Great for casual outings.",
-      },
-    ],
-  },
-  {
     id: "Sneha",
     name: "Sneha",
     price: 749,
@@ -472,86 +431,6 @@ const products = [
     ],
   },
   {
-    id: "badal",
-    name: "Badal",
-    price: 769,
-    shortDescription:
-      "Add a touch of elegance to your wardrobe with the Badal kurti, crafted from luxurious printed velvet. Its stunning blend of white, blue, and orange hues creates a vibrant yet graceful look perfect for festive or casual occasions.",
-    longDescription:
-      "Embrace effortless sophistication with our Badal kurti, designed in soft and sumptuous velvet fabric. The kurti features an exquisite white base adorned with blue and orange prints, bringing a refreshing fusion of tradition and modern style. Perfect for festive gatherings, evening outings, or special occasions, Badal offers comfort, style, and a hint of regal charm making it a standout piece",
-    images: [
-      "/Badal/Badal1.PNG",
-      "/Badal/Badal2.PNG",
-      "/Badal/Badal3.PNG",
-      "/Badal/Badal4.PNG",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    reviews: [
-      {
-        name: "Anjali",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "The color combo is chef's kiss! Looks even better in person 💙🧡",
-      },
-      {
-        name: "Kajal",
-        date: "2025-06-07",
-        rating: 4,
-        comment: "Wore it for a family gathering and got endless compliments!",
-      },
-    ],
-  },
-  {
-    id: "mishti",
-    name: "Mishti",
-    price: 769,
-    shortDescription:
-      "Add a pop of colour to your wardrobe with Mishti, a premium black velvet kurti featuring vibrant multicolour prints. Chic, comfortable, and effortlessly elegant perfect for any festive or evening occasion.",
-    longDescription:
-      "Redefine festive elegance with Mishti, crafted in rich premium black velvet and adorned with striking multicolour prints. The contrast of bold hues against the deep black fabric brings a perfect blend of sophistication and vibrance. Designed for comfort and style, Mishti is ideal for celebrations, evening gatherings, or anytime you want to make a subtle yet stunning statement.",
-    images: [
-      "/Mishti/Mishti1.PNG",
-      "/Mishti/Mishti2.png",
-      "/Mishti/Mishti3.png",
-      "/Mishti/Mishti4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    reviews: [
-      {
-        name: "Aakriti",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "The black velvet feels so luxe, and those colourful prints just pop! Totally obsessed.",
-      },
-      {
-        name: "Sanjana",
-        date: "2025-06-07",
-        rating: 4,
-        comment: "Such a classy piece - bold, comfy, and effortlessly elegant.",
-      },
-    ],
-  },
-  {
     id: "nazakat",
     name: "Nazakat",
     price: 649,
@@ -730,47 +609,6 @@ const products = [
         rating: 4,
         comment:
           "Full sleeves make it perfect for any season. The fit is amazing and very comfortable.",
-      },
-    ],
-  },
-  {
-    id: "diya",
-    name: "Diya",
-    price: 1999,
-    shortDescription:
-      "Diya is a graceful Farsi salwar suit with delicate noodle straps and a corset back. It blends ethnic elegance with a modern silhouette, perfect for festive occasions. Effortlessly stylish and uniquely feminine.",
-    longDescription:
-      "Diya is a striking Farsi salwar suit that blends tradition with a modern silhouette. Featuring delicate noodle straps and a structured corset back, it offers a flattering, feminine fit. The soft, flowing fabric contrasts beautifully with the tailored bodice, creating a look that's both graceful and bold. Perfect for festive events or weddings, Diya stands out with its effortless charm. Style it with statement jewelry for a look that's elegant yet contemporary.",
-    images: [
-      "/Diya/Diya1.png",
-      "/Diya/Diya2.png",
-      "/Diya/Diya3.png",
-      "/Diya/Diya4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: false },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    reviews: [
-      {
-        name: "Divya",
-        date: "2025-10-14",
-        rating: 5,
-        comment:
-          "Perfect for festive occasions — lightweight, flattering, and very chic. Will buy again in another color.",
-      },
-      {
-        name: "Ishu",
-        date: "2025-10-16",
-        rating: 4,
-        comment:
-          "Diya made me feel so confident — the corset back gives great shape without being restrictive.",
       },
     ],
   },
@@ -1194,52 +1032,6 @@ const products = [
       },
     ],
   },
-
-  {
-    id: "nishtha",
-    name: "Nishtha",
-    price: 599,
-    shortDescription:
-      "Nishtha is a bold red kurti made from pure cotton, featuring a double V neckline and the same elegant print as Shreya. Designed with breathable fabric, it offers a flattering silhouette with modern charm and all-day comfort.",
-    longDescription:
-      "Nishtha is a striking red kurti crafted from pure, breathable cotton. It shares the same elegant print as Shreya but features a unique double V neckline for a modern edge. The silhouette is flattering yet comfortable, perfect for day-to-night wear. Its airy fabric ensures ease and movement, even in warmer weather. Effortlessly stylish, it pairs beautifully with trousers, skirts, or statement accessories. Nishtha is a blend of bold color, thoughtful design, and everyday elegance.",
-    images: [
-      "/Nishtha/Nishtha1.webp",
-      "/Nishtha/Nishtha2.webp",
-      "/Nishtha/Nishtha3.webp",
-      "/Nishtha/Nishtha4.webp",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Shalini",
-        date: "2025-09-09",
-        rating: 5,
-        comment:
-          "The double V neckline is such a stylish detail. Love how the red stands out while still feeling very comfortable.",
-      },
-      {
-        name: "Divya",
-        date: "2025-09-10",
-        rating: 4,
-        comment:
-          "The fit is flattering and the breathable cotton is perfect for all-day wear. Great for both casual and festive occasions.",
-      },
-    ],
-  },
   {
     id: "barkha",
     name: "Barkha",
@@ -1603,50 +1395,6 @@ const products = [
     ],
   },
   {
-    id: "asha",
-    name: "Asha",
-    price: 599,
-    shortDescription: "100% cotton, short kurti with bell sleeves",
-    longDescription:
-      "Grace meets playfulness in the Asha Kurti, featuring delicate blue bell sleeves that add a charming flair. This short kurti blends comfort with style, perfect for adding a fresh twist to your everyday wardrobe.",
-    images: [
-      "/Asha/Asha1.png",
-      "/Asha/Asha2.png",
-      "/Asha/Asha3.png",
-      "/Asha/Asha4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Maya",
-        date: "2025-05-30",
-        rating: 5,
-        comment:
-          "The bell sleeves are so cute and playful! The cotton fabric is light and comfy.",
-      },
-      {
-        name: "Rashmi",
-        date: "2025-06-08",
-        rating: 4,
-        comment:
-          "Love the short length and the blue color. Perfect for a fresh, everyday look.",
-      },
-    ],
-  },
-  {
     id: "rekha",
     name: "Rekha",
     price: 599,
@@ -1732,6 +1480,257 @@ const products = [
         rating: 4,
         comment:
           "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
+    id: "Mehak",
+    name: "Mehak",
+    price: 749,
+    shortDescription:
+      "Mehak Kurti is a chic, padded, backless kurti crafted from pure cotton. Designed in a rich brown color, it offers comfort with a bold, elegant silhouette.",
+    longDescription:
+      "The Mehak Kurti blends comfort with contemporary style. Made from breathable pure cotton, this brown kurti features built-in padding for support and a stylish backless design that adds a modern edge. Lightweight and comfortable, it is perfect for warm days, casual gatherings, or festive styling when paired with statement accessories.",
+    images: [
+      "/Mehak/Mehak1.PNG",
+      "/Mehak/Mehak2.PNG",
+      "/Mehak/Mehak3.PNG",
+      "/Mehak/Mehak4.PNG",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Riya",
+        date: "2025-05-10",
+        rating: 5,
+        comment:
+          "The backless design is so chic! Perfect for summer days. The padding gives good support and the brown color is beautiful.",
+      },
+      {
+        name: "Shreya",
+        date: "2025-06-02",
+        rating: 4,
+        comment:
+          "Love the modern edge this kurti has. The cotton is breathable and the fit is really comfortable. Great for casual outings.",
+      },
+    ],
+  },
+  {
+    id: "badal",
+    name: "Badal",
+    price: 769,
+    shortDescription:
+      "Add a touch of elegance to your wardrobe with the Badal kurti, crafted from luxurious printed velvet. Its stunning blend of white, blue, and orange hues creates a vibrant yet graceful look perfect for festive or casual occasions.",
+    longDescription:
+      "Embrace effortless sophistication with our Badal kurti, designed in soft and sumptuous velvet fabric. The kurti features an exquisite white base adorned with blue and orange prints, bringing a refreshing fusion of tradition and modern style. Perfect for festive gatherings, evening outings, or special occasions, Badal offers comfort, style, and a hint of regal charm making it a standout piece",
+    images: [
+      "/Badal/Badal1.PNG",
+      "/Badal/Badal2.PNG",
+      "/Badal/Badal3.PNG",
+      "/Badal/Badal4.PNG",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Anjali",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The color combo is chef's kiss! Looks even better in person 💙🧡",
+      },
+      {
+        name: "Kajal",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Wore it for a family gathering and got endless compliments!",
+      },
+    ],
+  },
+  {
+    id: "mishti",
+    name: "Mishti",
+    price: 769,
+    shortDescription:
+      "Add a pop of colour to your wardrobe with Mishti, a premium black velvet kurti featuring vibrant multicolour prints. Chic, comfortable, and effortlessly elegant perfect for any festive or evening occasion.",
+    longDescription:
+      "Redefine festive elegance with Mishti, crafted in rich premium black velvet and adorned with striking multicolour prints. The contrast of bold hues against the deep black fabric brings a perfect blend of sophistication and vibrance. Designed for comfort and style, Mishti is ideal for celebrations, evening gatherings, or anytime you want to make a subtle yet stunning statement.",
+    images: [
+      "/Mishti/Mishti1.PNG",
+      "/Mishti/Mishti2.png",
+      "/Mishti/Mishti3.png",
+      "/Mishti/Mishti4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Aakriti",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The black velvet feels so luxe, and those colourful prints just pop! Totally obsessed.",
+      },
+      {
+        name: "Sanjana",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Such a classy piece - bold, comfy, and effortlessly elegant.",
+      },
+    ],
+  },
+  {
+    id: "diya",
+    name: "Diya",
+    price: 1999,
+    shortDescription:
+      "Diya is a graceful Farsi salwar suit with delicate noodle straps and a corset back. It blends ethnic elegance with a modern silhouette, perfect for festive occasions. Effortlessly stylish and uniquely feminine.",
+    longDescription:
+      "Diya is a striking Farsi salwar suit that blends tradition with a modern silhouette. Featuring delicate noodle straps and a structured corset back, it offers a flattering, feminine fit. The soft, flowing fabric contrasts beautifully with the tailored bodice, creating a look that's both graceful and bold. Perfect for festive events or weddings, Diya stands out with its effortless charm. Style it with statement jewelry for a look that's elegant yet contemporary.",
+    images: [
+      "/Diya/Diya1.png",
+      "/Diya/Diya2.png",
+      "/Diya/Diya3.png",
+      "/Diya/Diya4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    reviews: [
+      {
+        name: "Divya",
+        date: "2025-10-14",
+        rating: 5,
+        comment:
+          "Perfect for festive occasions — lightweight, flattering, and very chic. Will buy again in another color.",
+      },
+      {
+        name: "Ishu",
+        date: "2025-10-16",
+        rating: 4,
+        comment:
+          "Diya made me feel so confident — the corset back gives great shape without being restrictive.",
+      },
+    ],
+  },
+  {
+    id: "nishtha",
+    name: "Nishtha",
+    price: 599,
+    shortDescription:
+      "Nishtha is a bold red kurti made from pure cotton, featuring a double V neckline and the same elegant print as Shreya. Designed with breathable fabric, it offers a flattering silhouette with modern charm and all-day comfort.",
+    longDescription:
+      "Nishtha is a striking red kurti crafted from pure, breathable cotton. It shares the same elegant print as Shreya but features a unique double V neckline for a modern edge. The silhouette is flattering yet comfortable, perfect for day-to-night wear. Its airy fabric ensures ease and movement, even in warmer weather. Effortlessly stylish, it pairs beautifully with trousers, skirts, or statement accessories. Nishtha is a blend of bold color, thoughtful design, and everyday elegance.",
+    images: [
+      "/Nishtha/Nishtha1.webp",
+      "/Nishtha/Nishtha2.webp",
+      "/Nishtha/Nishtha3.webp",
+      "/Nishtha/Nishtha4.webp",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Shalini",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The double V neckline is such a stylish detail. Love how the red stands out while still feeling very comfortable.",
+      },
+      {
+        name: "Divya",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "The fit is flattering and the breathable cotton is perfect for all-day wear. Great for both casual and festive occasions.",
+      },
+    ],
+  },
+  {
+    id: "asha",
+    name: "Asha",
+    price: 599,
+    shortDescription: "100% cotton, short kurti with bell sleeves",
+    longDescription:
+      "Grace meets playfulness in the Asha Kurti, featuring delicate blue bell sleeves that add a charming flair. This short kurti blends comfort with style, perfect for adding a fresh twist to your everyday wardrobe.",
+    images: [
+      "/Asha/Asha1.png",
+      "/Asha/Asha2.png",
+      "/Asha/Asha3.png",
+      "/Asha/Asha4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Maya",
+        date: "2025-05-30",
+        rating: 5,
+        comment:
+          "The bell sleeves are so cute and playful! The cotton fabric is light and comfy.",
+      },
+      {
+        name: "Rashmi",
+        date: "2025-06-08",
+        rating: 4,
+        comment:
+          "Love the short length and the blue color. Perfect for a fresh, everyday look.",
       },
     ],
   },
@@ -1823,7 +1822,6 @@ const products = [
       },
     ],
   },
-
   {
     id: "Lata",
     name: "Lata",
