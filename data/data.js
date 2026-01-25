@@ -1,27 +1,24 @@
 // data/products.js
 
 // Products excluded from 10% discount sale
-const EXCLUDED_FROM_SALE = ["Chahat", "Srishti", "ayushi", "aashi", "simran", "Mehak", "Sneha"];
+const EXCLUDED_FROM_SALE = [
+  "Chahat",
+  "Srishti",
+  "ayushi",
+  "aashi",
+  "simran",
+  "Mehak",
+  "Sneha",
+];
 
 // Calculate discounted price (10% off for eligible products)
 export const getDiscountedPrice = (product) => {
-  if (EXCLUDED_FROM_SALE.includes(product.id)) {
-    return {
-      originalPrice: product.price,
-      discountedPrice: product.price,
-      isOnSale: false,
-      discount: 0,
-    };
-  }
-
-  const discount = 10; // 10% discount
-  const discountedPrice = product.price * (1 - discount / 100);
-
+  // All items are excluded from sale
   return {
     originalPrice: product.price,
-    discountedPrice: discountedPrice,
-    isOnSale: true,
-    discount: discount,
+    discountedPrice: product.price,
+    isOnSale: false,
+    discount: 0,
   };
 };
 
@@ -31,7 +28,7 @@ const products = [
     name: "Aashi",
     price: 699,
     shortDescription:
-      ". Aashi Kurti is a stylish pure cotton kurti crafted using two fabrics—printed and plain. Designed in classic red and black tones, it features side tie-up detailing and a comfortable double-lined finish.",
+      "Aashi Kurti is a stylish pure cotton kurti crafted using two fabrics—printed and plain. Designed in classic red and black tones, it features side tie-up detailing and a comfortable double-lined finish.",
     longDescription:
       "The Aashi Kurti brings together contrast and comfort in a timeless design. Made from breathable pure cotton, it combines a printed fabric with a plain red and black base for a striking yet elegant look. The kurti is double-lined for added comfort and structure, while the side tie-up detailing adds a touch of charm and adjustability. Perfect for everyday wear, casual outings, or relaxed festive occasions.",
     images: [
@@ -111,7 +108,7 @@ const products = [
   {
     id: "Mehak",
     name: "Mehak",
-    price: 699,
+    price: 749,
     shortDescription:
       "Mehak Kurti is a chic, padded, backless kurti crafted from pure cotton. Designed in a rich brown color, it offers comfort with a bold, elegant silhouette.",
     longDescription:
