@@ -24,6 +24,85 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+  id: "kishore",
+  name: "Kishore",
+  price: 659,
+  shortDescription: "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
+  longDescription:
+  "The Kishore shirt in earthy brown is crafted from 100% pure cotton, offering unmatched comfort and breathability. Inspired by classic desi aesthetics, it features a relaxed yet polished look that works well for both casual and semi-traditional occasions. Soft on the skin and easy to style, Kishore pairs beautifully with jeans, chinos, or ethnic bottoms making it a versatile staple for a grounded, authentic wardrobe.",
+  images: [
+  "/Kishore/Kishore1.png",
+  "/Kishore/Kishore2.png",
+  "/Kishore/Kishore3.png",
+  "/Kishore/Kishore4.png",
+  ],
+  category: "clothing",
+  inStock: true,
+  sizes: [
+  { label: "XXS", inStock: true },
+  { label: "XS", inStock: true },
+  { label: "S", inStock: true },
+  { label: "M", inStock: true },
+  { label: "L", inStock: true },
+  { label: "XL", inStock: true },
+  ],
+  reviews: [
+  {
+  name: "harshit",
+  date: "2025-05-14",
+  rating: 5,
+  comment:
+  "Very comfortable and light. The color is exactly as shown and gives a nice earthy vibe. Definitely my go-to shirt for casual outings.",
+  },
+  {
+  name: "gaurav",
+  date: "2025-06-07",
+  rating: 4,
+  comment:
+  "Nice desi aesthetic and feels very natural. Fits well with jeans or ethnic pants. Worth the price!.",
+  },
+  ],
+  },
+  {
+    id: "Manoj",
+    name: "Manoj",
+    price: 659,
+    shortDescription: "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
+    longDescription: "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",
+    images: [
+    "/Manoj/Manoj1.png",
+    "/Manoj/Manoj2.png",
+    "/Manoj/Manoj3.png",
+    "/Manoj/Manoj4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+    { label: "XXS", inStock: true },
+    { label: "XS", inStock: true },
+    { label: "S", inStock: true },
+    { label: "M", inStock: true },
+    { label: "L", inStock: true },
+    { label: "XL", inStock: true },
+    ],
+    reviews: [
+    {
+    name: "Kartik",
+    date: "2025-05-14",
+    rating: 5,
+    comment:
+    "Very stylish shirt. The black and red combo looks powerful and the cotton fabric feels great on the skin.",
+    },
+    {
+    name: "Parth",
+    date: "2025-06-07",
+    rating: 4,
+    comment:
+    "Comfortable and breathable. Has a nice desi vibe and fits well. Good for both casual and festive use.",
+    },
+],
+},
+  {
     id: "aashi",
     name: "Aashi",
     price: 699,
@@ -120,7 +199,7 @@ const products = [
       "/Mehak/Mehak4.PNG",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
@@ -289,9 +368,9 @@ const products = [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     reviews: [
       {
@@ -1226,9 +1305,9 @@ const products = [
     sizes: [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
       { label: "XL", inStock: true },
     ],
     heights: [
