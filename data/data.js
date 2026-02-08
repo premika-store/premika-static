@@ -24,8 +24,140 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+    id: "sajni-sajan-combo",
+    name: "Sajni & Sajan Combo",
+    price: 1119,
+    shortDescription:
+      "Sajni & Sajan is a pure cotton couple set featuring desi-inspired prints and a soft, breathable feel—perfect for stylish twinning with comfort and charm.",
+    longDescription:
+      "Sajni & Sajan is a beautifully crafted couple set made from pure cotton, designed for comfort, culture, and effortless style. Inspired by desi aesthetics and traditional prints, this set brings together timeless charm and modern elegance. Soft on the skin and breathable for all-day wear, it’s perfect for festive moments, casual outings, or cozy celebrations together. With coordinated prints and a graceful vibe, Sajni & Sajan lets you and your partner twin in style while staying true to your roots.",    
+    images: [
+      "/Sajni-Sajan/SS1.WEBP",
+      "/Sajni-Sajan/Ss2.WEBP",
+      "/Sajni-Sajan/SS3.WEBP",
+    ],
+    category: "clothing",
+    inStock: true,
+    isCombo: true,
+    comboItems: [
+      {
+        id: "sajni",
+        name: "Sajni (Women's Kurti)",
+        sizes: [
+          { label: "XXS", inStock: true },
+          { label: "XS", inStock: true },
+          { label: "S", inStock: true },
+          { label: "M", inStock: true },
+          { label: "L", inStock: true },
+          { label: "XL", inStock: true },
+        ],
+        heights: [
+          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+          { label: "5'6\" and above", value: "5-6-and-above", default: false },
+        ],
+      },
+      {
+        id: "sajan",
+        name: "Sajan (Men's Shirt)",
+        sizes: [
+          { label: "XXS", inStock: true },
+          { label: "XS", inStock: true },
+          { label: "S", inStock: true },
+          { label: "M", inStock: true },
+          { label: "L", inStock: true },
+          { label: "XL", inStock: true },
+          { label: "XXL", inStock: true },
+        ],
+      },
+    ],
+    reviews: [
+      {
+        name: "Harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The fabric is so soft and comfortable. We wore it for a family function and got so many compliments. The desi prints look even better in real life. Totally worth it!",
+      },
+      {
+        name: "Gaurav",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Perfect for twinning! Bought this for me and my partner and we're obsessed! The fit is great and the cotton feels very breathable. Looks super cute in pictures too.",
+      },
+    ],
+  },
+  {
+    id: "heer-ranjha-combo",
+    name: "Heer Ranjha Combo",
+    price: 1119,
+    shortDescription:
+      "Heer Ranjha is a pure cotton couple set with a corset-back shirt for her and a brown desi-print shirt for him—perfect for romantic twinning with comfort and style.",
+    longDescription:
+      "Heer Ranjha is a timeless couple set inspired by classic romance and desi aesthetics. Crafted from pure cotton, this set blends comfort with statement style. For her, the shirt features a flattering corset-style back that adds a modern, feminine touch while keeping the look elegant and graceful. For him, the brown shirt with desi-inspired prints offers a rich, earthy vibe that feels both traditional and trendy. Breathable, soft, and stylish, Heer Ranjha is perfect for festive days, date outings, cultural events, or simply twinning in effortless charm.",
+    images: [
+      "/Heer-Ranjha/HR1.WEBP",
+      "/Heer-Ranjha/HR2.WEBP",
+      "/Heer-Ranjha/HR3.WEBP",
+      "/Heer-Ranjha/HR4.WEBP",
+    ],
+    category: "clothing",
+    inStock: true,
+    isCombo: true,
+    comboItems: [
+      {
+        id: "heer",
+        name: "Heer (Women's Kurti)",
+        sizes: [
+          { label: "XXS", inStock: true },
+          { label: "XS", inStock: true },
+          { label: "S", inStock: true },
+          { label: "M", inStock: true },
+          { label: "L", inStock: true },
+          { label: "XL", inStock: true },
+        ],
+        heights: [
+          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+          { label: "5'6\" and above", value: "5-6-and-above", default: false },
+        ],
+      },
+      {
+        id: "ranjha",
+        name: "Ranjha (Men's Shirt)",
+        sizes: [
+          { label: "XXS", inStock: true },
+          { label: "XS", inStock: true },
+          { label: "S", inStock: true },
+          { label: "M", inStock: true },
+          { label: "L", inStock: true },
+          { label: "XL", inStock: true },
+          { label: "XXL", inStock: true },
+        ],
+      },
+    ],
+    reviews: [
+      {
+        name: "Harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The corset-back shirt looks stunning on my partner and the brown shirt for me has such a rich, earthy vibe. Perfect for romantic twinning!",
+      },
+      {
+        name: "Shreya",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Perfect blend of traditional and modern! This set looks very desi but still feels trendy. The brown shade is beautiful and the fabric is super soft.",
+      },
+    ],
+  },
+  {
   id: "kishore",
   name: "Kishore",
+  gender: "male",
   price: 659,
   shortDescription: "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
   longDescription:
@@ -66,6 +198,7 @@ const products = [
   {
     id: "Manoj",
     name: "Manoj",
+    gender: "male",
     price: 659,
     shortDescription: "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
     longDescription: "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",

@@ -31,6 +31,9 @@ export function ProductInfo({
   heights,
   inStock,
   images,
+  isCombo,
+  comboItems,
+  gender, // "male" for men's products, undefined for women's products
 }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("");
@@ -41,9 +44,41 @@ export function ProductInfo({
   const sizeChartModal = useSizeChartModal();
   const cart = useCart();
 
+  // State for combo items - separate size/height for each item
+  const [comboSelections, setComboSelections] = useState(() => {
+    if (!isCombo || !comboItems) return {};
+    const initial = {};
+    comboItems.forEach((item) => {
+      initial[item.id] = {
+        size: "",
+        height: item.heights?.find((h) => h.default)?.value || item.heights?.[0]?.value || "",
+      };
+    });
+    return initial;
+  });
+
   // Check if this product has skirt size chart information
   const hasSkirtSizeChart =
     description && description.includes("Size Chart For Skirt");
+
+  // Check if all combo sizes are selected
+  const allComboSizesSelected = isCombo && comboItems
+    ? comboItems.every((item) => comboSelections[item.id]?.size)
+    : true;
+
+  const handleComboSizeChange = (itemId, size) => {
+    setComboSelections((prev) => ({
+      ...prev,
+      [itemId]: { ...prev[itemId], size },
+    }));
+  };
+
+  const handleComboHeightChange = (itemId, height) => {
+    setComboSelections((prev) => ({
+      ...prev,
+      [itemId]: { ...prev[itemId], height },
+    }));
+  };
 
   const handleAddToCart = () => {
     const pricing = getDiscountedPrice({ id, price });
@@ -56,8 +91,10 @@ export function ProductInfo({
       isOnSale: pricing.isOnSale,
       discount: pricing.discount,
       quantity,
-      selectedSize,
-      selectedHeight,
+      selectedSize: isCombo ? null : selectedSize,
+      selectedHeight: isCombo ? null : selectedHeight,
+      isCombo,
+      comboSelections: isCombo ? comboSelections : null,
       inStock,
       images,
     };
@@ -147,8 +184,99 @@ export function ProductInfo({
         ))}
       </div>
 
-      {/* Size Selection */}
-      {sizes && sizes.length > 0 && (
+      {/* Combo Size Selection - For combo products */}
+      {isCombo && comboItems && comboItems.length > 0 && (
+        <div className="space-y-6 border border-primary/30 rounded-lg p-4 bg-muted/10">
+          <div className="text-center mb-4">
+            <h3 className="text-lg font-semibold text-secondary">Select Sizes for Each Item</h3>
+            <p className="text-sm text-tertiary mt-1">This is a combo set - please select sizes for both items</p>
+          </div>
+          
+          {comboItems.map((item, index) => (
+            <div key={item.id} className={`space-y-4 ${index > 0 ? "border-t border-primary/20 pt-4" : ""}`}>
+              <h4 className="text-sm font-semibold text-secondary flex items-center gap-2">
+                <span className="w-6 h-6 bg-foreground text-background rounded-full flex items-center justify-center text-xs">
+                  {index + 1}
+                </span>
+                {item.name}
+              </h4>
+              
+              {/* Size selection for this combo item */}
+              {item.sizes && item.sizes.length > 0 && (
+                <div className="space-y-2">
+                  <label className="text-xs font-medium text-tertiary">Size *</label>
+                  <div className="flex flex-wrap gap-2">
+                    {item.sizes.map((size) => (
+                      <button
+                        key={size.label}
+                        onClick={() => handleComboSizeChange(item.id, size.label)}
+                        disabled={!size.inStock}
+                        className={`px-4 py-2 text-sm border rounded-md transition-colors ${
+                          comboSelections[item.id]?.size === size.label
+                            ? "bg-foreground text-background border-foreground"
+                            : size.inStock
+                            ? "border-gray-300 hover:border-foreground"
+                            : "border-gray-200 text-gray-400 cursor-not-allowed"
+                        }`}
+                      >
+                        {size.label}
+                        {!size.inStock && " (Out of Stock)"}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              {/* Height selection for this combo item (if applicable) */}
+              {item.heights && item.heights.length > 0 && (
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <label className="text-xs font-medium text-tertiary">Height Range</label>
+                    <div className="group relative">
+                      <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </button>
+                      <div className="invisible group-hover:visible absolute bottom-5 left-0 bg-gray-900 text-white text-xs rounded py-2 px-3 whitespace-nowrap z-10 shadow-lg">
+                        Choose height range for the best fit
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {item.heights.map((height) => (
+                      <button
+                        key={height.value}
+                        onClick={() => handleComboHeightChange(item.id, height.value)}
+                        className={`px-3 py-1.5 text-xs border rounded-md transition-colors ${
+                          comboSelections[item.id]?.height === height.value
+                            ? "bg-foreground text-background border-foreground"
+                            : "border-gray-300 hover:border-foreground"
+                        }`}
+                      >
+                        {height.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Size Selection - For regular products */}
+      {!isCombo && sizes && sizes.length > 0 && (
         <div className="space-y-3">
           <h3 className="text-sm font-medium">Size:</h3>
           <div className="flex flex-wrap gap-2">
@@ -173,8 +301,8 @@ export function ProductInfo({
         </div>
       )}
 
-      {/* Height Selection */}
-      {heights && heights.length > 0 && (
+      {/* Height Selection - For regular products */}
+      {!isCombo && heights && heights.length > 0 && (
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <h3 className="text-sm font-medium">Height Range:</h3>
@@ -251,21 +379,38 @@ export function ProductInfo({
           </button>
         </div>
         <Link href="/cart" className="block">
-          {inStock && !(sizes && sizes.length > 0 && !selectedSize) ? (
-            <Button
-              onClick={handleAddToCart}
-              className="bg-foreground hover:bg-secondary text-background px-8 py-2"
-            >
-              ADD TO CART
-            </Button>
-          ) : (
-            <Button
-              className="bg-foreground hover:bg-secondary text-background px-8 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={true}
-            >
-              {!inStock ? "OUT OF STOCK" : "SELECT SIZE"}
-            </Button>
-          )}
+          {(() => {
+            // Check if product can be added to cart
+            const regularProductReady = !isCombo && inStock && !(sizes && sizes.length > 0 && !selectedSize);
+            const comboProductReady = isCombo && inStock && allComboSizesSelected;
+            const canAddToCart = regularProductReady || comboProductReady;
+            
+            // Determine button text for disabled state
+            let disabledText = "OUT OF STOCK";
+            if (inStock) {
+              if (isCombo && !allComboSizesSelected) {
+                disabledText = "SELECT ALL SIZES";
+              } else if (!isCombo && sizes && sizes.length > 0 && !selectedSize) {
+                disabledText = "SELECT SIZE";
+              }
+            }
+            
+            return canAddToCart ? (
+              <Button
+                onClick={handleAddToCart}
+                className="bg-foreground hover:bg-secondary text-background px-8 py-2"
+              >
+                ADD TO CART
+              </Button>
+            ) : (
+              <Button
+                className="bg-foreground hover:bg-secondary text-background px-8 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={true}
+              >
+                {disabledText}
+              </Button>
+            );
+          })()}
         </Link>
       </div>
 
@@ -276,7 +421,11 @@ export function ProductInfo({
         </button> */}
         <button
           className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors"
-          onClick={sizeChartModal.onOpen}
+          onClick={() => {
+            // Determine which size chart to show based on product type
+            const chartType = isCombo ? "combo" : gender === "male" ? "male" : "female";
+            sizeChartModal.onOpen(chartType);
+          }}
         >
           <Ruler className="w-4 h-4" />
           <span>Size chart</span>

@@ -81,7 +81,7 @@ export default function SingleProductPage({ params }) {
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Main Product Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-start">
           {/* Product Images */}
           <ProductImageCarousel images={product.images} alt={product.name} />
 
@@ -99,6 +99,9 @@ export default function SingleProductPage({ params }) {
             heights={product.heights}
             inStock={product.inStock}
             images={product.images}
+            isCombo={product.isCombo}
+            comboItems={product.comboItems}
+            gender={product.gender}
           />
         </div>
 
