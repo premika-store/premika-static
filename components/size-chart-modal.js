@@ -5,6 +5,11 @@ import Modal from "@/components/ui/modal";
 
 const SizeChartModal = () => {
   const sizeChartModal = useSizeChartModal();
+  const { productType } = sizeChartModal;
+
+  // Determine which charts to show based on product type
+  const showFemaleChart = productType === "female" || productType === "combo";
+  const showMaleChart = productType === "male" || productType === "combo";
 
   if (!sizeChartModal.isOpen) return null;
 
@@ -12,6 +17,8 @@ const SizeChartModal = () => {
     <Modal open={sizeChartModal.isOpen} onClose={sizeChartModal.onClose}>
       <div className="w-full max-w-4xl bg-primary mx-4 sm:mx-auto">
         <div className="px-4 sm:px-6 py-4">
+          {showFemaleChart && (
+            <>
           <h2 className="text-xl sm:text-2xl font-bold text-secondary pb-2">
             Size Chart - Female
           </h2>
@@ -141,7 +148,11 @@ const SizeChartModal = () => {
               All measurements are in inches
             </p>
           </div>
+            </>
+          )}
 
+          {showMaleChart && (
+            <>
           <h2 className="text-xl sm:text-2xl font-bold text-secondary pb-2">
             Size Chart - Male
           </h2>
@@ -285,6 +296,8 @@ const SizeChartModal = () => {
               All measurements are in inches
             </p>
           </div>
+            </>
+          )}
 
           {/* Size Guide */}
           <div className="mb-4 sm:mb-6">

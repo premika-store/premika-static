@@ -204,6 +204,8 @@ export default function Home() {
               quantity: item.quantity || 1,
               selectedSize: item.selectedSize,
               selectedHeight: item.selectedHeight,
+              isCombo: item.isCombo || false,
+              comboSelections: item.comboSelections || null,
               category: item.category,
               description: item.description,
             }))
@@ -908,7 +910,7 @@ export default function Home() {
                     <div className="flex-1">
                       {cart.items.map((item, index) => (
                         <div
-                          key={item.id}
+                          key={`${item.id}-${index}`}
                           className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-border mb-4"
                         >
                           <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-xl flex items-center justify-center border border-primary/20 flex-shrink-0">
@@ -931,13 +933,30 @@ export default function Home() {
                               {item.name}
                             </h4>
                             <div className="flex flex-wrap items-center gap-2 mt-1">
-                              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                                Size: {item.selectedSize}
-                              </span>
-                              {item.selectedHeight && (
-                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-primary">
-                                  Height: {item.selectedHeight}
-                                </span>
+                              {/* Display combo selections for combo products */}
+                              {item.isCombo && item.comboSelections ? (
+                                Object.entries(item.comboSelections).map(([itemId, selection]) => {
+                                  const itemLabel = (itemId === "sajni" || itemId === "heer") ? "Women" : (itemId === "sajan" || itemId === "ranjha") ? "Men" : itemId;
+                                  return (
+                                    <span key={itemId} className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                                      {itemLabel}: {selection.size}
+                                      {selection.height && ` (${selection.height === "up-to-5-3" ? "≤5'3\"" : selection.height === "5-4-to-5-6" ? "5'4\"-5'6\"" : "≥5'6\""})`}
+                                    </span>
+                                  );
+                                })
+                              ) : (
+                                <>
+                                  {item.selectedSize && (
+                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                                      Size: {item.selectedSize}
+                                    </span>
+                                  )}
+                                  {item.selectedHeight && (
+                                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-primary">
+                                      Height: {item.selectedHeight}
+                                    </span>
+                                  )}
+                                </>
                               )}
                               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-tertiary/10 text-primary">
                                 Qty: {item.quantity || 1}

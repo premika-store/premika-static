@@ -14,12 +14,12 @@ const CartItem = ({ data }) => {
   const cart = useCart();
 
   const onRemove = () => {
-    cart.removeItem(data.id, data.selectedSize, data.selectedHeight);
+    cart.removeItem(data.id, data.selectedSize, data.selectedHeight, data.comboSelections);
   };
 
   const onMoveToWishlist = () => {
     // This would typically save to wishlist store
-    cart.removeItem(data.id, data.selectedSize, data.selectedHeight);
+    cart.removeItem(data.id, data.selectedSize, data.selectedHeight, data.comboSelections);
     toast.success("Item moved to wishlist");
   };
 
@@ -29,7 +29,8 @@ const CartItem = ({ data }) => {
       data.id,
       data.selectedSize,
       data.selectedHeight,
-      newQuantity
+      newQuantity,
+      data.comboSelections
     );
   };
 
@@ -40,7 +41,8 @@ const CartItem = ({ data }) => {
         data.id,
         data.selectedSize,
         data.selectedHeight,
-        currentQuantity - 1
+        currentQuantity - 1,
+        data.comboSelections
       );
     }
   };
@@ -48,14 +50,18 @@ const CartItem = ({ data }) => {
   return (
     <li className="bg-white rounded-lg border border-background p-3 sm:p-4 md:p-5 lg:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
       <div className="flex flex-row gap-3 sm:gap-4 md:gap-5 items-stretch">
-        {/* Product Image */}
-        <div className="relative w-28 sm:w-24 md:w-28 lg:w-32 xl:w-36 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+        {/* Product Image - adjusted aspect ratio for combo products */}
+        <div className={`relative rounded-lg overflow-hidden bg-gray-100 flex-shrink-0 ${
+          data.isCombo 
+            ? "w-32 sm:w-28 md:w-32 lg:w-36 xl:w-40 aspect-[3/4]" 
+            : "w-28 sm:w-24 md:w-28 lg:w-32 xl:w-36 aspect-square"
+        }`}>
           <Link href={`/${data.id}`}>
             <Image
               fill
               src={data.images?.[0] || data.images}
               alt={data.name}
-              className="object-cover object-center hover:scale-105 transition-transform duration-200 cursor-pointer"
+              className="object-cover object-top hover:scale-105 transition-transform duration-200 cursor-pointer"
             />
           </Link>
         </div>
@@ -71,7 +77,37 @@ const CartItem = ({ data }) => {
               </Link>
 
               <div className="flex flex-col space-y-2 text-xs sm:text-sm md:text-base text-primary">
-                {data.selectedSize && (
+                {/* Display combo selections if it's a combo product */}
+                {data.isCombo && data.comboSelections && (
+                  <div className="space-y-2 border-l-2 border-primary/30 pl-2">
+                    {Object.entries(data.comboSelections).map(([itemId, selection]) => {
+                      // Format the item name for display
+                      const itemName = (itemId === "sajni" || itemId === "heer") ? "Women's Kurti" : (itemId === "sajan" || itemId === "ranjha") ? "Men's Shirt" : itemId;
+                      return (
+                        <div key={itemId} className="space-y-1">
+                          <span className="font-semibold text-xs text-secondary capitalize">{itemName}:</span>
+                          <div className="flex flex-wrap items-center gap-2 ml-2">
+                            {selection.size && (
+                              <span className="px-2 py-0.5 bg-gray-100 rounded text-xs font-medium">
+                                Size: {selection.size}
+                              </span>
+                            )}
+                            {selection.height && (
+                              <span className="px-2 py-0.5 bg-gray-100 rounded text-xs font-medium">
+                                Height: {selection.height === "up-to-5-3" ? "Up to 5'3\"" : 
+                                        selection.height === "5-4-to-5-6" ? "5'4\" - 5'6\"" : 
+                                        selection.height === "5-6-and-above" ? "5'6\" and above" : selection.height}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+                
+                {/* Display regular size selection for non-combo products */}
+                {!data.isCombo && data.selectedSize && (
                   <div className="flex items-center gap-2">
                     <span className="font-medium">Size:</span>
                     <span className="px-2 py-1 bg-gray-100 rounded text-xs sm:text-sm font-medium">
@@ -79,7 +115,7 @@ const CartItem = ({ data }) => {
                     </span>
                   </div>
                 )}
-                {data.selectedHeight && (
+                {!data.isCombo && data.selectedHeight && (
                   <div className="flex items-center gap-2">
                     <span className="font-medium">Height:</span>
                     <span className="px-2 py-1 bg-gray-100 rounded text-xs sm:text-sm font-medium">
