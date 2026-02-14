@@ -24,13 +24,139 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+    id: "akshara",
+    name: "Akshara",
+    price: 649,
+    shortDescription:
+      "Meet our Akshara Kurti, a stunning magenta red piece designed to make a statement. Featuring elegant printed rose detailing, a flattering corset back, and graceful bell sleeves, it perfectly blends charm and sophistication for a timeless look.",
+    longDescription:
+      "Introducing our Akshara Kurti, a beautiful magenta red kurti crafted for effortless elegance. Adorned with delicate printed rose detailing, this piece brings a touch of femininity and charm to your wardrobe. The stylish corset back enhances the fit and creates a flattering silhouette, while the flowy bell sleeves add a graceful and trendy finish. Perfect for casual outings, festive gatherings, or special occasions, the Akshara Kurti is designed to make you feel confident, stylish, and comfortable.",
+    images: [
+      "/Akshara/Akshara1.png",
+      "/Akshara/Akshara2.png",
+      "/Akshara/Akshara3.png",
+      "/Akshara/Akshara4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+
+  {
+    id: "kashish",
+    name: "Kashish",
+    price: 699,
+    shortDescription:
+      "Meet our Kashish Kurti—designed with elegant corset detailing on both sides for a beautifully snatched fit. Featuring a stunning neckline and double-lined fabric for comfort and structure, it blends style with sophistication effortlessly.",
+    longDescription:
+      "Introducing our Kashish Kurti, thoughtfully designed to enhance your silhouette with corset detailing on both sides for a flattering, snatched fit. It features a beautiful neckline that adds a touch of elegance, while the double-lined construction ensures comfort, structure, and a premium feel. Stylish yet comfortable, Kashish is perfect for days when you want effortless grace with a modern touch.",
+    images: [
+      "/Kashish/Kashish1.PNG",
+      "/Kashish/Kashish2.png",
+      "/Kashish/Kashish3.png",
+      "/Kashish/Kashish4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The fabric feels premium, soft, and breathable. Perfect for daily wear with a stylish edge.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the fit and the neckline. The corset detailing gives such a flattering shape, and it looks even better in real life.",
+      },
+    ],
+  },
+
+  {
+    id: "navya",
+    name: "Navya",
+    price: 649,
+    shortDescription:
+      "Meet our Navya Kurti—crafted from pure cotton in a rich solid rust-mehroon shade. Designed with a minimal little collar for a clean, elegant look, it’s comfortable, breathable, and perfect for everyday effortless style.",
+    longDescription:
+      "Introducing our Navya Kurti, made from pure cotton for all-day comfort and breathability. It comes in a beautiful solid rust-mehroon shade that adds warmth and elegance to your everyday wardrobe. Designed with a minimal little collar, the silhouette is simple yet refined, making it perfect for both casual outings and elevated daily wear. Easy, timeless, and effortlessly stylish.",
+    images: [
+      "/Navya/Navya1.PNG",
+      "/Navya/Navya2.PNG",
+      "/Navya/Navya3.PNG",
+      "/Navya/Navya4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The pure cotton fabric feels soft, breathable, and very comfortable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the clean design and the color. It looks simple yet elegant and feels even better in real life.",
+      },
+    ],
+  },
+
+  {
     id: "sajni-sajan-combo",
     name: "Sajni & Sajan Combo",
     price: 1119,
     shortDescription:
       "Sajni & Sajan is a pure cotton couple set featuring desi-inspired prints and a soft, breathable feel—perfect for stylish twinning with comfort and charm.",
     longDescription:
-      "Sajni & Sajan is a beautifully crafted couple set made from pure cotton, designed for comfort, culture, and effortless style. Inspired by desi aesthetics and traditional prints, this set brings together timeless charm and modern elegance. Soft on the skin and breathable for all-day wear, it’s perfect for festive moments, casual outings, or cozy celebrations together. With coordinated prints and a graceful vibe, Sajni & Sajan lets you and your partner twin in style while staying true to your roots.",    
+      "Sajni & Sajan is a beautifully crafted couple set made from pure cotton, designed for comfort, culture, and effortless style. Inspired by desi aesthetics and traditional prints, this set brings together timeless charm and modern elegance. Soft on the skin and breathable for all-day wear, it’s perfect for festive moments, casual outings, or cozy celebrations together. With coordinated prints and a graceful vibe, Sajni & Sajan lets you and your partner twin in style while staying true to your roots.",
     images: [
       "/Sajni-Sajan/SS1.WEBP",
       "/Sajni-Sajan/Ss2.WEBP",
@@ -88,6 +214,7 @@ const products = [
       },
     ],
   },
+
   {
     id: "heer-ranjha-combo",
     name: "Heer Ranjha Combo",
@@ -155,88 +282,91 @@ const products = [
     ],
   },
   {
-  id: "kishore",
-  name: "Kishore",
-  gender: "male",
-  price: 659,
-  shortDescription: "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
-  longDescription:
-  "The Kishore shirt in earthy brown is crafted from 100% pure cotton, offering unmatched comfort and breathability. Inspired by classic desi aesthetics, it features a relaxed yet polished look that works well for both casual and semi-traditional occasions. Soft on the skin and easy to style, Kishore pairs beautifully with jeans, chinos, or ethnic bottoms making it a versatile staple for a grounded, authentic wardrobe.",
-  images: [
-  "/Kishore/Kishore1.PNG",
-  "/Kishore/Kishore2.PNG",
-  "/Kishore/Kishore3.PNG",
-  "/Kishore/Kishore4.PNG",
-  ],
-  category: "clothing",
-  inStock: true,
-  sizes: [
-  { label: "XXXS", inStock: true },
-  { label: "XXS", inStock: true },
-  { label: "XS", inStock: true },
-  { label: "S", inStock: true },
-  { label: "M", inStock: true },
-  { label: "L", inStock: true },
-  { label: "XL", inStock: true },
-  ],
-  reviews: [
-  {
-  name: "harshit",
-  date: "2025-05-14",
-  rating: 5,
-  comment:
-  "Very comfortable and light. The color is exactly as shown and gives a nice earthy vibe. Definitely my go-to shirt for casual outings.",
-  },
-  {
-  name: "gaurav",
-  date: "2025-06-07",
-  rating: 4,
-  comment:
-  "Nice desi aesthetic and feels very natural. Fits well with jeans or ethnic pants. Worth the price!.",
-  },
-  ],
+    id: "kishore",
+    name: "Kishore",
+    gender: "male",
+    price: 659,
+    shortDescription:
+      "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
+    longDescription:
+      "The Kishore shirt in earthy brown is crafted from 100% pure cotton, offering unmatched comfort and breathability. Inspired by classic desi aesthetics, it features a relaxed yet polished look that works well for both casual and semi-traditional occasions. Soft on the skin and easy to style, Kishore pairs beautifully with jeans, chinos, or ethnic bottoms making it a versatile staple for a grounded, authentic wardrobe.",
+    images: [
+      "/Kishore/Kishore1.PNG",
+      "/Kishore/Kishore2.PNG",
+      "/Kishore/Kishore3.PNG",
+      "/Kishore/Kishore4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXXS", inStock: true },
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Very comfortable and light. The color is exactly as shown and gives a nice earthy vibe. Definitely my go-to shirt for casual outings.",
+      },
+      {
+        name: "gaurav",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Nice desi aesthetic and feels very natural. Fits well with jeans or ethnic pants. Worth the price!.",
+      },
+    ],
   },
   {
     id: "Manoj",
     name: "Manoj",
     gender: "male",
     price: 659,
-    shortDescription: "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
-    longDescription: "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",
+    shortDescription:
+      "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
+    longDescription:
+      "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",
     images: [
-    "/Manoj/Manoj1.PNG",
-    "/Manoj/Manoj2.PNG",
-    "/Manoj/Manoj3.PNG",
-    "/Manoj/Manoj4.PNG",
+      "/Manoj/Manoj1.PNG",
+      "/Manoj/Manoj2.PNG",
+      "/Manoj/Manoj3.PNG",
+      "/Manoj/Manoj4.PNG",
     ],
     category: "clothing",
     inStock: true,
     sizes: [
-    { label: "XXXS", inStock: true },
-    { label: "XXS", inStock: true },
-    { label: "XS", inStock: true },
-    { label: "S", inStock: true },
-    { label: "M", inStock: true },
-    { label: "L", inStock: true },
-    { label: "XL", inStock: true },
+      { label: "XXXS", inStock: true },
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     reviews: [
-    {
-    name: "Kartik",
-    date: "2025-05-14",
-    rating: 5,
-    comment:
-    "Very stylish shirt. The black and red combo looks powerful and the cotton fabric feels great on the skin.",
-    },
-    {
-    name: "Parth",
-    date: "2025-06-07",
-    rating: 4,
-    comment:
-    "Comfortable and breathable. Has a nice desi vibe and fits well. Good for both casual and festive use.",
-    },
-],
-},
+      {
+        name: "Kartik",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Very stylish shirt. The black and red combo looks powerful and the cotton fabric feels great on the skin.",
+      },
+      {
+        name: "Parth",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Comfortable and breathable. Has a nice desi vibe and fits well. Good for both casual and festive use.",
+      },
+    ],
+  },
   {
     id: "aashi",
     name: "Aashi",
@@ -246,10 +376,10 @@ const products = [
     longDescription:
       "The Aashi Kurti brings together contrast and comfort in a timeless design. Made from breathable pure cotton, it combines a printed fabric with a plain red and black base for a striking yet elegant look. The kurti is double-lined for added comfort and structure, while the side tie-up detailing adds a touch of charm and adjustability. Perfect for everyday wear, casual outings, or relaxed festive occasions.",
     images: [
-      "/Aashi/Aashi1.PNG",
-      "/Aashi/Aashi2.PNG",
-      "/Aashi/Aashi3.PNG",
-      "/Aashi/Aashi4.PNG",
+      "/Aashi/Aashi1.png",
+      "/Aashi/Aashi2.png",
+      "/Aashi/Aashi3.png",
+      "/Aashi/Aashi4.png",
     ],
     category: "clothing",
     inStock: true,
@@ -492,10 +622,10 @@ const products = [
     longDescription:
       "Meet Ayushi, the kurti that blends comfort with contemporary charm. Made from breathable pure cotton, this unique 2-in-1 design includes a chic noodle-strap inner kurti complemented by a detachable jacket, allowing you to switch between looks effortlessly. The beautifully crafted corset back adds a touch of sophistication and ensures a flattering fit. Whether you're dressing up for a festive event or keeping it casual, Ayushi adapts to your style with ease and grace",
     images: [
-      "/Ayushi/Ayushi1.PNG",
-      "/Ayushi/Ayushi2.PNG",
-      "/Ayushi/Ayushi3.PNG",
-      "/Ayushi/Ayushi4.PNG",
+      "/Ayushi/Ayushi1.png",
+      "/Ayushi/Ayushi2.png",
+      "/Ayushi/Ayushi3.png",
+      "/Ayushi/Ayushi4.png",
     ],
     category: "clothing",
     inStock: true,
@@ -665,9 +795,9 @@ const products = [
       "Sleek, stylish, and subtly bold—the Neelam Kurti features a crisp square neckline, elegant full sleeves, and a tie-up back that perfectly snatches the waist. A modern essential for everyday chic.",
     images: [
       "/Neelam/Neelam1.png",
-      "/Neelam/Neelam2.png",
-      "/Neelam/Neelam3.png",
-      "/Neelam/Neelam4.png",
+      "/Neelam/Neelam2.PNG",
+      "/Neelam/Neelam3.PNG",
+      "/Neelam/Neelam4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -711,9 +841,9 @@ const products = [
       "Timeless and fresh, the Piku Kurti in classic white features a sharp square neckline, graceful full sleeves, and a chic tie-up back to accentuate your waist. Perfect for effortless elegance any day.",
     images: [
       "/Piku/Piku1.jpg",
-      "/Piku/Piku2.png",
-      "/Piku/Piku3.png",
-      "/Piku/Piku4.png",
+      "/Piku/Piku2.PNG",
+      "/Piku/Piku3.PNG",
+      "/Piku/Piku4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1268,9 +1398,9 @@ const products = [
       "Fresh and fearless, the Monika Kurti shines in a breezy mint green. Made from pure cotton with double lining, it features a flattering halter neck and striking backless design, blending comfort with contemporary charm.",
     images: [
       "/Monika/Monika1.png",
-      "/Monika/Monika2.png",
-      "/Monika/Monika3.png",
-      "/Monika/Monika4.png",
+      "/Monika/Monika2.PNG",
+      "/Monika/Monika3.PNG",
+      "/Monika/Monika4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1314,8 +1444,8 @@ const products = [
     images: [
       "/Mastani/Mastani1.png",
       "/Mastani/Mastani2.webp",
-      "/Mastani/Mastani3.png",
-      "/Mastani/Mastani4.png",
+      "/Mastani/Mastani3.PNG",
+      "/Mastani/Mastani4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1357,10 +1487,10 @@ const products = [
     longDescription:
       "Make a striking impression with the Naina Kurti, crafted from pure cotton with a soft double lining for comfort and elegance. The halter neck, deep blue shade, and bold backless cut bring a perfect mix of grace and modern flair.",
     images: [
-      "/Naina/Naina1.png",
-      "/Naina/Naina2.png",
-      "/Naina/Naina3.png",
-      "/Naina/Naina4.png",
+      "/Naina/Naina1.PNG",
+      "/Naina/Naina2.PNG",
+      "/Naina/Naina3.PNG",
+      "/Naina/Naina4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1402,10 +1532,10 @@ const products = [
     longDescription:
       "Delicate yet daring, the Heer Kurti comes in a soft light pink shade, crafted from pure cotton with double lining for comfort and grace. Its elegant halter neck and backless style blend femininity with a bold, modern touch.",
     images: [
-      "/Heer/Heer1.png",
-      "/Heer/Heer2.png",
-      "/Heer/Heer3.png",
-      "/Heer/Heer4.png",
+      "/Heer/Heer1.PNG",
+      "/Heer/Heer2.PNG",
+      "/Heer/Heer3.PNG",
+      "/Heer/Heer4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1448,9 +1578,9 @@ const products = [
       "Bold and beautiful, the Geet Kurti stuns in a rich dark green hue. Made from pure cotton with double lining, it offers all-day comfort with a luxe feel. Featuring a flattering halter neck and daring backless design, it's perfect for making a stylish statement.",
     images: [
       "/Geet/Geet1.jpg",
-      "/Geet/Geet2.png",
-      "/Geet/Geet3.png",
-      "/Geet/Geet4.png",
+      "/Geet/Geet2.PNG",
+      "/Geet/Geet3.PNG",
+      "/Geet/Geet4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1537,10 +1667,10 @@ const products = [
     longDescription:
       "Feminine and flirty, the Rekha Kurti features delicate noodle straps and a lovely pink shade, perfect for warm days and casual outings. This short kurti combines simplicity with subtle elegance.",
     images: [
-      "/Rekha/Rekha1.png",
-      "/Rekha/Rekha2.png",
-      "/Rekha/Rekha3.png",
-      "/Rekha/Rekha4.png",
+      "/Rekha/Rekha1.PNG",
+      "/Rekha/Rekha2.PNG",
+      "/Rekha/Rekha3.PNG",
+      "/Rekha/Rekha4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1582,10 +1712,10 @@ const products = [
     longDescription:
       "Bold and unique, the Meera Kurti in warm rust features trendy tie-up sleeve straps and a stylish asymmetrical cut for a modern, edgy look. Perfect for those who love to stand out with effortless style.",
     images: [
-      "/Meera/Meera1.png",
-      "/Meera/Meera2.png",
-      "/Meera/Meera3.png",
-      "/Meera/Meera4.png",
+      "/Meera/Meera1.PNG",
+      "/Meera/Meera2.PNG",
+      "/Meera/Meera3.PNG",
+      "/Meera/Meera4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1877,10 +2007,10 @@ const products = [
     longDescription:
       "Classic and captivating, the Jaya Kurti in serene blue offers timeless style with a modern touch. Perfect for day-to-night wear, it's your go-to for effortless elegance.",
     images: [
-      "/Jaya/Jaya1.png",
-      "/Jaya/Jaya2.png",
-      "/Jaya/Jaya3.png",
-      "/Jaya/Jaya4.png",
+      "/Jaya/Jaya1.PNG",
+      "/Jaya/Jaya2.PNG",
+      "/Jaya/Jaya3.PNG",
+      "/Jaya/Jaya4.PNG",
     ],
     category: "clothing",
     inStock: false,
@@ -1921,10 +2051,10 @@ const products = [
     longDescription:
       "Elegant and enchanting, the Indu Kurti features a sweetheart neckline and full sleeves, crafted from pure cotton for a soft, luxurious feel. Perfect for adding a touch of sophistication to your wardrobe.",
     images: [
-      "/Indu/Indu1.png",
-      "/Indu/Indu2.png",
-      "/Indu/Indu3.png",
-      "/Indu/Indu4.png",
+      "/Indu/Indu1.PNG",
+      "/Indu/Indu2.PNG",
+      "/Indu/Indu3.PNG",
+      "/Indu/Indu4.PNG",
     ],
     category: "clothing",
     inStock: false,
@@ -1966,9 +2096,9 @@ const products = [
       "Lightweight and breezy, the Lata Kurti features delicate noodle straps and a relaxed fit, crafted from 100% cotton for ultimate comfort. Perfect for warm days or layering in cooler weather.",
     images: [
       "/Lata/Lata1.png",
-      "/Lata/Lata2.png",
-      "/Lata/Lata3.png",
-      "/Lata/Lata4.png",
+      "/Lata/Lata2.PNG",
+      "/Lata/Lata3.PNG",
+      "/Lata/Lata4.PNG",
     ],
     category: "clothing",
     inStock: false,
