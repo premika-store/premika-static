@@ -376,10 +376,10 @@ const products = [
     longDescription:
       "The Aashi Kurti brings together contrast and comfort in a timeless design. Made from breathable pure cotton, it combines a printed fabric with a plain red and black base for a striking yet elegant look. The kurti is double-lined for added comfort and structure, while the side tie-up detailing adds a touch of charm and adjustability. Perfect for everyday wear, casual outings, or relaxed festive occasions.",
     images: [
-      "/Aashi/Aashi1.png",
-      "/Aashi/Aashi2.png",
-      "/Aashi/Aashi3.png",
-      "/Aashi/Aashi4.png",
+      "/Aashi/Aashi1.PNG",
+      "/Aashi/Aashi2.PNG",
+      "/Aashi/Aashi3.PNG",
+      "/Aashi/Aashi4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -622,10 +622,10 @@ const products = [
     longDescription:
       "Meet Ayushi, the kurti that blends comfort with contemporary charm. Made from breathable pure cotton, this unique 2-in-1 design includes a chic noodle-strap inner kurti complemented by a detachable jacket, allowing you to switch between looks effortlessly. The beautifully crafted corset back adds a touch of sophistication and ensures a flattering fit. Whether you're dressing up for a festive event or keeping it casual, Ayushi adapts to your style with ease and grace",
     images: [
-      "/Ayushi/Ayushi1.png",
-      "/Ayushi/Ayushi2.png",
-      "/Ayushi/Ayushi3.png",
-      "/Ayushi/Ayushi4.png",
+      "/Ayushi/Ayushi1.PNG",
+      "/Ayushi/Ayushi2.PNG",
+      "/Ayushi/Ayushi3.PNG",
+      "/Ayushi/Ayushi4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1622,10 +1622,10 @@ const products = [
     longDescription:
       "Bold and stylish, the Babita Kurti in classic black features daring high side slits for a contemporary edge. Perfect for making a statement with effortless confidence.",
     images: [
-      "/Babita/Babita1.png",
-      "/Babita/Babita2.png",
-      "/Babita/Babita3.png",
-      "/Babita/Babita4.png",
+      "/Babita/Babita1.PNG",
+      "/Babita/Babita2.PNG",
+      "/Babita/Babita3.PNG",
+      "/Babita/Babita4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -1963,10 +1963,10 @@ const products = [
     longDescription:
       "Grace meets playfulness in the Asha Kurti, featuring delicate blue bell sleeves that add a charming flair. This short kurti blends comfort with style, perfect for adding a fresh twist to your everyday wardrobe.",
     images: [
-      "/Asha/Asha1.png",
-      "/Asha/Asha2.png",
-      "/Asha/Asha3.png",
-      "/Asha/Asha4.png",
+      "/Asha/Asha1.PNG",
+      "/Asha/Asha2.PNG",
+      "/Asha/Asha3.PNG",
+      "/Asha/Asha4.PNG",
     ],
     category: "clothing",
     inStock: false,
