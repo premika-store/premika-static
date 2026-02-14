@@ -584,7 +584,7 @@ const products = [
       "/Srishti/Srishti1.PNG",
       "/Srishti/Srishti2.PNG",
       "/Srishti/Srishti3.PNG",
-      "/Srishti/Srishti4.png",
+      "/Srishti/Srishti4.PNG",
     ],
     category: "clothing",
     inStock: true,
