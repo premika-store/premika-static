@@ -44,8 +44,8 @@ const products = [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {
