@@ -230,8 +230,8 @@ const products = [
       "/Heer-Ranjha/HR4.WEBP",
     ],
     category: "clothing",
-    inStock: true,
-    isCombo: true,
+    inStock: false,
+    isCombo: false,
     comboItems: [
       {
         id: "heer",
