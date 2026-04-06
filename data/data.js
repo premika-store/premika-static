@@ -1132,7 +1132,7 @@ const products = [
       "/Neha/Neha4.jpg",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XS", inStock: false },
       { label: "S", inStock: false },
