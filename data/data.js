@@ -1358,10 +1358,10 @@ const products = [
       "/Hema/Hema4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
       { label: "S", inStock: false },
       { label: "M", inStock: false },
       { label: "L", inStock: false },
