@@ -24,6 +24,47 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+    id: "sakshi",
+    name: "Sakshi",
+    price: 649,
+    shortDescription:
+      "Meet our Sakshi Kurti, a stunning magenta red piece designed to make a statement. Featuring elegant printed rose detailing, a flattering corset back, and graceful bell sleeves, it perfectly blends charm and sophistication for a timeless look.",
+    longDescription:
+      "Introducing our Sakshi Kurti, a beautiful magenta red kurti crafted for effortless elegance. Adorned with delicate printed rose detailing, this piece brings a touch of femininity and charm to your wardrobe. The stylish corset back enhances the fit and creates a flattering silhouette, while the flowy bell sleeves add a graceful and trendy finish. Perfect for casual outings, festive gatherings, or special occasions, the Sakshi Kurti is designed to make you feel confident, stylish, and comfortable.",
+    images: [
+      "/Akshara/Akshara1.png",
+      "/Akshara/Akshara2.png",
+      "/Akshara/Akshara3.png",
+      "/Akshara/Akshara4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
     id: "akshara",
     name: "Akshara",
     price: 649,
