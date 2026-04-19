@@ -32,10 +32,10 @@ const products = [
     longDescription:
       "Introducing our Sakshi Kurti, a beautiful magenta red kurti crafted for effortless elegance. Adorned with delicate printed rose detailing, this piece brings a touch of femininity and charm to your wardrobe. The stylish corset back enhances the fit and creates a flattering silhouette, while the flowy bell sleeves add a graceful and trendy finish. Perfect for casual outings, festive gatherings, or special occasions, the Sakshi Kurti is designed to make you feel confident, stylish, and comfortable.",
     images: [
-      "/Akshara/Akshara1.png",
-      "/Akshara/Akshara2.png",
-      "/Akshara/Akshara3.png",
-      "/Akshara/Akshara4.png",
+      "/Sakshi/Sakshi1.png",
+      "/Sakshi/Sakshi2.png",
+      "/Sakshi/Sakshi3.png",
+      "/Sakshi/Sakshi4.png",
     ],
     category: "clothing",
     inStock: true,
