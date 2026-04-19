@@ -28,9 +28,9 @@ const products = [
     name: "Sakshi",
     price: 649,
     shortDescription:
-      "Meet our Sakshi Kurti, a stunning magenta red piece designed to make a statement. Featuring elegant printed rose detailing, a flattering corset back, and graceful bell sleeves, it perfectly blends charm and sophistication for a timeless look.",
+      "Meet our Sakshi Kurti, a stunning green piece designed to make a statement. Featuring elegant printed rose detailing, a flattering corset back, and graceful bell sleeves, it perfectly blends charm and sophistication for a timeless look.",
     longDescription:
-      "Introducing our Sakshi Kurti, a beautiful magenta red kurti crafted for effortless elegance. Adorned with delicate printed rose detailing, this piece brings a touch of femininity and charm to your wardrobe. The stylish corset back enhances the fit and creates a flattering silhouette, while the flowy bell sleeves add a graceful and trendy finish. Perfect for casual outings, festive gatherings, or special occasions, the Sakshi Kurti is designed to make you feel confident, stylish, and comfortable.",
+      "Introducing our Sakshi Kurti, a beautiful green kurti crafted for effortless elegance. Adorned with delicate printed rose detailing, this piece brings a touch of femininity and charm to your wardrobe. The stylish corset back enhances the fit and creates a flattering silhouette, while the flowy bell sleeves add a graceful and trendy finish. Perfect for casual outings, festive gatherings, or special occasions, the Sakshi Kurti is designed to make you feel confident, stylish, and comfortable.",
     images: [
       "/Sakshi/Sakshi1.png",
       "/Sakshi/Sakshi2.png",
