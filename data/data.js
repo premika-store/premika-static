@@ -73,10 +73,10 @@ const products = [
     longDescription:
       "Ananya is a beautifully crafted blue kurti made from flowy georgette, designed to give you those effortless, pure desi vibes with a modern twist. Its standout corset back enhances your silhouette while adding a touch of contemporary charm. Light, graceful, and versatile, Ananya is perfect for festive occasions or special outings where you want to feel rooted yet stylish",
     images: [
-      "/Ananya/Ananya1.png",
-      "/Ananya/Ananya2.png",
-      "/Ananya/Ananya3.png",
-      "/Ananya/Ananya4.png",
+      "/Ananya/Ananya1.PNG",
+      "/Ananya/Ananya2.PNG",
+      "/Ananya/Ananya3.PNG",
+      "/Ananya/Ananya4.PNG",
     ],
     category: "clothing",
     inStock: true,
