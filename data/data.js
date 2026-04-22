@@ -228,6 +228,88 @@ const products = [
       },
     ],
   },
+  {
+    id: "ritika",
+    name: "Ritika",
+    price: 699,
+    shortDescription:
+      "Ritika is a versatile green pure cotton kurti with noodle straps, a flattering corset back, and a detachable jacket—giving you a stylish 2-in-1 look with pure desi vibes.",
+    longDescription:
+      "Ritika is a thoughtfully designed green kurti crafted from breathable pure cotton, featuring beautiful prints that bring out a rich desi aesthetic. It comes with noodle straps and a flattering corset back to enhance your silhouette, while the detachable jacket lets you switch between two looks effortlessly. Double-lined for added comfort and coverage, Ritika blends functionality with style—perfect for when you want versatility without compromising on elegance",
+    images: [
+      "/Ritika/Ritika1.png",
+      "/Ritika/Ritika2.png",
+      "/Ritika/Ritika3.png",
+      "/Ritika/Ritika4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "riya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "srishti",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
+    id: "jiya",
+    name: "Jiya",
+    price: 649,
+    shortDescription:
+      "Jiya is a dreamy pastel pink kurti with a flattering corset back, perfect for summers and filled with soft, pure desi vibes.",
+    longDescription:
+      "Jiya is a minimal yet striking pastel pink kurti designed to be your go-to statement piece. Crafted for comfort in warm weather, it features a flattering corset back that enhances your silhouette while keeping the look polished and refined. Its plain, elegant design makes it perfect for office wear as well as summer outings, offering a blend of modern simplicity and soft pure desi vibes",
+    images: [
+      "/Jiya/Jiya1.png",
+      "/Jiya/Jiya2.png",
+      "/Jiya/Jiya3.png",
+      "/Jiya/Jiya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "riya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "srishti",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
   
   {
     id: "sakshi",
