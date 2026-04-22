@@ -24,18 +24,18 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
-    id: "Swati",
-    name: "swati",
+    id: "Swasti",
+    name: "swasti",
     price: 649,
     shortDescription:
-      "Swati is a timeless black georgette kurti with delicate white floral prints and a flattering corset back, blending effortless elegance with pure desi vibes.",
+      "Swasti is a timeless black georgette kurti with delicate white floral prints and a flattering corset back, blending effortless elegance with pure desi vibes.",
     longDescription:
-      "Swati is a beautifully designed black kurti crafted from flowy georgette, featuring soft white floral prints that add a touch of classic charm. Its standout corset back enhances your silhouette, giving a structured yet graceful fit. Light, stylish, and easy to wear, it captures pure desi vibes while staying minimal and versatile—perfect for both everyday elegance and subtle festive looks.",
+      "Swasti is a beautifully designed black kurti crafted from flowy georgette, featuring soft white floral prints that add a touch of classic charm. Its standout corset back enhances your silhouette, giving a structured yet graceful fit. Light, stylish, and easy to wear, it captures pure desi vibes while staying minimal and versatile—perfect for both everyday elegance and subtle festive looks.",
     images: [
-      "/Swati/Swati1.png",
-      "/Swati/Swati2.png",
-      "/Swati/Swati3.png",
-      "/Swati/Swati4.png",
+      "/Swasti/Swasti1.png",
+      "/Swasti/Swasti2.png",
+      "/Swasti/Swasti3.png",
+      "/Swasti/Swasti4.png",
     ],
     category: "clothing",
     inStock: true,
