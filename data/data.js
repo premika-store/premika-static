@@ -114,10 +114,10 @@ const products = [
     longDescription:
       "Ojasvi is a thoughtfully designed kurti made from breathable pure cotton, perfect for all-day comfort without compromising on style. Featuring elegant prints, a beautifully detailed neckline, and a flattering corset back, it enhances your silhouette while keeping the look soft and effortless. With its easy charm and pure desi vibes, Ojasvi is ideal for everyday wear, casual outings, or relaxed festive moments.",
     images: [
-      "/Ojasvi/Ojasvi1.png",
-      "/Ojasvi/Ojasvi2.png",
-      "/Ojasvi/Ojasvi3.png",
-      "/Ojasvi/Ojasvi4.png",
+      "/Ojasvi/Ojasvi1.PNG",
+      "/Ojasvi/Ojasvi2.PNG",
+      "/Ojasvi/Ojasvi3.PNG",
+      "/Ojasvi/Ojasvi4.PNG",
     ],
     category: "clothing",
     inStock: true,
@@ -146,7 +146,89 @@ const products = [
       },
     ],
   },
-
+{
+    id: "suhani",
+    name: "Suhani",
+    price: 599,
+    shortDescription:
+      "Suhani is a graceful purple pure cotton kurti with elegant prints, a flattering corset back, and a beautifully crafted neckline, bringing together comfort and pure desi vibes",
+    longDescription:
+      "Suhani is a beautifully designed kurti in a rich purple hue, crafted from breathable pure cotton for all-day ease. Featuring subtle prints, a stunning neckline, and a flattering corset back, it enhances your silhouette while keeping the look soft and effortless. With its blend of comfort, elegance, and pure desi vibes, Suhani is perfect for everyday wear, casual outings, or relaxed festive moments",
+    images: [
+      "/Suhani/Suhani1.PNG",
+      "/Suhani/Suhani2.PNG",
+      "/Suhani/Suhani3.PNG",
+      "/Suhani/Suhani4.PNG",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "teena",
+    name: "Teena",
+    price: 649,
+    shortDescription:
+      "Teena is a dreamy pastel pink georgette kurti with a flattering corset back, perfect for summers and filled with soft, pure desi vibes.",
+    longDescription:
+      "Teena is a beautifully crafted kurti in a delicate pastel pink shade, made from lightweight georgette that feels breezy and effortless—perfect for warm summer days. Designed with a flattering corset back, it enhances your silhouette while keeping the look soft and feminine. With its airy feel, elegant flow, and pure desi vibes, Teena is ideal for daytime outings, brunches, or light festive moments.",
+    images: [
+      "/Teena/Teena1.png",
+      "/Teena/Teena2.png",
+      "/Teena/Teena3.png",
+      "/Teena/Teena4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "riya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "srishti",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  
   {
     id: "sakshi",
     name: "Sakshi",
