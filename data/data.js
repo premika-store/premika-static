@@ -25,7 +25,7 @@ export const getDiscountedPrice = (product) => {
 const products = [
   {
     id: "Swasti",
-    name: "swasti",
+    name: "Swasti",
     price: 649,
     shortDescription:
       "Swasti is a timeless black georgette kurti with delicate white floral prints and a flattering corset back, blending effortless elegance with pure desi vibes.",
@@ -36,6 +36,88 @@ const products = [
       "/Swasti/Swasti2.png",
       "/Swasti/Swasti3.png",
       "/Swasti/Swasti4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "ananya",
+    name: "Ananya",
+    price: 649,
+    shortDescription:
+      "Ananya is a stunning blue georgette kurti that blends elegance with pure desi vibes, featuring a flattering silhouette and a chic corset back for the perfect fit.",
+    longDescription:
+      "Ananya is a beautifully crafted blue kurti made from flowy georgette, designed to give you those effortless, pure desi vibes with a modern twist. Its standout corset back enhances your silhouette while adding a touch of contemporary charm. Light, graceful, and versatile, Ananya is perfect for festive occasions or special outings where you want to feel rooted yet stylish",
+    images: [
+      "/Ananya/Ananya1.png",
+      "/Ananya/Ananya2.png",
+      "/Ananya/Ananya3.png",
+      "/Ananya/Ananya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "ojasvi",
+    name: "Ojasvi",
+    price: 599,
+    shortDescription:
+      "Ojasvi is a pure cotton printed kurti with a flattering corset back and a beautifully crafted neckline, bringing together comfort, elegance, and pure desi vibes.",
+    longDescription:
+      "Ojasvi is a thoughtfully designed kurti made from breathable pure cotton, perfect for all-day comfort without compromising on style. Featuring elegant prints, a beautifully detailed neckline, and a flattering corset back, it enhances your silhouette while keeping the look soft and effortless. With its easy charm and pure desi vibes, Ojasvi is ideal for everyday wear, casual outings, or relaxed festive moments.",
+    images: [
+      "/Ojasvi/Ojasvi1.png",
+      "/Ojasvi/Ojasvi2.png",
+      "/Ojasvi/Ojasvi3.png",
+      "/Ojasvi/Ojasvi4.png",
     ],
     category: "clothing",
     inStock: true,
