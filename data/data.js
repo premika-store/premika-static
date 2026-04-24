@@ -64,6 +64,47 @@ const products = [
       },
     ],
   },
+    {
+    id: "rimjhim",
+    name: "Rimjhim",
+    price: 649,
+    shortDescription:
+      "Rimjhim is a stunning magenta pink georgette kurti that blends elegance with pure desi vibes, featuring a flattering silhouette and a chic corset back for the perfect fit.",
+    longDescription:
+      "Rimjhim is a beautifully crafted magenta pink kurti made from flowy georgette, designed to give you those effortless, pure desi vibes with a modern twist. Its standout corset back enhances your silhouette while adding a touch of contemporary charm. Light, graceful, and versatile, Ananya is perfect for festive occasions or special outings where you want to feel rooted yet stylish.",
+    images: [
+      "/Rimjhim/Rimjhim1.png",
+      "/Rimjhim/Rimjhim2.png",
+      "/Rimjhim/Rimjhim3.png",
+      "/Rimjhim/Rimjhim4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
   {
     id: "ananya",
     name: "Ananya",
