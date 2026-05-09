@@ -1262,12 +1262,12 @@ const products = [
       "/Ambika/Ambika4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XS", inStock: false },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
       { label: "XL", inStock: false },
     ],
     heights: [
@@ -1314,7 +1314,7 @@ const products = [
       "/Gauri/Gauri4.png",
     ],
     category: "clothing",
-    inStock: true,
+    inStock: false,
     sizes: [
       { label: "XXS", inStock: true },
       { label: "XS", inStock: true },
