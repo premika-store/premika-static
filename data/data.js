@@ -41,7 +41,7 @@ const products = [
     inStock: true,
     sizes: [
       { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "XS", inStock: false },
       { label: "S", inStock: false },
       { label: "M", inStock: false },
       { label: "L", inStock: false },
