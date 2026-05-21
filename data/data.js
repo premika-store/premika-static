@@ -410,8 +410,8 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
+      { label: "XXS", inStock:false },
+      { label: "XS", inStock: false },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
       { label: "L", inStock: false },
