@@ -247,26 +247,6 @@ export function Footer() {
           <p className="text-center text-m text-[#E0BCA2]">
             © 2025 Premika. All rights reserved.
           </p>
-          <p className="text-center text-xs text-[#E0BCA2]">
-            Made with ❤️ by{" "}
-            <a
-              href="https://www.linkedin.com/in/somani-khushi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              Khushi Somani
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.linkedin.com/in/parth-dahiya/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-white"
-            >
-              Parth Dahiya
-            </a>
-          </p>
         </div>
       </div>
     </footer>
