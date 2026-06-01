@@ -627,24 +627,24 @@ export function ProductInfo({
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="font-semibold text-gray-900">Size S</span>
                 <div className="text-right">
-                  <div className="text-gray-700">Waist: 26" - 30"</div>
-                  <div className="text-xs text-gray-500">Length: 40"</div>
+                  <div className="text-gray-700">Waist: 26&quot; - 30&quot;</div>
+                  <div className="text-xs text-gray-500">Length: 40&quot;</div>
                 </div>
               </div>
 
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="font-semibold text-gray-900">Size M</span>
                 <div className="text-right">
-                  <div className="text-gray-700">Waist: 30" - 34"</div>
-                  <div className="text-xs text-gray-500">Length: 40"</div>
+                  <div className="text-gray-700">Waist: 30&quot; - 34&quot;</div>
+                  <div className="text-xs text-gray-500">Length: 40&quot;</div>
                 </div>
               </div>
 
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="font-semibold text-gray-900">Size L</span>
                 <div className="text-right">
-                  <div className="text-gray-700">Waist: 35" - 38"</div>
-                  <div className="text-xs text-gray-500">Length: 40"</div>
+                  <div className="text-gray-700">Waist: 35&quot; - 38&quot;</div>
+                  <div className="text-xs text-gray-500">Length: 40&quot;</div>
                 </div>
               </div>
             </div>
