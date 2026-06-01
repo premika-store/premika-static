@@ -41,6 +41,7 @@ export function ProductInfo({
     heights?.find((h) => h.default)?.value || heights?.[0]?.value || ""
   );
   const [showSkirtSizeChart, setShowSkirtSizeChart] = useState(false);
+  const [showBottomSizeChart, setShowBottomSizeChart] = useState(false);
   const sizeChartModal = useSizeChartModal();
   const cart = useCart();
 
@@ -60,6 +61,9 @@ export function ProductInfo({
   // Check if this product has skirt size chart information
   const hasSkirtSizeChart =
     description && description.includes("Size Chart For Skirt");
+
+  const hasBottomSizeChart =
+    description && description.includes("Size Chart For Bottoms");
 
   // Check if all combo sizes are selected
   const allComboSizesSelected = isCombo && comboItems
@@ -118,11 +122,10 @@ export function ProductInfo({
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${
-                  i < rating
-                    ? "fill-current"
-                    : "stroke-current fill-transparent"
-                }`}
+                className={`w-4 h-4 ${i < rating
+                  ? "fill-current"
+                  : "stroke-current fill-transparent"
+                  }`}
               />
             ))}
           </div>
@@ -167,9 +170,8 @@ export function ProductInfo({
         {/* Stock Status */}
         <div className="mb-4">
           <span
-            className={`text-sm font-medium ${
-              inStock ? "text-green-600" : "text-red-600"
-            }`}
+            className={`text-sm font-medium ${inStock ? "text-green-600" : "text-red-600"
+              }`}
           >
             {inStock ? "✓ In Stock" : "✗ Out of Stock"}
           </span>
@@ -191,7 +193,7 @@ export function ProductInfo({
             <h3 className="text-lg font-semibold text-secondary">Select Sizes for Each Item</h3>
             <p className="text-sm text-tertiary mt-1">This is a combo set - please select sizes for both items</p>
           </div>
-          
+
           {comboItems.map((item, index) => (
             <div key={item.id} className={`space-y-4 ${index > 0 ? "border-t border-primary/20 pt-4" : ""}`}>
               <h4 className="text-sm font-semibold text-secondary flex items-center gap-2">
@@ -200,7 +202,7 @@ export function ProductInfo({
                 </span>
                 {item.name}
               </h4>
-              
+
               {/* Size selection for this combo item */}
               {item.sizes && item.sizes.length > 0 && (
                 <div className="space-y-2">
@@ -211,13 +213,12 @@ export function ProductInfo({
                         key={size.label}
                         onClick={() => handleComboSizeChange(item.id, size.label)}
                         disabled={!size.inStock}
-                        className={`px-4 py-2 text-sm border rounded-md transition-colors ${
-                          comboSelections[item.id]?.size === size.label
-                            ? "bg-foreground text-background border-foreground"
-                            : size.inStock
+                        className={`px-4 py-2 text-sm border rounded-md transition-colors ${comboSelections[item.id]?.size === size.label
+                          ? "bg-foreground text-background border-foreground"
+                          : size.inStock
                             ? "border-gray-300 hover:border-foreground"
                             : "border-gray-200 text-gray-400 cursor-not-allowed"
-                        }`}
+                          }`}
                       >
                         {size.label}
                         {!size.inStock && " (Out of Stock)"}
@@ -226,7 +227,7 @@ export function ProductInfo({
                   </div>
                 </div>
               )}
-              
+
               {/* Height selection for this combo item (if applicable) */}
               {item.heights && item.heights.length > 0 && (
                 <div className="space-y-2">
@@ -258,11 +259,10 @@ export function ProductInfo({
                       <button
                         key={height.value}
                         onClick={() => handleComboHeightChange(item.id, height.value)}
-                        className={`px-3 py-1.5 text-xs border rounded-md transition-colors ${
-                          comboSelections[item.id]?.height === height.value
-                            ? "bg-foreground text-background border-foreground"
-                            : "border-gray-300 hover:border-foreground"
-                        }`}
+                        className={`px-3 py-1.5 text-xs border rounded-md transition-colors ${comboSelections[item.id]?.height === height.value
+                          ? "bg-foreground text-background border-foreground"
+                          : "border-gray-300 hover:border-foreground"
+                          }`}
                       >
                         {height.label}
                       </button>
@@ -285,13 +285,12 @@ export function ProductInfo({
                 key={size.label}
                 onClick={() => setSelectedSize(size.label)}
                 disabled={!size.inStock}
-                className={`px-4 py-2 text-sm border rounded-md transition-colors ${
-                  selectedSize === size.label
-                    ? "bg-foreground text-background border-foreground"
-                    : size.inStock
+                className={`px-4 py-2 text-sm border rounded-md transition-colors ${selectedSize === size.label
+                  ? "bg-foreground text-background border-foreground"
+                  : size.inStock
                     ? "border-gray-300 hover:border-foreground"
                     : "border-gray-200 text-gray-400 cursor-not-allowed"
-                }`}
+                  }`}
               >
                 {size.label}
                 {!size.inStock && " (Out of Stock)"}
@@ -332,11 +331,10 @@ export function ProductInfo({
               <button
                 key={height.value}
                 onClick={() => setSelectedHeight(height.value)}
-                className={`px-4 py-2 text-sm border rounded-md transition-colors ${
-                  selectedHeight === height.value
-                    ? "bg-foreground text-background border-foreground"
-                    : "border-gray-300 hover:border-foreground"
-                }`}
+                className={`px-4 py-2 text-sm border rounded-md transition-colors ${selectedHeight === height.value
+                  ? "bg-foreground text-background border-foreground"
+                  : "border-gray-300 hover:border-foreground"
+                  }`}
               >
                 {height.label}
               </button>
@@ -384,7 +382,7 @@ export function ProductInfo({
             const regularProductReady = !isCombo && inStock && !(sizes && sizes.length > 0 && !selectedSize);
             const comboProductReady = isCombo && inStock && allComboSizesSelected;
             const canAddToCart = regularProductReady || comboProductReady;
-            
+
             // Determine button text for disabled state
             let disabledText = "OUT OF STOCK";
             if (inStock) {
@@ -394,7 +392,7 @@ export function ProductInfo({
                 disabledText = "SELECT SIZE";
               }
             }
-            
+
             return canAddToCart ? (
               <Button
                 onClick={handleAddToCart}
@@ -449,6 +447,27 @@ export function ProductInfo({
               />
             </svg>
             <span>Skirt Size Chart</span>
+          </button>
+        )}
+        {hasBottomSizeChart && (
+          <button
+            className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors"
+            onClick={() => setShowBottomSizeChart(true)}
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01m3 0h.01M9 11h.01m3 0h.01m0-7h.01M9 7h.01M24 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>Bottom Size Chart</span>
           </button>
         )}
       </div>
@@ -564,6 +583,85 @@ export function ProductInfo({
 
             <button
               onClick={() => setShowSkirtSizeChart(false)}
+              className="mt-4 w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Bottom Size Chart Modal */}
+      {showBottomSizeChart && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 relative">
+            <button
+              onClick={() => setShowBottomSizeChart(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Bottom Size Chart
+              </h3>
+              <p className="text-sm text-gray-600 mb-4">
+                Waist measurements in inches
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size S</span>
+                <div className="text-right">
+                  <div className="text-gray-700">Waist: 26" - 30"</div>
+                  <div className="text-xs text-gray-500">Length: 40"</div>
+                </div>
+              </div>
+
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size M</span>
+                <div className="text-right">
+                  <div className="text-gray-700">Waist: 30" - 34"</div>
+                  <div className="text-xs text-gray-500">Length: 40"</div>
+                </div>
+              </div>
+
+              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                <span className="font-semibold text-gray-900">Size L</span>
+                <div className="text-right">
+                  <div className="text-gray-700">Waist: 35" - 38"</div>
+                  <div className="text-xs text-gray-500">Length: 40"</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 p-4 bg-muted-foreground/30 rounded-lg">
+              <h4 className="font-medium text-secondary mb-2">
+                📏 How to Measure
+              </h4>
+              <p className="text-sm text-secondary">
+                Measure around the fullest part of your waist while standing naturally.
+                Keep the measuring tape snug but comfortable. Compare your measurement
+                with the chart above to find your best fit.
+              </p>
+            </div>
+
+            <button
+              onClick={() => setShowBottomSizeChart(false)}
               className="mt-4 w-full bg-gray-900 text-white py-2 px-4 rounded-lg hover:bg-gray-800 transition-colors"
             >
               Close
