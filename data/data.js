@@ -99,7 +99,7 @@ name: "kritika",
 date: "2026-05-01",
 rating: 4,
 comment:
-“Absolutely loved the soft brown color! It’s subtle, elegant, and perfect for everyday wear as well as casual outings!",
+"Absolutely loved the soft brown color! It’s subtle, elegant, and perfect for everyday wear as well as casual outings!",
 },
 ],
 },
@@ -107,8 +107,7 @@ comment:
 id: "koyal salwar ",
 name: "koyal salwar",
 price: 899,
-shortDescription: "The Koyal Farshi Salwar is crafted from premium pure cotton slub fabric, offering a structured yet comfortable silhouette. Designed to add effortless grace and movement to your look, it’s the perfect blend of elegance and ease.
-",
+shortDescription: "The Koyal Farshi Salwar is crafted from premium pure cotton slub fabric, offering a structured yet comfortable silhouette. Designed to add effortless grace and movement to your look, it’s the perfect blend of elegance and ease.",
 longDescription:
 "Crafted from pure cotton slub fabric, the Koyal Farshi Salwar is designed to create a beautifully structured and flowy silhouette. The textured fabric adds depth and character, while the comfortable fit ensures ease of movement throughout the day. Timeless, versatile, and effortlessly elegant, it’s the perfect companion to elevate any kurti.”,
 images: [
@@ -139,7 +138,7 @@ name: "aayushi",
 date: "2026-05-01",
 rating: 4,
 comment:
-“The cotton slub fabric has the perfect structure without feeling heavy. Super comfortable to wear all day.",
+"The cotton slub fabric has the perfect structure without feeling heavy. Super comfortable to wear all day.",
 },
 ],
 },
@@ -179,8 +178,7 @@ comment:
         name: "Manojna",
         date: "2025-06-07",
         rating: 4,
-        comment:
-          "Loved the bell sleeves and the overall style. It looks even better in real life!",
+        comment:"Loved the bell sleeves and the overall style. It looks even better in real life!",
       },
     ],
   },
