@@ -25,7 +25,7 @@ export const getDiscountedPrice = (product) => {
 const products = [
     {
 id: "koyal-set",
-name: "Koyal set",
+name: "Koyal Set",
 price: 1499,
 shortDescription: "Koyal is a timeless soft brown kurti and farshi salwar set crafted for effortless elegance. The kurti is made from pure cambric cotton and features a charming neckline with delicate side detailing on both sides, while the pure cotton slub farshi salwar adds a beautifully structured silhouette. View Size Chart For Bottoms for the perfect fit.",
 longDescription:
@@ -59,6 +59,87 @@ name: "simran",
 date: "2026-05-07",
 rating: 4,
 comment: "Loved the sleeves and the overall style. It looks even better in real life!",
+},
+],
+},
+  {
+id: "koyal-kurti",
+name: "Koyal Kurti",
+price: 699,
+shortDescription: "Koyal is a soft brown kurti crafted from premium pure cambric cotton. Designed with a charming neckline and delicate side detailing on both sides, it blends everyday comfort with understated elegance.
+",
+longDescription:
+"The Koyal Kurti is crafted from breathable pure cambric cotton in a beautiful soft brown hue. Featuring a cute, thoughtfully designed neckline and elegant side detailing on both sides, it offers a perfect balance of comfort and sophistication. Lightweight and versatile, Koyal is designed to be your go-to choice for effortless everyday dressing.",
+images: [
+"/KoyalKurti/Koyal1.png",
+"/KoyalKurti/Koyal2.png",
+"/KoyalKurti/Koyal3.png",
+"/KoyalKurti/Koyal4.png",
+],
+category: "clothing",
+inStock: true,
+sizes: [
+{ label: "XXS", inStock: true },
+{ label: "XS", inStock: true },
+{ label: "S", inStock: true },
+{ label: "M", inStock: true },
+{ label: "L", inStock: true },
+{ label: "XL", inStock: true },
+],
+reviews: [
+{
+name: "priya",
+date: "2026-06-1”,
+rating: 5,
+comment:
+"The fabric is so soft and breathable. The fit is beautiful, and the side detailing makes it look much more premium than regular cotton kurtis.”,
+},
+{
+name: "kritika",
+date: "2026-05-01",
+rating: 4,
+comment:
+“Absolutely loved the soft brown color! It’s subtle, elegant, and perfect for everyday wear as well as casual outings!",
+},
+],
+},
+  {
+id: "koyal salwar ",
+name: "koyal salwar",
+price: 899,
+shortDescription: "The Koyal Farshi Salwar is crafted from premium pure cotton slub fabric, offering a structured yet comfortable silhouette. Designed to add effortless grace and movement to your look, it’s the perfect blend of elegance and ease.
+",
+longDescription:
+"Crafted from pure cotton slub fabric, the Koyal Farshi Salwar is designed to create a beautifully structured and flowy silhouette. The textured fabric adds depth and character, while the comfortable fit ensures ease of movement throughout the day. Timeless, versatile, and effortlessly elegant, it’s the perfect companion to elevate any kurti.”,
+images: [
+"/KoyalSalwar/Koyal1.png",
+"/KoyalSalwar/Koyal2.png",
+"/KoyalSalwar/Koyal3.png",
+],
+category: "clothing",
+inStock: true,
+sizes: [
+{ label: "XXS", inStock: true },
+{ label: "XS", inStock: true },
+{ label: "S", inStock: true },
+{ label: "M", inStock: true },
+{ label: "L", inStock: true },
+{ label: "XL", inStock: true },
+],
+reviews: [
+{
+name: "sarah",
+date: "2026-06-1”,
+rating: 5,
+comment:
+"The fall of this salwar is absolutely beautiful. It gives such a graceful and premium look.”,
+},
+{
+name: "aayushi",
+date: "2026-05-01",
+rating: 4,
+comment:
+“The cotton slub fabric has the perfect structure without feeling heavy. Super comfortable to wear all day.",
 },
 ],
 },
