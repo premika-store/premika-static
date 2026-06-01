@@ -46,11 +46,6 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
-     heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
     reviews: [
       {
         name: "swati",
