@@ -46,6 +46,11 @@ const products = [
       { label: "L", inStock: true },
       { label: "XL", inStock: true },
     ],
+     heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
     reviews: [
       {
         name: "swati",
@@ -103,7 +108,7 @@ const products = [
     ],
   },
   {
-    id: "koyal salwar ",
+    id: "koyal-salwar ",
     name: "Koyal Salwar",
     price: 899,
     shortDescription: "The Koyal Farshi Salwar is crafted from premium pure cotton slub fabric, offering a structured yet comfortable silhouette. Designed to add effortless grace and movement to your look, it’s the perfect blend of elegance and ease. View Size Chart For Bottoms for the perfect fit.",
