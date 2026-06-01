@@ -24,6 +24,48 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+id: "koyal-set",
+name: "Koyal set",
+price: 1499,
+shortDescription: "Koyal is a timeless soft brown kurti and farshi salwar set crafted for effortless elegance. The kurti is made from pure cambric cotton and features a charming neckline with delicate side detailing on both sides, while the pure cotton slub farshi salwar adds a beautifully structured silhouette.
+",
+longDescription:
+"Meet Koyal — a graceful soft brown kurti and farshi salwar set designed for comfort and sophistication. The kurti is crafted from premium pure cambric cotton, offering a lightweight and breathable feel, and is adorned with a cute neckline and subtle side detailing on both sides for an elevated touch. Paired with a pure cotton slub farshi salwar, the set creates a structured yet effortless silhouette, making it perfect for everyday elegance as well as special occasions. View Size Chart For Bottoms for the perfect fit.",
+images: [
+"/Koyal/Koyal1.png",
+"/Koyal/Koyal2.png",
+"/Koyal/Koyal3.png",
+"/Koyal/Koyal4.png",
+],
+category: "clothing",
+inStock: true,
+sizes: [
+{ label: "XXS", inStock: true },
+{ label: "XS", inStock: true },
+{ label: "S", inStock: true },
+{ label: "M", inStock: true },
+{ label: "L", inStock: true },
+{ label: "XL", inStock: true },
+],
+reviews: [
+{
+name: "swati",
+date: "2026-06-14",
+rating: 5,
+comment:
+"Absolutely loved it!”
+“Loved the fabric! The pure cotton feels so soft and breathable. Perfect for daily wear.”,
+},
+{
+name: "simran",
+date: "2026-05-07",
+rating: 4,
+comment:
+“Loved the sleeves and the overall style. It looks even better in real life!",
+},
+],
+},
+  {
     id: "Swasti",
     name: "Swasti",
     price: 649,
