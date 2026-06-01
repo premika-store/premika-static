@@ -31,10 +31,10 @@ shortDescription: "Koyal is a timeless soft brown kurti and farshi salwar set cr
 longDescription:
 "Meet Koyal — a graceful soft brown kurti and farshi salwar set designed for comfort and sophistication. The kurti is crafted from premium pure cambric cotton, offering a lightweight and breathable feel, and is adorned with a cute neckline and subtle side detailing on both sides for an elevated touch. Paired with a pure cotton slub farshi salwar, the set creates a structured yet effortless silhouette, making it perfect for everyday elegance as well as special occasions.",
 images: [
-"/Koyal full set/Koyal1.png",
-"/Koyal full set/Koyal2.png",
-"/Koyal full set/Koyal3.png",
-"/Koyal full set/Koyal4.png",
+"/KoyalFull/Koyal1.png",
+"/KoyalFull/Koyal2.png",
+"/KoyalFull/Koyal3.png",
+"/KoyalFull/Koyal4.png",
 ],
 category: "clothing",
 inStock: true,
