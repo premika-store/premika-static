@@ -108,7 +108,7 @@ const products = [
     ],
   },
   {
-    id: "koyal-salwar ",
+    id: "koyal-salwar",
     name: "Koyal Salwar",
     price: 899,
     shortDescription: "The Koyal Farshi Salwar is crafted from premium pure cotton slub fabric, offering a structured yet comfortable silhouette. Designed to add effortless grace and movement to your look, it’s the perfect blend of elegance and ease. View Size Chart For Bottoms for the perfect fit.",
