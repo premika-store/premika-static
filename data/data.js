@@ -24,6 +24,46 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
+    id: "Tanya-Full",
+    name: "Tanya Set",
+    price: 1499,
+    shortDescription:
+      "Tanya is a pure cotton kurti and salwar set designed for effortless elegance. Featuring a flattering corset back and a beautifully crafted neckline, it is paired with a printed slub cotton salwar that adds charm and character to the look.View Size Chart For Bottoms for the perfect fit.",
+    longDescription:
+      "Meet Tanya — a timeless kurti and salwar set crafted for days when comfort and elegance go hand in hand. Made from breathable pure cotton, the kurti features a beautifully designed neckline and an adjustable corset back that creates a flattering fit. Paired with a printed slub cotton salwar, the set combines structure, comfort, and effortless style. Thoughtfully designed and easy to wear, Tanya is perfect for everything from casual gatherings to festive celebrations.",
+    images: [
+      "/TanyaFull/Tanya1.png",
+      "/TanyaFull/Tanya2.png",
+      "/TanyaFull/Tanya3.png",
+      "/TanyaFull/Tanya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
     id: "palak",
     name: "Palak",
     price: 649,
