@@ -24,6 +24,86 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
+    id: "tanya-kurti",
+    name: "Tanya Kurti",
+    price: 649,
+    shortDescription:
+      "The Tanya Kurti is crafted from pure cotton and features a beautifully designed neckline with an adjustable corset tie-up back. Comfortable, flattering, and easy to wear, it’s designed for effortless everyday elegance.",
+    longDescription:
+      "Crafted from breathable pure cotton, the Tanya Kurti is designed to bring together comfort and charm. Featuring a beautiful neckline and a corset tie-up back for an adjustable fit, it flatters the silhouette while maintaining an effortless feel. Thoughtfully designed and easy to style, Tanya is the kind of piece you’ll find yourself reaching for time and time again.",
+    images: [
+      "/Tanya/Tanya1.png",
+      "/Tanya/Tanya2.png",
+      "/Tanya/Tanya3.png",
+      "/Tanya/Tanya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "tanya-salwar",
+    name: "Tanya Salwar",
+    price: 899,
+    shortDescription:
+      "The Tanya Salwar features a beautiful print that adds just the right amount of charm to the set. Comfortable, breathable, and easy to wear, it’s designed for effortless everyday elegance.",
+    longDescription:
+      "Designed to complement the Tanya Kurti, this salwar features a beautiful print that brings character and charm to the overall look. Crafted from soft, breathable slub cotton, it offers all-day comfort while maintaining a graceful silhouette. Versatile and timeless, it’s a piece you’ll love wearing again and again.",
+    images: [
+      "/TanyaSal/Tanya1.png",
+      "/TanyaSal/Tanya2.png",
+      "/TanyaSal/Tanya3.png",
+      "/TanyaSal/Tanya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
     id: "Tanya-Full",
     name: "Tanya Set",
     price: 1499,
