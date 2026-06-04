@@ -24,6 +24,46 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
+    id: "Tara",
+    name: "Tara",
+    price: 649,
+    shortDescription:
+      "Tara is a timeless halter-neck kurti crafted from breathable slub cotton. Designed with a flattering silhouette and subtle texture, it brings together comfort, elegance, and effortless charm.",
+    longDescription:
+      "Meet Tara — a graceful halter-neck kurti crafted from premium slub cotton. Featuring a flattering neckline and a beautifully relaxed silhouette, Tara is designed for days when comfort and style go hand in hand. The textured slub cotton fabric adds character and depth, making it a versatile piece that transitions effortlessly from casual outings to special occasions.",
+    images: [
+      "/Tara/Tara1.png",
+      "/Tara/Tara2.png",
+      "/Tara/Tara3.png",
+      "/Tara/Tara4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
     id: "bulbul-set",
     name: "Bulbul Set",
     price: 1499,
