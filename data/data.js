@@ -24,6 +24,126 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
+    id: "palak",
+    name: "Palak",
+    price: 649,
+    shortDescription:
+      "Palak is a timeless black halter-neck kurti crafted from pure cotton. Designed with a relaxed silhouette and a flattering neckline, it’s the perfect blend of comfort, simplicity, and effortless style.",
+    longDescription:
+      "Meet Palak — a black halter-neck kurti crafted from breathable pure cotton for all-day comfort. Featuring a flattering V-neckline, an easy silhouette, and a classic black hue, it’s a versatile piece that can be dressed up or down with ease. Minimal, comfortable, and effortlessly elegant, Palak is designed for days when you want to look put together without trying too hard.",
+    images: [
+      "/Palak/Palak1.png",
+      "/Palak/Palak2.png",
+      "/Palak/Palak3.png",
+      "/Palak/Palak4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "yamini",
+    name: "Yamini",
+    price: 699,
+    shortDescription:
+      "Yamini is a butter yellow cotton kurti designed for effortless elegance. Double-lined for comfort and coverage, it features delicate side tie-up detailing that adds a subtle, flattering touch to its relaxed silhouette.",
+    longDescription:
+      "Meet Yamini — a soft butter yellow kurti crafted from breathable cotton and thoughtfully double-lined for added comfort. Designed with adjustable side tie-up detailing that gently cinches the waist, it creates a flattering silhouette while maintaining an effortless feel. Light, versatile, and easy to wear, Yamini is perfect for slow mornings, sunny afternoons, and everything in between.",
+    images: [
+      "/Yamini/Yamini1.png",
+      "/Yamini/Yamini2.png",
+      "/Yamini/Yamini3.png",
+      "/Yamini/Yamini4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "Diksha",
+    name: "Diksha",
+    price: 649,
+    shortDescription:
+      "Diksha is a soft butter-yellow kurti crafted from lightweight georgette chiffon. Featuring delicate noodle straps and a double-lined finish for added comfort and coverage, it’s the perfect blend of elegance and ease.",
+    longDescription:
+      "Meet Diksha — a dreamy butter-yellow kurti crafted from flowy georgette chiffon. Designed with delicate noodle straps and thoughtfully double-lined for comfort and confidence, it drapes beautifully while maintaining a lightweight feel. The subtle texture and soft hue make it an effortlessly feminine piece that’s perfect for warm days, festive gatherings, and everything in between.",
+    images: [
+      "/Diksha/Diksha1.png",
+      "/Diksha/Diksha2.png",
+      "/Diksha/Diksha3.png",
+      "/Diksha/Diksha4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
     id: "Chand",
     name: "Chand",
     price: 649,
