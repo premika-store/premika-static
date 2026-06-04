@@ -24,6 +24,46 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
+    id: "bulbul-kurti",
+    name: "Bulbul Kurti",
+    price: 649,
+    shortDescription:
+      "Bulbul is crafted in soft cotton and features delicate noodle straps with a corset tie-up back for the perfect fit. Double-lined for added comfort and coverage, this timeless black kurti is effortlessly stylish and designed to be worn on repeat.",
+    longDescription:
+      "Bulbul is a black cotton kurti with delicate noodle straps and a corset tie-up back. Designed to fit beautifully and comfortably, it’s one of those pieces that feels effortless yet makes a statement. The classic black color makes it easy to dress up or down, making Bulbul a wardrobe staple you’ll keep reaching for.",
+    images: [
+      "/Bulbul/Bulbul1.png",
+      "/Bulbul/Bulbul2.png",
+      "/Bulbul/Bulbul3.png",
+      "/Bulbul/Bulbul4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
     id: "Tara",
     name: "Tara",
     price: 649,
