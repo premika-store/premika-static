@@ -24,28 +24,28 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
 {
-    id: "bulbul-kurti",
-    name: "Bulbul Kurti",
+    id: "Chand",
+    name: "Chand",
     price: 649,
     shortDescription:
-      "Bulbul is crafted in soft cotton and features delicate noodle straps with a corset tie-up back for the perfect fit. Double-lined for added comfort and coverage, this timeless black kurti is effortlessly stylish and designed to be worn on repeat.",
+      "Chand is a timeless white cotton kurti designed for effortless everyday elegance. Double-lined for comfort and coverage, it features statement bell sleeves and a relaxed silhouette that feels as good as it looks.",
     longDescription:
-      "Bulbul is a black cotton kurti with delicate noodle straps and a corset tie-up back. Designed to fit beautifully and comfortably, it’s one of those pieces that feels effortless yet makes a statement. The classic black color makes it easy to dress up or down, making Bulbul a wardrobe staple you’ll keep reaching for.",
+      "Meet Chand — a classic white kurti crafted from breathable cotton and thoughtfully double-lined for added comfort and coverage. Featuring elegant bell sleeves, side slits, and a relaxed silhouette, it’s the kind of piece you’ll keep reaching for. Simple, versatile, and effortlessly graceful, Chand is designed to fit seamlessly into your everyday wardrobe.",
     images: [
-      "/Bulbul/Bulbul1.png",
-      "/Bulbul/Bulbul2.png",
-      "/Bulbul/Bulbul3.png",
-      "/Bulbul/Bulbul4.png",
+      "/Chand/Chand1.png",
+      "/Chand/Chand2.png",
+      "/Chand/Chand3.png",
+      "/Chand/Chand4.png",
     ],
     category: "clothing",
     inStock: true,
     sizes: [
       { label: "XXS", inStock: true },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     reviews: [
       {
@@ -81,11 +81,91 @@ const products = [
     inStock: true,
     sizes: [
       { label: "XXS", inStock: true },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+{
+    id: "bulbul-kurti",
+    name: "Bulbul Kurti",
+    price: 649,
+    shortDescription:
+      "Bulbul is crafted in soft cotton and features delicate noodle straps with a corset tie-up back for the perfect fit. Double-lined for added comfort and coverage, this timeless black kurti is effortlessly stylish and designed to be worn on repeat.",
+    longDescription:
+      "Bulbul is a black cotton kurti with delicate noodle straps and a corset tie-up back. Designed to fit beautifully and comfortably, it’s one of those pieces that feels effortless yet makes a statement. The classic black color makes it easy to dress up or down, making Bulbul a wardrobe staple you’ll keep reaching for.",
+    images: [
+      "/Bulbul/Bulbul1.png",
+      "/Bulbul/Bulbul2.png",
+      "/Bulbul/Bulbul3.png",
+      "/Bulbul/Bulbul4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "bulbul-salwar",
+    name: "Bulbul Salwar",
+    price: 899,
+    shortDescription:
+      "The Bulbul Farshi Salwar is crafted from soft viscose rayon that drapes beautifully with every step. Designed for comfort and effortless movement, its flowy silhouette adds grace and elegance while perfectly complementing the structured fit of the Bulbul Kurti.",
+    longDescription:
+      "The Bulbul Farshi Salwar is crafted from soft viscose rayon that drapes beautifully and moves effortlessly with you. Designed with a flowy, relaxed silhouette, it offers the perfect combination of comfort and elegance. The lightweight fabric creates a graceful fall, while the timeless design makes it easy to pair with both festive and everyday looks. Comfortable, versatile, and effortlessly chic, Bulbul is a piece you’ll find yourself reaching for again and again.",
+    images: [
+      "/BulbulSal/Bulbul1.png",
+      "/BulbulSal/Bulbul2.png",
+      "/BulbulSal/Bulbul3.png",
+      "/BulbulSal/Bulbul4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     reviews: [
       {
