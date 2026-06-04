@@ -68,14 +68,13 @@ const products = [
     name: "Tanya Salwar",
     price: 899,
     shortDescription:
-      "The Tanya Salwar features a beautiful print that adds just the right amount of charm to the set. Comfortable, breathable, and easy to wear, it’s designed for effortless everyday elegance.",
+      "The Tanya Salwar features a beautiful print that adds just the right amount of charm to the set. Comfortable, breathable, and easy to wear, it’s designed for effortless everyday elegance.View Size Chart For Bottoms for the perfect fit.",
     longDescription:
       "Designed to complement the Tanya Kurti, this salwar features a beautiful print that brings character and charm to the overall look. Crafted from soft, breathable slub cotton, it offers all-day comfort while maintaining a graceful silhouette. Versatile and timeless, it’s a piece you’ll love wearing again and again.",
     images: [
       "/TanyaSal/Tanya1.png",
       "/TanyaSal/Tanya2.png",
       "/TanyaSal/Tanya3.png",
-      "/TanyaSal/Tanya4.png",
     ],
     category: "clothing",
     inStock: true,
