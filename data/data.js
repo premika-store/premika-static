@@ -23,6 +23,45 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+{
+    id: "bulbul-set",
+    name: "Bulbul Set",
+    price: 1499,
+    shortDescription: "Bulbul is a timeless black kurti and farshi salwar set crafted for modern elegance. Featuring a cotton kurti with delicate noodle straps and a corset-style back, it is paired with a flowy viscose rayon farshi salwar for a graceful and effortlessly chic look.",
+    longDescription:
+      "Meet Bulbul — a striking black kurti and farshi salwar set designed for effortless elegance. Crafted from breathable cotton, the kurti features delicate noodle straps and a beautifully adjustable corset back that flatters the silhouette while adding a contemporary touch. Paired with a flowy viscose rayon farshi salwar, the set offers graceful movement and all-day comfort. Timeless yet distinctive, Bulbul is perfect for festive gatherings, intimate celebrations, and everything in between.",
+    images: [
+      "/BulbulFull/Bulbul1.png",
+      "/BulbulFull/Bulbul2.png",
+      "/BulbulFull/Bulbul3.png",
+      "/BulbulFull/Bulbul4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "swati",
+        date: "2026-06-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it!Loved the fabric! The pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "simran",
+        date: "2026-05-07",
+        rating: 4,
+        comment: "Loved the sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },  
   {
     id: "koyal-set",
     name: "Koyal Set",
