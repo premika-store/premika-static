@@ -1935,59 +1935,6 @@ const products = [
     ],
   },
   {
-    id: "gauri",
-    name: "Gauri",
-    price: 899,
-    shortDescription:
-      "Gauri is a striking purple top with delicate lace detailing and a bold backless cut. Flowing in the front and fearless at the back, it brings together elegance and edge with effortless ease.",
-    longDescription:
-      "Gauri is a bold purple kurti that blends classic charm with a daring twist. Featuring soft lace details and a striking backless design, it’s graceful in the front and fearless at the back. Whether styled up or down, Gauri is made for moments when you want to stand out — without saying a word",
-    images: [
-      "/Gauri/Gauri1.png",
-      "/Gauri/Gauri2.jpg",
-      "/Gauri/Gauri3.png",
-      "/Gauri/Gauri4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: true },
-      { label: "XS", inStock: true },
-      { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Shreya",
-        date: "2025-09-19",
-        rating: 5,
-        comment:
-          "The purple color is absolutely gorgeous! The lace detailing adds such elegance and the backless design is so bold and beautiful.",
-      },
-      {
-        name: "Rhea",
-        date: "2025-09-19",
-        rating: 5,
-        comment:
-          "Love how it flows in the front and is fearless at the back. Perfect blend of classic charm with a daring twist. Gets compliments every time!",
-      },
-      {
-        name: "Meera",
-        date: "2025-09-12",
-        rating: 4,
-        comment:
-          "The soft lace details are beautiful and the striking backless design makes it perfect for special occasions. Very well made!",
-      },
-    ],
-  },
-  {
     id: "durga",
     name: "Durga",
     price: 899,
@@ -2750,6 +2697,59 @@ const products = [
         rating: 4,
         comment:
           "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+   {
+    id: "gauri",
+    name: "Gauri",
+    price: 899,
+    shortDescription:
+      "Gauri is a striking purple top with delicate lace detailing and a bold backless cut. Flowing in the front and fearless at the back, it brings together elegance and edge with effortless ease.",
+    longDescription:
+      "Gauri is a bold purple kurti that blends classic charm with a daring twist. Featuring soft lace details and a striking backless design, it’s graceful in the front and fearless at the back. Whether styled up or down, Gauri is made for moments when you want to stand out — without saying a word",
+    images: [
+      "/Gauri/Gauri1.png",
+      "/Gauri/Gauri2.jpg",
+      "/Gauri/Gauri3.png",
+      "/Gauri/Gauri4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Shreya",
+        date: "2025-09-19",
+        rating: 5,
+        comment:
+          "The purple color is absolutely gorgeous! The lace detailing adds such elegance and the backless design is so bold and beautiful.",
+      },
+      {
+        name: "Rhea",
+        date: "2025-09-19",
+        rating: 5,
+        comment:
+          "Love how it flows in the front and is fearless at the back. Perfect blend of classic charm with a daring twist. Gets compliments every time!",
+      },
+      {
+        name: "Meera",
+        date: "2025-09-12",
+        rating: 4,
+        comment:
+          "The soft lace details are beautiful and the striking backless design makes it perfect for special occasions. Very well made!",
       },
     ],
   },
