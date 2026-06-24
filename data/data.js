@@ -1287,92 +1287,6 @@ const products = [
     ],
   },
   {
-    id: "kishore",
-    name: "Kishore",
-    gender: "male",
-    price: 659,
-    shortDescription:
-      "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
-    longDescription:
-      "The Kishore shirt in earthy brown is crafted from 100% pure cotton, offering unmatched comfort and breathability. Inspired by classic desi aesthetics, it features a relaxed yet polished look that works well for both casual and semi-traditional occasions. Soft on the skin and easy to style, Kishore pairs beautifully with jeans, chinos, or ethnic bottoms making it a versatile staple for a grounded, authentic wardrobe.",
-    images: [
-      "/Kishore/Kishore1.PNG",
-      "/Kishore/Kishore2.PNG",
-      "/Kishore/Kishore3.PNG",
-      "/Kishore/Kishore4.PNG",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXXS", inStock: false },
-      { label: "XXS", inStock: false },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: false },
-    ],
-    reviews: [
-      {
-        name: "harshit",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "Very comfortable and light. The color is exactly as shown and gives a nice earthy vibe. Definitely my go-to shirt for casual outings.",
-      },
-      {
-        name: "gaurav",
-        date: "2025-06-07",
-        rating: 4,
-        comment:
-          "Nice desi aesthetic and feels very natural. Fits well with jeans or ethnic pants. Worth the price!.",
-      },
-    ],
-  },
-  {
-    id: "Manoj",
-    name: "Manoj",
-    gender: "male",
-    price: 659,
-    shortDescription:
-      "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
-    longDescription:
-      "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",
-    images: [
-      "/Manoj/Manoj1.PNG",
-      "/Manoj/Manoj2.PNG",
-      "/Manoj/Manoj3.PNG",
-      "/Manoj/Manoj4.PNG",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXXS", inStock: false },
-      { label: "XXS", inStock: false },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    reviews: [
-      {
-        name: "Kartik",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "Very stylish shirt. The black and red combo looks powerful and the cotton fabric feels great on the skin.",
-      },
-      {
-        name: "Parth",
-        date: "2025-06-07",
-        rating: 4,
-        comment:
-          "Comfortable and breathable. Has a nice desi vibe and fits well. Good for both casual and festive use.",
-      },
-    ],
-  },
-  {
     id: "aashi",
     name: "Aashi",
     price: 699,
@@ -2697,6 +2611,92 @@ const products = [
         rating: 4,
         comment:
           "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+    {
+    id: "kishore",
+    name: "Kishore",
+    gender: "male",
+    price: 659,
+    shortDescription:
+      "Kishore is a brown pure cotton men’s shirt that carries a warm desi vibe. Comfortable, breathable, and effortlessly stylish for everyday wear..",
+    longDescription:
+      "The Kishore shirt in earthy brown is crafted from 100% pure cotton, offering unmatched comfort and breathability. Inspired by classic desi aesthetics, it features a relaxed yet polished look that works well for both casual and semi-traditional occasions. Soft on the skin and easy to style, Kishore pairs beautifully with jeans, chinos, or ethnic bottoms making it a versatile staple for a grounded, authentic wardrobe.",
+    images: [
+      "/Kishore/Kishore1.PNG",
+      "/Kishore/Kishore2.PNG",
+      "/Kishore/Kishore3.PNG",
+      "/Kishore/Kishore4.PNG",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXXS", inStock: false },
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: false },
+    ],
+    reviews: [
+      {
+        name: "harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Very comfortable and light. The color is exactly as shown and gives a nice earthy vibe. Definitely my go-to shirt for casual outings.",
+      },
+      {
+        name: "gaurav",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Nice desi aesthetic and feels very natural. Fits well with jeans or ethnic pants. Worth the price!.",
+      },
+    ],
+  },
+  {
+    id: "Manoj",
+    name: "Manoj",
+    gender: "male",
+    price: 659,
+    shortDescription:
+      "Manoj is a bold black and red pure cotton men’s shirt with a strong desi touch. Comfortable, breathable, and perfect for everyday or festive wear.",
+    longDescription:
+      "The Manoj shirt blends classic desi aesthetics with a striking black and red color combination. Made from 100% pure cotton, it offers excellent breathability and all-day comfort, making it ideal for warm weather. The bold colors add character while keeping the look rooted and authentic. Easy to style with jeans, trousers, or ethnic bottoms, Manoj works effortlessly for casual outings, festive gatherings, and relaxed traditional wear.",
+    images: [
+      "/Manoj/Manoj1.PNG",
+      "/Manoj/Manoj2.PNG",
+      "/Manoj/Manoj3.PNG",
+      "/Manoj/Manoj4.PNG",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXXS", inStock: false },
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    reviews: [
+      {
+        name: "Kartik",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Very stylish shirt. The black and red combo looks powerful and the cotton fabric feels great on the skin.",
+      },
+      {
+        name: "Parth",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Comfortable and breathable. Has a nice desi vibe and fits well. Good for both casual and festive use.",
       },
     ],
   },
