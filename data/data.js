@@ -802,8 +802,8 @@ const products = [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "L", inStock: true },
-      { label: "XL", inStock: true },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
     ],
     reviews: [
       {
@@ -2025,51 +2025,6 @@ const products = [
     ],
   },
   {
-    id: "mastani",
-    name: "Mastani",
-    price: 599,
-    shortDescription: "halter neck kurti",
-    longDescription:
-      "Grace meets bold in the Mastani Kurti, tailored in pure cotton with a soft double lining for extra comfort and coverage. Its elegant halter neck, timeless white hue, and daring backless design make it a standout for any occasion.",
-    images: [
-      "/Mastani/Mastani1.png",
-      "/Mastani/Mastani2.webp",
-      "/Mastani/Mastani3.PNG",
-      "/Mastani/Mastani4.PNG",
-    ],
-    category: "clothing",
-    inStock: true,
-    sizes: [
-      { label: "XXS", inStock: false },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Priya",
-        date: "2025-05-28",
-        rating: 5,
-        comment:
-          "The white color is so elegant and the halter neck fits perfectly. Love the bold backless style!",
-      },
-      {
-        name: "Megha",
-        date: "2025-06-10",
-        rating: 4,
-        comment:
-          "Super comfortable and the double lining adds a nice touch. Great for both casual and special occasions.",
-      },
-    ],
-  },
-  {
     id: "naina",
     name: "Naina",
     price: 599,
@@ -2426,6 +2381,51 @@ const products = [
         rating: 4,
         comment:
           "Love the cotton fabric and the elegant design. Perfect for both everyday wear and special occasions.",
+      },
+    ],
+  },
+   {
+    id: "mastani",
+    name: "Mastani",
+    price: 599,
+    shortDescription: "halter neck kurti",
+    longDescription:
+      "Grace meets bold in the Mastani Kurti, tailored in pure cotton with a soft double lining for extra comfort and coverage. Its elegant halter neck, timeless white hue, and daring backless design make it a standout for any occasion.",
+    images: [
+      "/Mastani/Mastani1.png",
+      "/Mastani/Mastani2.webp",
+      "/Mastani/Mastani3.PNG",
+      "/Mastani/Mastani4.PNG",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-28",
+        rating: 5,
+        comment:
+          "The white color is so elegant and the halter neck fits perfectly. Love the bold backless style!",
+      },
+      {
+        name: "Megha",
+        date: "2025-06-10",
+        rating: 4,
+        comment:
+          "Super comfortable and the double lining adds a nice touch. Great for both casual and special occasions.",
       },
     ],
   },
