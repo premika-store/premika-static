@@ -1664,58 +1664,6 @@ const products = [
     ],
   },
   {
-    id: "ambika",
-    name: "Ambika",
-    price: 1599,
-    shortDescription:
-      "Ambika is a powerful black set featuring our signature backless lace top Durga paired with a full-flared, double-lined skirt. Fierce, fluid, and unapologetically bold.<br>View Size Chart For Skirt for the perfect fit.",
-    longDescription:
-      "Ambika is a statement in all black a striking set that pairs the dramatic lace-back kurti with a voluminous, double-lined skirt. The top flows long in the front and daringly open at the back, while the skirt brings movement and depth with its full flare. Together, they create a look that’s equal parts elegance and attitude — made for presence, not subtlety.",
-    images: [
-      "/Ambika/Ambika1.png",
-      "/Ambika/Ambika2.png",
-      "/Ambika/Ambika3.png",
-      "/Ambika/Ambika4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Priya",
-        date: "2025-08-15",
-        rating: 5,
-        comment:
-          "Absolutely stunning set! The backless lace top is so dramatic and the full-flared skirt flows beautifully. Perfect for special occasions.",
-      },
-      {
-        name: "Kavya",
-        date: "2025-09-19",
-        rating: 5,
-        comment:
-          "The all-black look is so powerful and elegant. Love how the double-lined skirt moves when I walk. Definitely a statement piece!",
-      },
-      {
-        name: "Anita",
-        date: "2025-09-19",
-        rating: 4,
-        comment:
-          "The lace detailing on the top is exquisite and the skirt has such a lovely volume. Great quality fabric and fits perfectly.",
-      },
-    ],
-  },
-  {
     id: "durga",
     name: "Durga",
     price: 899,
@@ -1847,51 +1795,6 @@ const products = [
         rating: 4,
         comment:
           "The noodle straps are delicate and the round neck is flattering. Perfect for summer days!",
-      },
-    ],
-  },
-  {
-    id: "neha",
-    name: "Neha",
-    price: 599,
-    shortDescription:
-      "Neha is a pure cotton short kurti featuring delicate noodle straps and a round neck. Its white base is adorned with vibrant multicolour floral prints, making it a breezy and stylish pick for summer days",
-    longDescription:
-      "Neha is a pure cotton short kurti with a round neck and delicate noodle straps. Its white base is brightened with multicolour floral prints, giving it a fresh, summery vibe. Lightweight and breezy, it's perfect for casual days out or relaxed indoor wear. Pair it with jeans, shorts, or skirts for an effortlessly chic look.",
-    images: [
-      "/Neha/Neha1.jpg",
-      "/Neha/Neha2.jpg",
-      "/Neha/Neha3.jpg",
-      "/Neha/Neha4.jpg",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Ananya",
-        date: "2025-09-09",
-        rating: 5,
-        comment:
-          "The multicolour floral prints on the white base look so fresh and summery! The cotton fabric feels super light and comfy, perfect for hot days.",
-      },
-      {
-        name: "Kritika",
-        date: "2025-09-10",
-        rating: 4,
-        comment:
-          "Love the round neck and noodle straps design. It’s stylish yet casual, and the breezy fit makes it great for everyday wear.",
       },
     ],
   },
@@ -2073,52 +1976,6 @@ const products = [
         rating: 4,
         comment:
           "Love the pure cotton fabric and the unique corset back design. Great for both casual and festive wear.",
-      },
-    ],
-  },
-  {
-    id: "Hema",
-    name: "Hema",
-    price: 599,
-    shortDescription:
-      "Crafted in pure cotton, this feminine piece features a soft sweetheart neckline and a flattering corset back.",
-    longDescription:
-      "The Hema Kurti is made from breathable pure cotton, designed for comfort and elegance. A soft sweetheart neckline brings a romantic touch, while the corset back adds a modern, form-enhancing detail. Feminine and flattering, Hema is perfect for both everyday grace and special moments.",
-    images: [
-      "/Hema/Hema1.png",
-      "/Hema/Hema2.png",
-      "/Hema/Hema3.png",
-      "/Hema/Hema4.png",
-    ],
-    category: "clothing",
-    inStock: false,
-    sizes: [
-      { label: "XXS", inStock: false },
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
-    ],
-    heights: [
-      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-      { label: "5'6\" and above", value: "5-6-and-above", default: false },
-    ],
-    reviews: [
-      {
-        name: "Khushi",
-        date: "2025-08-15",
-        rating: 5,
-        comment:
-          "The soft sweetheart neckline is so romantic and feminine! The corset back gives a beautiful silhouette.",
-      },
-      {
-        name: "Saumya",
-        date: "2025-06-07",
-        rating: 4,
-        comment:
-          "Love the cotton fabric and the elegant design. Perfect for both everyday wear and special occasions.",
       },
     ],
   },
@@ -2437,7 +2294,7 @@ const products = [
       },
     ],
   },
-  {
+    {
     id: "meera",
     name: "Meera",
     price: 599,
@@ -2478,6 +2335,97 @@ const products = [
         rating: 4,
         comment:
           "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+  {
+    id: "neha",
+    name: "Neha",
+    price: 599,
+    shortDescription:
+      "Neha is a pure cotton short kurti featuring delicate noodle straps and a round neck. Its white base is adorned with vibrant multicolour floral prints, making it a breezy and stylish pick for summer days",
+    longDescription:
+      "Neha is a pure cotton short kurti with a round neck and delicate noodle straps. Its white base is brightened with multicolour floral prints, giving it a fresh, summery vibe. Lightweight and breezy, it's perfect for casual days out or relaxed indoor wear. Pair it with jeans, shorts, or skirts for an effortlessly chic look.",
+    images: [
+      "/Neha/Neha1.jpg",
+      "/Neha/Neha2.jpg",
+      "/Neha/Neha3.jpg",
+      "/Neha/Neha4.jpg",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Ananya",
+        date: "2025-09-09",
+        rating: 5,
+        comment:
+          "The multicolour floral prints on the white base look so fresh and summery! The cotton fabric feels super light and comfy, perfect for hot days.",
+      },
+      {
+        name: "Kritika",
+        date: "2025-09-10",
+        rating: 4,
+        comment:
+          "Love the round neck and noodle straps design. It’s stylish yet casual, and the breezy fit makes it great for everyday wear.",
+      },
+    ],
+  },
+   {
+    id: "Hema",
+    name: "Hema",
+    price: 599,
+    shortDescription:
+      "Crafted in pure cotton, this feminine piece features a soft sweetheart neckline and a flattering corset back.",
+    longDescription:
+      "The Hema Kurti is made from breathable pure cotton, designed for comfort and elegance. A soft sweetheart neckline brings a romantic touch, while the corset back adds a modern, form-enhancing detail. Feminine and flattering, Hema is perfect for both everyday grace and special moments.",
+    images: [
+      "/Hema/Hema1.png",
+      "/Hema/Hema2.png",
+      "/Hema/Hema3.png",
+      "/Hema/Hema4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XXS", inStock: false },
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Khushi",
+        date: "2025-08-15",
+        rating: 5,
+        comment:
+          "The soft sweetheart neckline is so romantic and feminine! The corset back gives a beautiful silhouette.",
+      },
+      {
+        name: "Saumya",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Love the cotton fabric and the elegant design. Perfect for both everyday wear and special occasions.",
       },
     ],
   },
@@ -2546,7 +2494,58 @@ const products = [
       },
     ],
   },
-
+ {
+    id: "ambika",
+    name: "Ambika",
+    price: 1599,
+    shortDescription:
+      "Ambika is a powerful black set featuring our signature backless lace top Durga paired with a full-flared, double-lined skirt. Fierce, fluid, and unapologetically bold.<br>View Size Chart For Skirt for the perfect fit.",
+    longDescription:
+      "Ambika is a statement in all black a striking set that pairs the dramatic lace-back kurti with a voluminous, double-lined skirt. The top flows long in the front and daringly open at the back, while the skirt brings movement and depth with its full flare. Together, they create a look that’s equal parts elegance and attitude — made for presence, not subtlety.",
+    images: [
+      "/Ambika/Ambika1.png",
+      "/Ambika/Ambika2.png",
+      "/Ambika/Ambika3.png",
+      "/Ambika/Ambika4.png",
+    ],
+    category: "clothing",
+    inStock: false,
+    sizes: [
+      { label: "XS", inStock: false },
+      { label: "S", inStock: false },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
+      { label: "XL", inStock: false },
+    ],
+    heights: [
+      { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+      { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+      { label: "5'6\" and above", value: "5-6-and-above", default: false },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-08-15",
+        rating: 5,
+        comment:
+          "Absolutely stunning set! The backless lace top is so dramatic and the full-flared skirt flows beautifully. Perfect for special occasions.",
+      },
+      {
+        name: "Kavya",
+        date: "2025-09-19",
+        rating: 5,
+        comment:
+          "The all-black look is so powerful and elegant. Love how the double-lined skirt moves when I walk. Definitely a statement piece!",
+      },
+      {
+        name: "Anita",
+        date: "2025-09-19",
+        rating: 4,
+        comment:
+          "The lace detailing on the top is exquisite and the skirt has such a lovely volume. Great quality fabric and fits perfectly.",
+      },
+    ],
+  },
   {
     id: "heer-ranjha-combo",
     name: "Heer Ranjha Combo",
