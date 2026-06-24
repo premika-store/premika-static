@@ -23,6 +23,86 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+  {
+    id: "divya",
+    name: "Divya",
+    price: 649,
+    shortDescription:
+      "Divya is a pure cotton kurti featuring delicate noodle straps, a sweetheart scrunched neckline, and an elegant corset back. Light, feminine, and effortlessly chic.",
+    longDescription:
+      "Divya is a charming pure cotton kurti designed for effortless elegance. Featuring delicate noodle straps and a sweetheart scrunched neckline, it adds a soft, romantic touch to your look. The corset back creates a flattering silhouette while ensuring a comfortable fit. Lightweight, breathable, and versatile, Divya is perfect for everything from casual outings to special occasions.",
+    images: [
+      "/Divya/Divya1.png",
+      "/Divya/Divya2.png",
+      "/Divya/Divya3.png",
+      "/Divya/Divya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
+  {
+    id: "malika",
+    name: "Malika",
+    price: 649,
+    shortDescription:
+      "Malika is a dreamy baby pink kurti crafted from pure cotton, featuring adjustable pull-up strings that create a flattering sweetheart neckline and an elegant corset back for the perfect feminine fit.",
+    longDescription:
+      "Malika is a charming baby pink kurti designed to make you feel effortlessly beautiful. Made from breathable pure cotton, it features adjustable pull-up strings at the neckline that can be styled into a flattering sweetheart shape. The elegant corset back adds a feminine touch while ensuring a flattering fit. Soft, comfortable, and versatile, Malika is perfect for everything from casual outings to special occasions.",
+    images: [
+      "/Malika/Malika1.png",
+      "/Malika/Malika2.png",
+      "/Malika/Malika3.png",
+      "/Malika/Malika4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Priya",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! Loved the fabric — the pure cotton feels so soft and breathable. Perfect for daily wear.",
+      },
+      {
+        name: "Manojna",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Loved the bell sleeves and the overall style. It looks even better in real life!",
+      },
+    ],
+  },
 {
     id: "tanya-kurti",
     name: "Tanya Kurti",
