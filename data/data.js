@@ -1153,139 +1153,6 @@ const products = [
       },
     ],
   },
-
-  {
-    id: "sajni-sajan-combo",
-    name: "Sajni & Sajan Combo",
-    price: 1119,
-    shortDescription:
-      "Sajni & Sajan is a pure cotton couple set featuring desi-inspired prints and a soft, breathable feel—perfect for stylish twinning with comfort and charm.",
-    longDescription:
-      "Sajni & Sajan is a beautifully crafted couple set made from pure cotton, designed for comfort, culture, and effortless style. Inspired by desi aesthetics and traditional prints, this set brings together timeless charm and modern elegance. Soft on the skin and breathable for all-day wear, it’s perfect for festive moments, casual outings, or cozy celebrations together. With coordinated prints and a graceful vibe, Sajni & Sajan lets you and your partner twin in style while staying true to your roots.",
-    images: [
-      "/Sajni-Sajan/SS1.WEBP",
-      "/Sajni-Sajan/Ss2.WEBP",
-      "/Sajni-Sajan/SS3.WEBP",
-    ],
-    category: "clothing",
-    inStock: false,
-    isCombo: false,
-    comboItems: [
-      {
-        id: "sajni",
-        name: "Sajni (Women's Kurti)",
-        sizes: [
-          { label: "XXS", inStock: false },
-          { label: "XS", inStock: false },
-          { label: "S", inStock: false },
-          { label: "M", inStock: false },
-          { label: "L", inStock: false },
-          { label: "XL", inStock: false },
-        ],
-        heights: [
-          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-          { label: "5'6\" and above", value: "5-6-and-above", default: false },
-        ],
-      },
-      {
-        id: "sajan",
-        name: "Sajan (Men's Shirt)",
-        sizes: [
-          { label: "XXS", inStock: false },
-          { label: "XS", inStock: false },
-          { label: "S", inStock: false },
-          { label: "M", inStock: false },
-          { label: "L", inStock: false },
-          { label: "XL", inStock: false },
-          { label: "XXL", inStock: false },
-        ],
-      },
-    ],
-    reviews: [
-      {
-        name: "Harshit",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "Absolutely loved it! The fabric is so soft and comfortable. We wore it for a family function and got so many compliments. The desi prints look even better in real life. Totally worth it!",
-      },
-      {
-        name: "Gaurav",
-        date: "2025-06-07",
-        rating: 4,
-        comment:
-          "Perfect for twinning! Bought this for me and my partner and we're obsessed! The fit is great and the cotton feels very breathable. Looks super cute in pictures too.",
-      },
-    ],
-  },
-
-  {
-    id: "heer-ranjha-combo",
-    name: "Heer Ranjha Combo",
-    price: 1119,
-    shortDescription:
-      "Heer Ranjha is a pure cotton couple set with a corset-back shirt for her and a brown desi-print shirt for him—perfect for romantic twinning with comfort and style.",
-    longDescription:
-      "Heer Ranjha is a timeless couple set inspired by classic romance and desi aesthetics. Crafted from pure cotton, this set blends comfort with statement style. For her, the shirt features a flattering corset-style back that adds a modern, feminine touch while keeping the look elegant and graceful. For him, the brown shirt with desi-inspired prints offers a rich, earthy vibe that feels both traditional and trendy. Breathable, soft, and stylish, Heer Ranjha is perfect for festive days, date outings, cultural events, or simply twinning in effortless charm.",
-    images: [
-      "/Heer-Ranjha/HR1.WEBP",
-      "/Heer-Ranjha/HR2.WEBP",
-      "/Heer-Ranjha/HR3.WEBP",
-      "/Heer-Ranjha/HR4.WEBP",
-    ],
-    category: "clothing",
-    inStock: false,
-    isCombo: false,
-    comboItems: [
-      {
-        id: "heer",
-        name: "Heer (Women's Kurti)",
-        sizes: [
-          { label: "XXS", inStock: false },
-          { label: "XS", inStock: false },
-          { label: "S", inStock: false },
-          { label: "M", inStock: false },
-          { label: "L", inStock: false },
-          { label: "XL", inStock: false },
-        ],
-        heights: [
-          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
-          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
-          { label: "5'6\" and above", value: "5-6-and-above", default: false },
-        ],
-      },
-      {
-        id: "ranjha",
-        name: "Ranjha (Men's Shirt)",
-        sizes: [
-          { label: "XXS", inStock: false },
-          { label: "XS", inStock: false },
-          { label: "S", inStock: false },
-          { label: "M", inStock: false },
-          { label: "L", inStock: false },
-          { label: "XL", inStock: false },
-          { label: "XXL", inStock: false },
-        ],
-      },
-    ],
-    reviews: [
-      {
-        name: "Harshit",
-        date: "2025-05-14",
-        rating: 5,
-        comment:
-          "Absolutely loved it! The corset-back shirt looks stunning on my partner and the brown shirt for me has such a rich, earthy vibe. Perfect for romantic twinning!",
-      },
-      {
-        name: "Shreya",
-        date: "2025-06-07",
-        rating: 4,
-        comment:
-          "Perfect blend of traditional and modern! This set looks very desi but still feels trendy. The brown shade is beautiful and the fabric is super soft.",
-      },
-    ],
-  },
   {
     id: "aashi",
     name: "Aashi",
@@ -2611,6 +2478,138 @@ const products = [
         rating: 4,
         comment:
           "Love the tie-up sleeve straps! The cotton fabric is soft and comfortable.",
+      },
+    ],
+  },
+    {
+    id: "sajni-sajan-combo",
+    name: "Sajni & Sajan Combo",
+    price: 1119,
+    shortDescription:
+      "Sajni & Sajan is a pure cotton couple set featuring desi-inspired prints and a soft, breathable feel—perfect for stylish twinning with comfort and charm.",
+    longDescription:
+      "Sajni & Sajan is a beautifully crafted couple set made from pure cotton, designed for comfort, culture, and effortless style. Inspired by desi aesthetics and traditional prints, this set brings together timeless charm and modern elegance. Soft on the skin and breathable for all-day wear, it’s perfect for festive moments, casual outings, or cozy celebrations together. With coordinated prints and a graceful vibe, Sajni & Sajan lets you and your partner twin in style while staying true to your roots.",
+    images: [
+      "/Sajni-Sajan/SS1.WEBP",
+      "/Sajni-Sajan/Ss2.WEBP",
+      "/Sajni-Sajan/SS3.WEBP",
+    ],
+    category: "clothing",
+    inStock: false,
+    isCombo: false,
+    comboItems: [
+      {
+        id: "sajni",
+        name: "Sajni (Women's Kurti)",
+        sizes: [
+          { label: "XXS", inStock: false },
+          { label: "XS", inStock: false },
+          { label: "S", inStock: false },
+          { label: "M", inStock: false },
+          { label: "L", inStock: false },
+          { label: "XL", inStock: false },
+        ],
+        heights: [
+          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+          { label: "5'6\" and above", value: "5-6-and-above", default: false },
+        ],
+      },
+      {
+        id: "sajan",
+        name: "Sajan (Men's Shirt)",
+        sizes: [
+          { label: "XXS", inStock: false },
+          { label: "XS", inStock: false },
+          { label: "S", inStock: false },
+          { label: "M", inStock: false },
+          { label: "L", inStock: false },
+          { label: "XL", inStock: false },
+          { label: "XXL", inStock: false },
+        ],
+      },
+    ],
+    reviews: [
+      {
+        name: "Harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The fabric is so soft and comfortable. We wore it for a family function and got so many compliments. The desi prints look even better in real life. Totally worth it!",
+      },
+      {
+        name: "Gaurav",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Perfect for twinning! Bought this for me and my partner and we're obsessed! The fit is great and the cotton feels very breathable. Looks super cute in pictures too.",
+      },
+    ],
+  },
+
+  {
+    id: "heer-ranjha-combo",
+    name: "Heer Ranjha Combo",
+    price: 1119,
+    shortDescription:
+      "Heer Ranjha is a pure cotton couple set with a corset-back shirt for her and a brown desi-print shirt for him—perfect for romantic twinning with comfort and style.",
+    longDescription:
+      "Heer Ranjha is a timeless couple set inspired by classic romance and desi aesthetics. Crafted from pure cotton, this set blends comfort with statement style. For her, the shirt features a flattering corset-style back that adds a modern, feminine touch while keeping the look elegant and graceful. For him, the brown shirt with desi-inspired prints offers a rich, earthy vibe that feels both traditional and trendy. Breathable, soft, and stylish, Heer Ranjha is perfect for festive days, date outings, cultural events, or simply twinning in effortless charm.",
+    images: [
+      "/Heer-Ranjha/HR1.WEBP",
+      "/Heer-Ranjha/HR2.WEBP",
+      "/Heer-Ranjha/HR3.WEBP",
+      "/Heer-Ranjha/HR4.WEBP",
+    ],
+    category: "clothing",
+    inStock: false,
+    isCombo: false,
+    comboItems: [
+      {
+        id: "heer",
+        name: "Heer (Women's Kurti)",
+        sizes: [
+          { label: "XXS", inStock: false },
+          { label: "XS", inStock: false },
+          { label: "S", inStock: false },
+          { label: "M", inStock: false },
+          { label: "L", inStock: false },
+          { label: "XL", inStock: false },
+        ],
+        heights: [
+          { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
+          { label: "5'4\" - 5'6\"", value: "5-4-to-5-6", default: false },
+          { label: "5'6\" and above", value: "5-6-and-above", default: false },
+        ],
+      },
+      {
+        id: "ranjha",
+        name: "Ranjha (Men's Shirt)",
+        sizes: [
+          { label: "XXS", inStock: false },
+          { label: "XS", inStock: false },
+          { label: "S", inStock: false },
+          { label: "M", inStock: false },
+          { label: "L", inStock: false },
+          { label: "XL", inStock: false },
+          { label: "XXL", inStock: false },
+        ],
+      },
+    ],
+    reviews: [
+      {
+        name: "Harshit",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved it! The corset-back shirt looks stunning on my partner and the brown shirt for me has such a rich, earthy vibe. Perfect for romantic twinning!",
+      },
+      {
+        name: "Shreya",
+        date: "2025-06-07",
+        rating: 4,
+        comment:
+          "Perfect blend of traditional and modern! This set looks very desi but still feels trendy. The brown shade is beautiful and the fabric is super soft.",
       },
     ],
   },
