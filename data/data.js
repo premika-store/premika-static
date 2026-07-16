@@ -23,6 +23,86 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+   {
+    id: "kajal",
+    name: "Kajal",
+    price: 649,
+    shortDescription:
+      "Kajal is a chic beige and black pure cotton kurti featuring an adjustable sweetheart neckline and a flattering corset back. Comfortable, stylish, and perfect for everyday wear or special occasions.",
+    longDescription:
+      "Kajal is a timeless beige and black kurti crafted from breathable pure cotton for all-day comfort. It features adjustable pull-up strings at the neckline that can be styled into a flattering sweetheart shape, while the elegant corset back enhances your silhouette with a beautiful, adjustable fit. Effortlessly versatile, Kajal is perfect for casual outings, office wear, brunches, and festive occasions.",
+    images: [
+      "/Kajal/Kajal1.png",
+      "/Kajal/Kajal2.png",
+      "/Kajal/Kajal3.png",
+      "/Kajal/Kajal4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "The beige and black combination looks so classy. I received so many compliments the first time I wore it.",
+      },
+      {
+        name: "Rekha",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "I’ve worn it to brunch and family gatherings, and it looked amazing both times. Super comfortable and stylish.",
+      },
+    ],
+  },
+       {
+    id: "sana",
+    name: "Sana",
+    price: 649,
+    shortDescription:
+      "Sana is a chic and effortlessly elegant kurti featuring a flattering square neckline, delicate noodle straps, and an adjustable corset back. Soft, breathable, and designed for all-day comfort, it’s perfect for both casual days and special occasions.",
+    longDescription:
+      "Sana is a timeless kurti designed to make you feel effortlessly confident. Featuring a flattering square neckline, delicate noodle straps, and an elegant corset back, it creates a beautifully feminine silhouette with an adjustable fit. Lightweight, breathable, and versatile, Sana is perfect for brunch dates, vacations, festive gatherings, or everyday outings.",
+    images: [
+      "/Sana/Sana1.png",
+      "/Sana/Sana2.png",
+      "/Sana/Sana3.png",
+      "/Sana/Sana4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Rucha",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Such a beautiful fit! The square neckline and corset back make it so flattering. It fits perfectly and feels amazing to wear.",
+      },
+      {
+        name: "Anushka",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "It’s comfortable enough for everyday wear but also looks dressy for special occasions.",
+      },
+    ],
+  },
   {
     id: "divya",
     name: "Divya",
