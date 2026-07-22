@@ -2332,7 +2332,7 @@ const products = [
     {
     id: "meera",
     name: "Meera",
-    price: 599,
+    price: 1,
     shortDescription: "100% cotton, short Asymmetrical Kurti",
     longDescription:
       "Bold and unique, the Meera Kurti in warm rust features trendy tie-up sleeve straps and a stylish asymmetrical cut for a modern, edgy look. Perfect for those who love to stand out with effortless style.",
