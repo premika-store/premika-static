@@ -425,7 +425,7 @@ const products = [
 {
     id: "Chand",
     name: "Chand",
-    price: 649,
+    price: 1,
     shortDescription:
       "Chand is a timeless white cotton kurti designed for effortless everyday elegance. Double-lined for comfort and coverage, it features statement bell sleeves and a relaxed silhouette that feels as good as it looks.",
     longDescription:
