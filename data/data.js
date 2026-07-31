@@ -23,6 +23,46 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+  {
+    id: "bhavika",
+    name: "Bhavika",
+    price: 649,
+    shortDescription:
+      "Bhavika is crafted from soft popcorn cotton and features elegant pearl detailing on the sleeves and hem. Finished with a beautifully designed back, it’s the perfect blend of comfort and effortless charm.",
+    longDescription:
+      "Meet Bhavika — a graceful kurti crafted from premium popcorn cotton for all-day comfort. Designed with a beautifully detailed back and delicate pearl embellishments on the sleeves and hem, it adds a subtle touch of elegance to your everyday look. Lightweight, breathable, and effortlessly stylish, Bhavika is perfect for college, office, or casual outings.",
+    images: [
+      "/Bhavika/Bhavika1.png",
+      "/Bhavika/Bhavika2.png",
+      "/Bhavika/Bhavika3.png",
+      "/Bhavika/Bhavika4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Absolutely loved the back design! It’s unique yet elegant. Got so many compliments wearing it.",
+      },
+      {
+        name: "Rekha",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "The pearl work on the sleeves and bottom is subtle but beautiful. Looks exactly like the pictures.",
+      },
+    ],
+  },
    {
     id: "kajal",
     name: "Kajal",
