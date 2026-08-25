@@ -23,6 +23,46 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+   {
+    id: "reet",
+    name: "Reet",
+    price: 699,
+    shortDescription:
+      "Meet Reet 🤍 A pure cotton kurti with beautiful detailing and a flattering corset-back fit. Effortlessly elegant, comfortable, and made to stand out.",
+    longDescription:
+      "Introducing Reet — a beautifully crafted pure cotton kurti designed for effortless elegance. With intricate detailing and a flattering corset-back silhouette, Reet brings together comfort, charm, and a timeless ethnic feel.",
+    images: [
+      "/Reet/Reet1.png",
+      "/Reet/Reet2.png",
+      "/Reet/Reet3.png",
+      "/Reet/Reet4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "Reet is absolutely gorgeous! The pure cotton fabric is so comfortable, and the corset back gives such a beautiful fit.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "Loved the detailing on Reet. It looks elegant without feeling too heavy, and the fit is just perfect.",
+      },
+    ],
+  },
   {
     id: "madhuri",
     name: "Madhuri",
