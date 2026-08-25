@@ -24,6 +24,90 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
   {
+    id: "madhuri",
+    name: "Madhuri",
+    price: 699,
+    shortDescription:
+      "Madhuri is a mehroon-red oversized shirt crafted from 100% pure cotton. Soft, breathable, and effortlessly stylish, it’s your perfect go-to for a relaxed everyday look.",
+    longDescription:
+      "Meet Madhuri, a rich mehroon-red oversized shirt made from soft, breathable 100% pure cotton. Designed for an effortless, relaxed fit, it brings together comfort and understated elegance. The deep mehroon-red shade makes it easy to style with jeans, trousers, skirts, or even layered over your favourite ethnic pieces. Perfect for everyday college days, casual outings, or when you want your outfit to look effortlessly put together",
+    images: [
+      "/Madhuri/Madhuri1.png",
+      "/Madhuri/Madhuri2.png",
+      "/Madhuri/Madhuri3.png",
+      "/Madhuri/Madhuri4.png",
+      "/Madhuri/Madhuri5.png",
+      "/Madhuri/Madhuri6.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2025-05-14",
+        rating: 5,
+        comment:
+          "Such a classy everyday shirt! The fabric feels really nice and breathable, and I love how effortlessly it looks styled with jeans.",
+      },
+      {
+        name: "Rekha",
+        date: "2025-06-07",
+        rating: 4,
+        comment: "Honestly, one of my favourite purchases from Premika. The fabric is soft, the colour is gorgeous and it’s so easy to style.",
+      },
+    ],
+  },
+  {
+    id: "kanak",
+    name: "Kanak",
+    price: 699,
+    shortDescription:
+      "Kanak is a fresh green oversized shirt made from 100% pure cotton. Comfortable, breathable, and effortlessly stylish, it’s the perfect everyday essential for a relaxed yet chic look.",
+    longDescription:
+      "Meet Kanak, a beautiful green oversized shirt crafted from 100% pure cotton. Soft, breathable, and effortlessly comfortable, Kanak is designed for an easy, relaxed fit that looks stylish without trying too hard. The fresh green shade adds a pop of colour to your wardrobe and pairs beautifully with jeans, trousers, skirts, or even ethnic bottoms. A perfect everyday piece for college, casual outings, or weekend plans.",
+    images: [
+      "/Kanak/Kanak1.png",
+      "/Kanak/Kanak2.png",
+      "/Kanak/Kanak3.png",
+      "/Kanak/Kanak4.png",
+      "/Kanak/Kanak5.png",
+      "/Kanak/Kanak6.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Komal",
+        date: "2026-08-28",
+        rating: 5,
+        comment:
+          "Loved the fabric and the fit. It’s soft, breathable and perfect for everyday wear.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-25",
+        rating: 5,
+        comment: "Absolutely love the oversized look. Very comfortable and gives such a cool, effortless vibe.",
+      },
+    ],
+  },
+  {
     id: "bhavika",
     name: "Bhavika",
     price: 649,
