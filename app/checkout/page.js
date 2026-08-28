@@ -967,9 +967,25 @@ export default function Home() {
                             <p className="text-base sm:text-xl lg:text-2xl font-bold text-foreground break-words">
                               ₹{(item.price * (item.quantity || 1)).toFixed(2)}
                             </p>
-                            <p className="text-xs sm:text-sm text-muted-foreground break-words">
-                              ₹{item.price.toFixed(2)} each
-                            </p>
+                            {item.isOnSale && item.originalPrice ? (
+                              <div className="flex flex-col items-end gap-0.5 mt-0.5">
+                                <p className="text-xs sm:text-sm text-muted-foreground line-through break-words">
+                                  ₹{(item.originalPrice * (item.quantity || 1)).toFixed(2)}
+                                </p>
+                                <div className="flex items-center gap-1.5 flex-wrap justify-end">
+                                  <span className="text-xs text-muted-foreground break-words">
+                                    ₹{item.price.toFixed(2)} each
+                                  </span>
+                                  <span className="text-[10px] sm:text-xs bg-red-500 text-white px-1.5 py-0.5 rounded font-medium">
+                                    {item.discount}% OFF
+                                  </span>
+                                </div>
+                              </div>
+                            ) : (
+                              <p className="text-xs sm:text-sm text-muted-foreground break-words">
+                                ₹{item.price.toFixed(2)} each
+                              </p>
+                            )}
                           </div>
                         </div>
                       ))}

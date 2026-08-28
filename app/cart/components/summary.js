@@ -44,6 +44,9 @@ const SummaryContent = () => {
     return total;
   }, 0);
 
+  // Dynamic sale discount percentage from cart items
+  const saleDiscountPercent = items.find((item) => item.isOnSale && item.discount)?.discount;
+
   // Free shipping for all orders
   const freeShippingThreshold = 0; // Always free shipping
   const shippingCost = 0;
@@ -136,7 +139,7 @@ const SummaryContent = () => {
               <div className="flex items-center space-x-1">
                 <Percent size={12} className="sm:w-4 sm:h-4 flex-shrink-0" />
                 <span className="text-xs sm:text-sm">
-                  Sale Discount (10% OFF)
+                  Sale Discount{saleDiscountPercent ? ` (${saleDiscountPercent}% OFF)` : ""}
                 </span>
               </div>
               <span className="text-sm sm:text-base">
@@ -249,7 +252,7 @@ const SummaryContent = () => {
           <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
             {saleDiscount > 0 && (
               <div className="flex justify-between text-green-800">
-                <span>Sale Discount (10% OFF):</span>
+                <span>Sale Discount{saleDiscountPercent ? ` (${saleDiscountPercent}% OFF)` : ""}:</span>
                 <span>
                   -<Currency value={saleDiscount} />
                 </span>

@@ -1,24 +1,41 @@
 // data/products.js
 
-// Products excluded from 10% discount sale
-const EXCLUDED_FROM_SALE = [
-  "Chahat",
-  "Srishti",
-  "ayushi",
-  "aashi",
-  "simran",
-  "Mehak",
-  "Sneha",
-];
+// Global Site-Wide Sale Configuration
+export const SALE_CONFIG = {
+  enabled: true,
+  discountPercent: 10,
+};
 
-// Calculate discounted price (10% off for eligible products)
+// Calculate discounted price based on global SALE_CONFIG
 export const getDiscountedPrice = (product) => {
-  // All items are excluded from sale
+  if (!product || typeof product.price !== "number") {
+    return {
+      originalPrice: 0,
+      discountedPrice: 0,
+      isOnSale: false,
+      discount: 0,
+    };
+  }
+
+  const originalPrice = product.price;
+
+  if (!SALE_CONFIG.enabled || SALE_CONFIG.discountPercent <= 0) {
+    return {
+      originalPrice,
+      discountedPrice: originalPrice,
+      isOnSale: false,
+      discount: 0,
+    };
+  }
+
+  const discount = SALE_CONFIG.discountPercent;
+  const discountedPrice = originalPrice * (1 - discount / 100);
+
   return {
-    originalPrice: product.price,
-    discountedPrice: product.price,
-    isOnSale: false,
-    discount: 0,
+    originalPrice,
+    discountedPrice,
+    isOnSale: true,
+    discount,
   };
 };
 
