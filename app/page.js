@@ -5,7 +5,7 @@ import { Carattere } from "next/font/google";
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import ProductCard from "@/components/product-card";
-import products from "@/data/data";
+import products, { getDiscountedPrice } from "@/data/data";
 
 const carattere = Carattere({
   subsets: ["latin"],
@@ -36,8 +36,14 @@ export default function ProductsPage() {
       filtered.sort((a, b) => b.price - a.price);
     } else if (sortBy === "name") {
       filtered.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === "featured") {
+      // "featured" prioritizes active sale products first while preserving original order
+      filtered.sort((a, b) => {
+        const aSale = getDiscountedPrice(a).isOnSale ? 1 : 0;
+        const bSale = getDiscountedPrice(b).isOnSale ? 1 : 0;
+        return bSale - aSale;
+      });
     }
-    // "featured" keeps original order
 
     return filtered;
   }, [availabilityFilter, sortBy]);

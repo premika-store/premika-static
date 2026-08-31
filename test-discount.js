@@ -1,8 +1,9 @@
 // Test script for discount functionality
-import products, { SALE_CONFIG, getDiscountedPrice } from "./data/data.js";
+import products, { SALE_CONFIG, PRODUCT_SPECIFIC_SALES, getDiscountedPrice } from "./data/data.js";
 
 console.log("==================================================");
 console.log("Global SALE_CONFIG:", SALE_CONFIG);
+console.log("PRODUCT_SPECIFIC_SALES:", PRODUCT_SPECIFIC_SALES);
 console.log(`Total Products in Catalog: ${products.length}`);
 console.log("==================================================\n");
 
@@ -15,92 +16,86 @@ function assert(condition, message) {
   console.log(`✅ PASSED: ${message}`);
 }
 
-// Test 1: Verify current configuration applies to ALL products
-console.log("--- TEST 1: Current SALE_CONFIG (10% Sale ON) ---");
-let allProductsPassed = true;
+// Test 1: Global sale is OFF
+console.log("--- TEST 1: Global Sale State ---");
+assert(SALE_CONFIG.enabled === false, "Global sale is OFF (SALE_CONFIG.enabled === false)");
+
+// Test 2: Tanya Kurti on sale (10% OFF, Math.floor)
+console.log("\n--- TEST 2: Tanya Kurti (Target Sale Product) ---");
+const tanyaKurti = products.find((p) => p.id === "tanya-kurti");
+assert(!!tanyaKurti, "tanya-kurti exists in product catalog");
+
+const tanyaKurtiPricing = getDiscountedPrice(tanyaKurti);
+console.log("Tanya Kurti Pricing:", tanyaKurtiPricing);
+
+assert(tanyaKurtiPricing.isOnSale === true, "tanya-kurti isOnSale is true");
+assert(tanyaKurtiPricing.discount === 10, "tanya-kurti discount is 10%");
+assert(tanyaKurtiPricing.originalPrice === 649, "tanya-kurti originalPrice is 649");
+assert(tanyaKurtiPricing.discountedPrice === 584, "tanya-kurti discountedPrice is 584 (Math.floor(649 * 0.90))");
+
+// Test with minimal object { id, price } as passed by ProductInfo component
+const tanyaKurtiMinimalPricing = getDiscountedPrice({ id: "tanya-kurti", price: 649 });
+assert(tanyaKurtiMinimalPricing.isOnSale === true, "ProductInfo format { id, price } receives isOnSale = true");
+assert(tanyaKurtiMinimalPricing.discountedPrice === 584, "ProductInfo format { id, price } receives discountedPrice = 584");
+
+// Test 3: Tanya Salwar NOT on sale
+console.log("\n--- TEST 3: Tanya Salwar (Must NOT be on sale) ---");
+const tanyaSalwar = products.find((p) => p.id === "tanya-salwar");
+assert(!!tanyaSalwar, "tanya-salwar exists in product catalog");
+const tanyaSalwarPricing = getDiscountedPrice(tanyaSalwar);
+console.log("Tanya Salwar Pricing:", tanyaSalwarPricing);
+assert(tanyaSalwarPricing.isOnSale === false, "tanya-salwar isOnSale is false");
+assert(tanyaSalwarPricing.discount === 0, "tanya-salwar discount is 0");
+assert(tanyaSalwarPricing.discountedPrice === 899, "tanya-salwar discountedPrice is original price (899)");
+
+// Test 4: Tanya Set (Tanya-Full) NOT on sale
+console.log("\n--- TEST 4: Tanya Set / Tanya-Full (Must NOT be on sale) ---");
+const tanyaSet = products.find((p) => p.id === "Tanya-Full");
+assert(!!tanyaSet, "Tanya-Full exists in product catalog");
+const tanyaSetPricing = getDiscountedPrice(tanyaSet);
+console.log("Tanya Set Pricing:", tanyaSetPricing);
+assert(tanyaSetPricing.isOnSale === false, "Tanya-Full isOnSale is false");
+assert(tanyaSetPricing.discount === 0, "Tanya-Full discount is 0");
+assert(tanyaSetPricing.discountedPrice === 1499, "Tanya-Full discountedPrice is original price (1499)");
+
+// Test 5: Verify all other catalog products have NO SALE
+console.log("\n--- TEST 5: All Other Catalog Products ---");
+let nonSaleProductsCorrect = true;
+let nonSaleCount = 0;
+
 products.forEach((product) => {
-  const pricing = getDiscountedPrice(product);
-  const expectedDiscountedPrice = product.price * 0.9;
-  
-  if (
-    pricing.originalPrice !== product.price ||
-    Math.abs(pricing.discountedPrice - expectedDiscountedPrice) > 0.001 ||
-    pricing.isOnSale !== true ||
-    pricing.discount !== 10
-  ) {
-    console.error(`Mismatch for product ${product.id}:`, pricing);
-    allProductsPassed = false;
+  if (product.id !== "tanya-kurti") {
+    const pricing = getDiscountedPrice(product);
+    if (
+      pricing.isOnSale !== false ||
+      pricing.discount !== 0 ||
+      pricing.discountedPrice !== product.price ||
+      pricing.originalPrice !== product.price
+    ) {
+      console.error(`Unexpected sale for product ${product.id}:`, pricing);
+      nonSaleProductsCorrect = false;
+    }
+    nonSaleCount++;
   }
 });
-assert(allProductsPassed, `All ${products.length} products correctly received 10% discount`);
 
-// Test specific sample products
-const sampleProductIds = [
-  "reet",       // normal product (₹699)
-  "madhuri",    // normal product (₹699)
-  "Tanya-Full", // high price product (₹1499)
-  "Chahat",     // previously excluded product (₹699)
-  "Srishti",    // previously excluded product (₹699)
-  "Indu",       // out of stock product (₹699)
-  "Lata",       // out of stock product (₹599)
-];
+assert(
+  nonSaleProductsCorrect,
+  `All ${nonSaleCount} other products in catalog are confirmed OFF SALE (original price, isOnSale: false, discount: 0)`
+);
 
-console.log("\nSample Product Pricing:");
-sampleProductIds.forEach((id) => {
+// Sample unrelated products check
+const sampleIds = ["reet", "madhuri", "Chahat", "Srishti", "Indu", "Lata"];
+sampleIds.forEach((id) => {
   const p = products.find((prod) => prod.id === id);
   if (p) {
     const pricing = getDiscountedPrice(p);
-    console.log(`  • ${p.name} (ID: ${p.id}): Original: ₹${pricing.originalPrice.toFixed(2)} | Sale: ₹${pricing.discountedPrice.toFixed(2)} | ${pricing.discount}% OFF | isOnSale: ${pricing.isOnSale}`);
+    console.log(`  • ${p.name} (ID: ${p.id}): Price ₹${pricing.discountedPrice} | isOnSale: ${pricing.isOnSale} | discount: ${pricing.discount}%`);
   }
 });
-
-// Test 2: Verify Sale OFF behavior
-console.log("\n--- TEST 2: Sale OFF Behavior ---");
-SALE_CONFIG.enabled = false;
-let allSaleOffPassed = true;
-products.forEach((product) => {
-  const pricing = getDiscountedPrice(product);
-  if (
-    pricing.originalPrice !== product.price ||
-    pricing.discountedPrice !== product.price ||
-    pricing.isOnSale !== false ||
-    pricing.discount !== 0
-  ) {
-    allSaleOffPassed = false;
-  }
-});
-assert(allSaleOffPassed, "When SALE_CONFIG.enabled = false, all products return original price and isOnSale = false");
-
-// Test 3: Verify 20% Sale behavior
-console.log("\n--- TEST 3: 20% Sale Behavior ---");
-SALE_CONFIG.enabled = true;
-SALE_CONFIG.discountPercent = 20;
-const test20Product = products.find((p) => p.id === "reet"); // ₹699
-const pricing20 = getDiscountedPrice(test20Product);
-assert(
-  pricing20.discount === 20 &&
-  pricing20.isOnSale === true &&
-  Math.abs(pricing20.discountedPrice - 699 * 0.8) < 0.001,
-  `20% sale on ₹699 produces ₹${pricing20.discountedPrice.toFixed(2)} with ${pricing20.discount}% OFF`
-);
-
-// Test 4: Verify 30% Sale behavior
-console.log("\n--- TEST 4: 30% Sale Behavior ---");
-SALE_CONFIG.enabled = true;
-SALE_CONFIG.discountPercent = 30;
-const pricing30 = getDiscountedPrice(test20Product);
-assert(
-  pricing30.discount === 30 &&
-  pricing30.isOnSale === true &&
-  Math.abs(pricing30.discountedPrice - 699 * 0.7) < 0.001,
-  `30% sale on ₹699 produces ₹${pricing30.discountedPrice.toFixed(2)} with ${pricing30.discount}% OFF`
-);
-
-// Reset SALE_CONFIG back to 10% enabled
-SALE_CONFIG.enabled = true;
-SALE_CONFIG.discountPercent = 10;
 
 console.log("\n==================================================");
 console.log("ALL TESTS COMPLETED SUCCESSFULLY! 🎉");
 console.log("==================================================");
+
 

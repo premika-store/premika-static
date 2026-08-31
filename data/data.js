@@ -2,11 +2,16 @@
 
 // Global Site-Wide Sale Configuration
 export const SALE_CONFIG = {
-  enabled: true,
+  enabled: false,
   discountPercent: 10,
 };
 
-// Calculate discounted price based on global SALE_CONFIG
+// Product-specific sale discounts (active when global sale is OFF)
+export const PRODUCT_SPECIFIC_SALES = {
+  "tanya-kurti": 10,
+};
+
+// Calculate discounted price based on global SALE_CONFIG or product-specific sales
 export const getDiscountedPrice = (product) => {
   if (!product || typeof product.price !== "number") {
     return {
@@ -19,28 +24,41 @@ export const getDiscountedPrice = (product) => {
 
   const originalPrice = product.price;
 
-  if (!SALE_CONFIG.enabled || SALE_CONFIG.discountPercent <= 0) {
+  // 1. If global sale is enabled and has a valid discount, apply global sale
+  if (SALE_CONFIG.enabled && SALE_CONFIG.discountPercent > 0) {
+    const discount = SALE_CONFIG.discountPercent;
+    const discountedPrice = Math.floor(originalPrice * (1 - discount / 100));
     return {
       originalPrice,
-      discountedPrice: originalPrice,
-      isOnSale: false,
-      discount: 0,
+      discountedPrice,
+      isOnSale: true,
+      discount,
     };
   }
 
-  const discount = SALE_CONFIG.discountPercent;
-  const discountedPrice = originalPrice * (1 - discount / 100);
+  // 2. Otherwise, check whether the product ID exists in PRODUCT_SPECIFIC_SALES
+  const productDiscount = product.id ? PRODUCT_SPECIFIC_SALES[product.id] : undefined;
+  if (productDiscount && productDiscount > 0) {
+    const discountedPrice = Math.floor(originalPrice * (1 - productDiscount / 100));
+    return {
+      originalPrice,
+      discountedPrice,
+      isOnSale: true,
+      discount: productDiscount,
+    };
+  }
 
+  // 3. Otherwise, return the original price with no sale
   return {
     originalPrice,
-    discountedPrice,
-    isOnSale: true,
-    discount,
+    discountedPrice: originalPrice,
+    isOnSale: false,
+    discount: 0,
   };
 };
 
 const products = [
-   {
+  {
     id: "reet",
     name: "Reet",
     price: 699,
@@ -204,7 +222,7 @@ const products = [
       },
     ],
   },
-   {
+  {
     id: "kajal",
     name: "Kajal",
     price: 649,
@@ -244,7 +262,7 @@ const products = [
       },
     ],
   },
-       {
+  {
     id: "sana",
     name: "Sana",
     price: 649,
@@ -364,7 +382,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "tanya-kurti",
     name: "Tanya Kurti",
     price: 649,
@@ -443,7 +461,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "Tanya-Full",
     name: "Tanya Set",
     price: 1499,
@@ -483,7 +501,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "palak",
     name: "Palak",
     price: 649,
@@ -603,7 +621,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "Chand",
     name: "Chand",
     price: 649,
@@ -643,7 +661,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "Tara",
     name: "Tara",
     price: 649,
@@ -683,7 +701,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "bulbul-kurti",
     name: "Bulbul Kurti",
     price: 649,
@@ -763,7 +781,7 @@ const products = [
       },
     ],
   },
-{
+  {
     id: "bulbul-set",
     name: "Bulbul Set",
     price: 1499,
@@ -801,7 +819,7 @@ const products = [
         comment: "Loved the sleeves and the overall style. It looks even better in real life!",
       },
     ],
-  },  
+  },
   {
     id: "koyal-set",
     name: "Koyal Set",
@@ -2510,7 +2528,7 @@ const products = [
       },
     ],
   },
-    {
+  {
     id: "meera",
     name: "Meera",
     price: 599,
@@ -2599,7 +2617,7 @@ const products = [
       },
     ],
   },
-   {
+  {
     id: "Hema",
     name: "Hema",
     price: 599,
@@ -2645,7 +2663,7 @@ const products = [
       },
     ],
   },
-   {
+  {
     id: "mastani",
     name: "Mastani",
     price: 599,
@@ -2690,7 +2708,7 @@ const products = [
       },
     ],
   },
-    {
+  {
     id: "sajni-sajan-combo",
     name: "Sajni & Sajan Combo",
     price: 1119,
@@ -2755,7 +2773,7 @@ const products = [
       },
     ],
   },
- {
+  {
     id: "ambika",
     name: "Ambika",
     price: 1599,
@@ -2873,7 +2891,7 @@ const products = [
       },
     ],
   },
-    {
+  {
     id: "kishore",
     name: "Kishore",
     gender: "male",
@@ -2959,7 +2977,7 @@ const products = [
       },
     ],
   },
-   {
+  {
     id: "gauri",
     name: "Gauri",
     price: 899,
