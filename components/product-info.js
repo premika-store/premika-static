@@ -421,7 +421,14 @@ export function ProductInfo({
           className="flex items-center space-x-2 text-tertiary hover:text-secondary transition-colors"
           onClick={() => {
             // Determine which size chart to show based on product type
-            const chartType = isCombo ? "combo" : gender === "male" ? "male" : "female";
+            const isKanakMadhuri = id === "kanak" || id === "madhuri";
+            const chartType = isKanakMadhuri
+              ? "kanak-madhuri"
+              : isCombo
+              ? "combo"
+              : gender === "male"
+              ? "male"
+              : "female";
             sizeChartModal.onOpen(chartType);
           }}
         >
