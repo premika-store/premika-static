@@ -179,7 +179,7 @@ const products = [
    {
     id: "eshika",
     name: "Eshika",
-    price: 659,
+    price: 699,
     shortDescription:
       "Rani pink with a hint of maroon, Eshika features a flattering keyhole neckline, flowy georgette fabric and an adjustable corset back. Double-lined for comfort and coverage.",
     longDescription:
