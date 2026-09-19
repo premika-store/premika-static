@@ -58,6 +58,164 @@ export const getDiscountedPrice = (product) => {
 };
 
 const products = [
+   {
+    id: "prachi",
+    name: "Prachi",
+    price: 659,
+    shortDescription:
+      "A statement-making georgette kurti with a one-shoulder neckline, flared sleeves, and adjustable corset back. Semi-double lined for comfort and coverage.",
+    longDescription:
+      "Made in flowy georgette, Prachi features a chic one-shoulder neckline, dramatic flared sleeves, and a flattering corset-back closure for an adjustable fit. Semi-double lined for added comfort and coverage, it’s designed to make a statement while keeping the silhouette effortlessly feminine.",
+    images: [
+      "/Prachi/Prachi1.png",
+      "/Prachi/Prachi2.png",
+      "/Prachi/Prachi3.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "The colour and design are even prettier in person. Perfect for a dinner or outing.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "The corset back makes it fit perfectly, and the sleeves are gorgeous.",
+      },
+    ],
+  },
+   {
+    id: "anusha",
+    name: "Anusha",
+    price: 659,
+    shortDescription:
+      "A cute lilac halter-neck kurti with an adjustable drawstring back and a flattering fit. Double-lined for comfort and coverage.",
+    longDescription:
+      "A cute and feminine lilac halter-neck kurti featuring a flattering fitted silhouette and adjustable drawstring back for a comfortable, customizable fit. Double-lined for better coverage, Anusha is perfect for a soft, effortless look.",
+    images: [
+      "/Anusha/Anusha1.png",
+      "/Anusha/Anusha2.png",
+      "/Anusha/Anusha3.png",
+      "/Anusha/Anusha4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "The cutest lilac! The colour is so pretty and the fit is super flattering.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "The halter neckline makes it look so chic, and the drawstrings make the fit easy to adjust.",
+      },
+    ],
+  },
+   {
+    id: "gayatri",
+    name: "Gayatri",
+    price: 659,
+    shortDescription:
+      "A pretty pistachio green halter-neck kurti with an adjustable drawstring back and flattering fit. Double-lined for comfort and coverage.",
+    longDescription:
+      "A fresh and elegant pistachio green halter-neck kurti featuring a flattering fitted silhouette and an adjustable drawstring back for a customized fit. Crafted in textured fabric and double-lined for better coverage, Gayatri is a perfect pick for a soft, effortless look.",
+    images: [
+      "/Gayatri/Gayatri1.png",
+      "/Gayatri/Gayatri2.png",
+      "/Gayatri/Gayatri3.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "Such a fresh, unique shade and the fit is really flattering.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "The back detailing makes it look so cute and the drawstrings make the fit perfect.",
+      },
+    ],
+  },
+   {
+    id: "eshika",
+    name: "Eshika",
+    price: 659,
+    shortDescription:
+      "Rani pink with a hint of maroon, Eshika features a flattering keyhole neckline, flowy georgette fabric and an adjustable corset back. Double-lined for comfort and coverage.",
+    longDescription:
+      "A gorgeous rani pink with subtle maroon undertones, Eshika is crafted in flowy georgette and designed with a flattering keyhole neckline. The corset-back detail lets you adjust the fit for a more defined silhouette, while the double lining ensures better coverage and comfort. A perfect blend of feminine charm and effortless elegance.",
+    images: [
+      "/Eshika/Eshika1.png",
+      "/Eshika/Eshika2.png",
+      "/Eshika/Eshika3.png",
+      "/Eshika/Eshika4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "The rani shade with the maroon undertone looks so rich and pretty.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "It gives such a flattering fit and makes the kurti look really stylish.",
+      },
+    ],
+  },
   {
     id: "reet",
     name: "Reet",
