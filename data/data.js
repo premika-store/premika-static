@@ -2017,8 +2017,8 @@ const products = [
     sizes: [
       { label: "XS", inStock: true },
       { label: "S", inStock: true },
-      { label: "M", inStock: true },
-      { label: "L", inStock: true },
+      { label: "M", inStock: false },
+      { label: "L", inStock: false },
       { label: "XL", inStock: false },
     ],
     heights: [
@@ -2197,11 +2197,11 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
       { label: "L", inStock: true },
-      { label: "XL", inStock: false },
+      { label: "XL", inStock: true },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
@@ -2242,11 +2242,11 @@ const products = [
     category: "clothing",
     inStock: true,
     sizes: [
-      { label: "XS", inStock: false },
+      { label: "XS", inStock: true },
       { label: "S", inStock: true },
       { label: "M", inStock: true },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
@@ -3028,11 +3028,11 @@ const products = [
     category: "clothing",
     inStock: false,
     sizes: [
-      { label: "XS", inStock: false },
-      { label: "S", inStock: false },
-      { label: "M", inStock: false },
-      { label: "L", inStock: false },
-      { label: "XL", inStock: false },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
     ],
     heights: [
       { label: "Up to 5'3\"", value: "up-to-5-3", default: true },
