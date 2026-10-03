@@ -59,6 +59,86 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
    {
+    id: "kesariya",
+    name: "Kesariya Chaniya-Choli",
+    price: 1999,
+    shortDescription:
+      "Kesariya Chaniya Choli — a flowy cotton Chanderi skirt paired with a Shantoon wrap-around backless blouse, detailed with handwork mirrors and ghungroo tassels, finished with a matching dupatta.",
+    longDescription:
+      "Kesariya is a festive Chaniya Choli set featuring a flowy cotton Chanderi skirt paired with a Shantoon wrap-around backless blouse, adorned with delicate handwork mirrors and ghungroo tassels. Paired with a matching dupatta, it brings together traditional craftsmanship and a contemporary festive silhouette.",
+    images: [
+      "/Kesariya/Kesariya1.png",
+      "/Kesariya/Kesariya2.png",
+      "/Kesariya/Kesariya3.png",
+      "/Kesariya/Kesariya4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "The cutest lilac! The colour is so pretty and the fit is super flattering.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "The halter neckline makes it look so chic, and the drawstrings make the fit easy to adjust.",
+      },
+    ],
+  },
+   {
+    id: "roop",
+    name: "Roop Rani Chaniya-Choli",
+    price: 1999,
+    shortDescription:
+      "Roop Rani Chaniya Choli — a graceful blue cotton Chanderi skirt paired with a Shantoon wrap-around backless blouse, detailed with handwork mirrors and ghungroo tassels, finished with a matching dupatta.",
+    longDescription:
+      "Roop Rani is a beautiful blue Chaniya Choli set featuring a flowy cotton Chanderi skirt paired with a Shantoon wrap-around backless blouse, adorned with delicate handwork mirrors and ghungroo tassels. Complete with a matching dupatta, this set beautifully blends traditional charm with a modern festive silhouette.",
+    images: [
+      "/RoopRani/RR1.png",
+      "/RoopRani/RR2.png",
+      "/RoopRani/RR3.png",
+      "/RoopRani/RR4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "The cutest lilac! The colour is so pretty and the fit is super flattering.",
+      },
+      {
+        name: "Rekha",
+        date: "2026-08-07",
+        rating: 4,
+        comment: "The halter neckline makes it look so chic, and the drawstrings make the fit easy to adjust.",
+      },
+    ],
+  },
+   {
     id: "prachi",
     name: "Prachi",
     price: 659,
