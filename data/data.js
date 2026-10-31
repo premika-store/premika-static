@@ -59,6 +59,70 @@ export const getDiscountedPrice = (product) => {
 
 const products = [
    {
+    id: "nandini",
+    name: "Nandini",
+    price: 759,
+    shortDescription:
+      "A stunning pure georgette kurti featuring intricate floral prints, elegant lace detailing, and a beautifully designed neckline. Perfect for festive occasions and daytime outings.",
+    longDescription:
+      "Elevate your ethnic wardrobe with this gorgeous pure georgette kurti in a rich purple hue. Adorned with delicate floral prints, exquisite lace detailing, and a beautifully embellished neckline, it blends traditional charm with contemporary elegance. The graceful flared sleeves and flattering silhouette make it perfect for daytime outings, festive celebrations, and special occasions.",
+    images: [
+      "/Nandini/Nandini1.png",
+      "/Nandini/Nandini2.png",
+      "/Nandini/Nandini3.png",
+      "/Nandini/Nandini4.png",
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Sakshi",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "Absolutely loved the kurti! The colour and print are even prettier in person. Perfect for festive wear.",
+      },
+       {
+    id: "muskan",
+    name: "Muskan",
+    price: 659,
+    shortDescription:
+      "A pretty yellow georgette kurti/cover-up featuring elegant, flowy sleeves and a graceful silhouette. Perfect for daytime outings and effortless styling.",
+    longDescription:
+      "Brighten up your wardrobe with the Muskan Kurti, a beautiful yellow georgette cover-up that blends elegance with a playful charm. Featuring delicate, flowy sleeves and a flattering silhouette, it adds a touch of effortless grace to any outfit. Perfect for brunch dates, casual outings, and festive occasions, style it over your favourite trousers or a matching inner for a chic Indo-Western look.",
+    images: [
+      "/Muskan/Muskan1.png",
+      "/Muskan/Muskan2.png",
+      "/Muskan/Muskan3.png",
+      "/Muskan/Muskan4.png",      
+    ],
+    category: "clothing",
+    inStock: true,
+    sizes: [
+      { label: "XXS", inStock: true },
+      { label: "XS", inStock: true },
+      { label: "S", inStock: true },
+      { label: "M", inStock: true },
+      { label: "L", inStock: true },
+      { label: "XL", inStock: true },
+    ],
+    reviews: [
+      {
+        name: "Rekha",
+        date: "2026-08-14",
+        rating: 5,
+        comment:
+          "Loved the lightweight georgette fabric and the flowy design. Perfect for summer outings!",
+      },
+   {
     id: "kesariya",
     name: "Kesariya Chaniya-Choli",
     price: 1999,
