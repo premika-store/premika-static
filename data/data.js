@@ -124,6 +124,8 @@ const products = [
         comment:
           "Loved the lightweight georgette fabric and the flowy design. Perfect for summer outings!",
       },
+      ],
+       },
    {
     id: "kesariya",
     name: "Kesariya Chaniya-Choli",
