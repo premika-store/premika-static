@@ -90,6 +90,8 @@ const products = [
         comment:
           "Absolutely loved the kurti! The colour and print are even prettier in person. Perfect for festive wear.",
       },
+      ],
+   },
        {
     id: "muskan",
     name: "Muskan",
